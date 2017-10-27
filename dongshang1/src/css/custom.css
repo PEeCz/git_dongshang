@@ -1,0 +1,57 @@
+/** Your theme modifications here **/
+
+@font-face {
+	font-family: 'srisurywongse_regular';
+	src: url('fonts/Sri Sury Wongse.eot');
+	src: local('☺'), url('fonts/Sri Sury Wongse.woff') format('woff'), url('fonts/Sri Sury Wongse.ttf') format('truetype'), url('fonts/Sri Sury Wongse.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'srisurywongse_bold';
+	src: url('fonts/Sri Sury Wongse Bold.eot');
+	src: local('☺'), url('fonts/Sri Sury Wongse Bold.woff') format('woff'), url('fonts/Sri Sury Wongse Bold.ttf') format('truetype'), url('fonts/Sri Sury Wongse Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'dan_vi_vek_bold';
+	src: url('fonts/TH Dan Vi Vek Bold ver 1.03.eot');
+	src: local('☺'), url('fonts/TH Dan Vi Vek Bold ver 1.03.woff') format('woff'), url('fonts/TH Dan Vi Vek Bold ver 1.03.ttf') format('truetype'), url('fonts/TH Dan Vi Vek Bold ver 1.03.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'dan_vi_vek_regular';
+	src: url('fonts/TH Dan Vi Vek ver 1.03.eot');
+	src: local('☺'), url('fonts/TH Dan Vi Vek ver 1.03.woff') format('woff'), url('fonts/TH Dan Vi Vek ver 1.03.ttf') format('truetype'), url('fonts/TH Dan Vi Vek ver 1.03.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'superspace_bold';
+	src: url('fonts/Superspace Bold ver 1.00.eot');
+	src: local('☺'), url('fonts/Superspace Bold ver 1.00.woff') format('woff'), url('fonts/Superspace Bold ver 1.00.ttf') format('truetype'), url('fonts/Superspace Bold ver 1.00.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'superspace_regular';
+	src: url('fonts/Superspace Regular ver 1.00 Slant.eot');
+	src: local('☺'), url('fonts/Superspace Regular ver 1.00 Slant.woff') format('woff'), url('fonts/Superspace Regular ver 1.00 Slant.ttf') format('truetype'), url('fonts/Superspace Regular ver 1.00 Slant.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'superspace_light';
+	src: url('fonts/Superspace Light ver 1.00.eot');
+	src: local('☺'), url('fonts/Superspace Light ver 1.00.woff') format('woff'), url('fonts/Superspace Light ver 1.00.ttf') format('truetype'), url('fonts/Superspace Light ver 1.00.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

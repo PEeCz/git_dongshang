@@ -1,0 +1,1 @@
+<div class="row"><div class="ws-footer">© 2017 Dong Shang Travel Service Group(Thailand) Co.,Ltd.</div></div>
