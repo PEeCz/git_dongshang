@@ -5,8 +5,8 @@
         <div class="container">
             <div class="navbar-header">
 
-                <a class="navbar-brand home" href="../index.php" data-animate-hover="bounce">
-                    <img src="../img/logo/dongshang.png" alt="" width="70px;" height="50px;">
+                <a class="navbar-brand home" href="../../index.php" data-animate-hover="bounce">
+                    <img src="../../img/logo/dongshang.png" alt="" width="70px;" height="50px;">
                     <!--<img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">DongShang - go to homepage</span>-->
                 </a>
                 <div class="navbar-buttons">
@@ -28,10 +28,10 @@
             <div class="navbar-collapse collapse" id="navigation">
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="../index.php" data-hover="dropdown">หน้าหลัก</a>
+                    <li><a href="../../index.php" data-hover="dropdown">หน้าหลัก</a>
                     </li>
                     <li>
-                        <a href="../about.php" data-hover="dropdown">เกี่ยวกับเรา</a>
+                        <a href="../../about.php" data-hover="dropdown">เกี่ยวกับเรา</a>
                     </li>
 
                     <li class="dropdown yamm-fw">
@@ -110,9 +110,9 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="../board/index.php" data-hover="dropdown">เว็บบอร์ด </a>
+                        <a href="../../board/index.php" data-hover="dropdown">เว็บบอร์ด </a>
                     </li>
-                    <li><a href="../contact.php" data-hover="dropdown">ติดต่อเรา</a>
+                    <li><a href="../../contact.php" data-hover="dropdown">ติดต่อเรา</a>
                     </li>
                 </ul>
 
