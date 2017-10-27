@@ -5,6 +5,10 @@
     }else{
         require '../assets/lang/cn.php';
     }
+
+    if(!isset($_SESSION['user_status'])<> '100' && !isset($_SESSION['user_status'])<> '500'){
+        header("Location: ../../index.php");
+    }
     
 ?>
 

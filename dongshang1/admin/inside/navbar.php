@@ -31,7 +31,7 @@
                     <li><a href="../../index.php" data-hover="dropdown">หน้าหลัก</a>
                     </li>
                     <li>
-                        <a href="../../about.php" data-hover="dropdown">บอร์ด</a>
+                        <a href="" data-hover="dropdown">บอร์ด</a>
                     </li>
 
                     <li class="dropdown yamm-fw">
@@ -39,9 +39,9 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="../../board/index.php" data-hover="dropdown">รายชื่อไกด์ </a>
+                        <a href="" data-hover="dropdown">รายชื่อไกด์ </a>
                     </li>
-                    <li><a href="../../contact.php" data-hover="dropdown">โรงแรมและกอล์ฟ</a>
+                    <li><a href="" data-hover="dropdown">โรงแรมและกอล์ฟ</a>
                     </li>
                 </ul>
 

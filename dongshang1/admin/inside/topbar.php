@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-6" data-animate="fadeInDown">
                 <ul class="menu">
-                    <li><a href="#" data-toggle="modal" data-target="#login-modal">ล็อคอิน</a>
+                    <li><a href="#" data-toggle="modal" data-target="#login-modal"><?php echo $_SESSION['is_username']; ?></a>
                     </li>
                     <li><a href="../../contact.php">ติดต่อเรา</a>
                     </li>
