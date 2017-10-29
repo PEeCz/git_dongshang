@@ -23,6 +23,7 @@
 <link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <!-- Custom Theme files -->
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../assets/css/table-snipp.css" rel="stylesheet" type="text/css" media="all"/>
  
 <!--icons-css-->
 <link href="../assets/css/font-awesome.css" rel="stylesheet"> 
@@ -97,66 +98,79 @@
 					<!--mainpage chit-chating-->
 					<div class="chit-chat-layer1">
 						<div class="col-md-12 chit-chat-layer1-left">
-							<form class="navbar-form" role="search">
-			                    <div class="input-group">
-			                        <input type="text" class="form-control" placeholder="Search">
-			                        <span class="input-group-btn">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-								    </span>
-			                    </div>
-			                </form>
 				           <div class="work-progres">
 				                <div class="chit-chat-heading">
 				                	<a id="<?php echo $rs['user_id']; ?>" class="btn btn-xs btn-success btn_addGuide">เพิ่มข้อมูลไกด์</a>
 				                	รายงานข้อมูลไกด์
 				                </div>
-				                <div class="table-responsive">
-				                    <table class="table table-bordered table-striped table-hover">
-				                        <thead>
-				                            <tr>
-				                              	<th>No.</th>
-												<th>No. Group</th>
-												<th>ชื่อไกด์</th>
-												<th>ชื่อหัวหน้าทัวร์</th>
-												<th>ชื่อเอเยนต์</th>
-												<th>ชื่อรายการ</th>
-												<th>จำนวนคน</th>
-												<th>รับ</th>
-												<th>ส่ง</th>
-												<th>โรงแรม 1</th>
-												<th>โรงแรม 2</th>
-												<th>โรงแรม 3</th>
-												<th>โรงแรม 4</th>
-												<th>รายละเอียด</th>
-				                          	</tr>
-				                       	</thead>
-				                        <tbody>
-				                            <tr>
-				                              	<td>1</td>
-				                              	<td>Face book</td>
-				                              	<td>Malorum</td>                        
-				                              	<td><span class="label label-danger">in progress</span></td>
-				                              	<td><span class="badge badge-info">50%</span></td>
-				                              	<td></td>
-				                              	<td></td>
-				                              	<td></td>
-				                              	<td></td>
-				                              	<td></td>
-				                              	<td></td>
-				                              	<td></td>
-				                              	<td></td>
-				                              	<td></td>
-				                          	</tr>
-				                      	</tbody>
-				                  	</table>
-				            	</div>
+				                
 				        	</div>
 						</div>
-					    <div class="clearfix"> </div>
 					</div>
 					<!--main page chit chating end here-->
 				</div>
 				<!--inner block end here-->
+
+				<div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">รายงานข้อมูล Group</h3>
+                <div class="pull-right">
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> ค้นหา</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="filters">
+                        <th><input type="text" class="form-control" placeholder="No" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="No. Group" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="ชื่อไกด์" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="ชื่อหัวหน้าทัวร์" disabled></th>
+                    </tr>
+                    <tr>
+						<th>No.</th>
+						<th>No. Group</th>
+						<th>ชื่อไกด์</th>
+						<th>ชื่อหัวหน้าทัวร์</th>
+						<th>ชื่อเอเยนต์</th>
+						<th>ชื่อรายการ</th>
+						<th>จำนวนคน</th>
+						<th>รับ</th>
+						<th>ส่ง</th>
+						<th>โรงแรม 1</th>
+						<th>โรงแรม 2</th>
+						<th>โรงแรม 3</th>
+						<th>โรงแรม 4</th>
+						<th>รายละเอียด</th>
+                    </tr>
+                </thead>
+                <?php
+            		$selReport = "SELECT * FROM report_group";
+            		$qryReport = $conn->query($selReport);
+            	?>
+                <tbody>
+                	<?php
+                		while($rs = $qryReport->fetch_assoc()){
+                	?>
+                    <tr>
+                      	<td><?php echo (int)$rs['re_group_id']; ?></td>
+                      	<td><?php echo $rs['re_group_code']; ?></td>
+                      	<td><?php echo $rs['re_group_nameguide_th']; ?></td>
+                      	<td><span class="label label-danger"><?php echo $rs['re_group_leadertour']; ?></span></td>
+                      	<td><span class="badge badge-info"><?php echo $rs['re_group_nameagent']; ?></span></td>
+                      	<td><?php echo $rs['re_group_program']; ?></td>
+                      	<td><?php echo $rs['re_group_personqty']; ?></td>
+                      	<td><?php echo $rs['re_group_in_date'].' <BR> '.$rs['re_group_in_time']; ?></td>
+                      	<td><?php echo $rs['re_group_out_date'].' <BR> '.$rs['re_group_out_time']; ?></td>
+                      	<td><?php echo $rs['re_group_hotel1']; ?></td>
+                      	<td><?php echo $rs['re_group_hotel2']; ?></td>
+                      	<td><?php echo $rs['re_group_hotel3']; ?></td>
+                      	<td><?php echo $rs['re_group_hotel4']; ?></td>
+                      	<td></td>
+                  	</tr>
+                  	<?php } ?>
+              	</tbody>
+            </table>
+        </div>
 
 				<!--copy rights start here-->
 				<div class="copyrights">
@@ -238,6 +252,8 @@
     <script src="//cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
     <script>window.modernizr || document.write('<script src="lib/modernizr/modernizr-custom.js"><\/script>')</script>
     <!--<script src="lib/html5shiv/html5shiv.js"></script>-->
+    <!-- Table Snipp -->
+    <script src="../assets/js/table-snipp.js"></script>
      <!-- Chartinator  -->
     <script src="../assets/js/chartinator.js" ></script>
     <script type="text/javascript">

@@ -6,7 +6,7 @@
 		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		        	<h4 class="modal-title text-center">ข้อมูลไกด์</h4>
 		      	</div>
-		      	<form method="post" class="form-horizontal" name="frmAddGuide" action="ins_guidechk.php">
+		      	<form method="post" class="form-horizontal" name="frmAddGuide" action="add_report/ins_guidechk.php">
 			      	<div class="modal-body">
 				      	<div class="form-group">
 						    <label for="re_group_code" class="col-sm-2 control-label">กรุ๊ปโค้ด</label>
@@ -39,19 +39,19 @@
 						    <div class="col-sm-3">
 						      	<div class="radio">
 								  <label>
-								    <input type="checkbox" name="final" id="final" value="Final">
+								    <input type="checkbox" name="final" id="final" value="10">
 								    Final
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="no_final" id="no_final" value="No Final">
+								    <input type="checkbox" name="no_final" id="no_final" value="20">
 								    No Final
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="edit" id="edit" value="Edit">
+								    <input type="checkbox" name="edit" id="edit" value="30">
 								    มีการแก้ไข
 								  </label>
 								</div>
@@ -59,13 +59,13 @@
 						    <div class="col-sm-3">
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="normal" id="normal" value="Normal">
+								    <input type="checkbox" name="normal" id="normal" value="10">
 								    Normal
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="no_shop" id="no_shop" value="No Shop">
+								    <input type="checkbox" name="no_shop" id="no_shop" value="20">
 								    No Shop
 								  </label>
 								</div>
@@ -79,7 +79,8 @@
 						    </div>
 						    <label for="re_group_in" class="col-sm-2 col-sm-pull-1 control-label">รับ</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="text" class="form-control" id="re_group_in" name="re_group_in" placeholder="Email">
+						      	<input type="date" class="form-control" id="re_group_in_date" name="re_group_in_date">
+						      	<input type="time" class="form-control" id="re_group_in_time" name="re_group_in_time">
 						    </div>
 						    <label for="re_group_flight_in" class="col-sm-2 col-sm-pull-1 control-label">Flight-In</label>
 						    <div class="col-sm-2 col-sm-pull-1">
@@ -94,7 +95,8 @@
 						    </div>
 						    <label for="re_group_out" class="col-sm-2 col-sm-pull-1 control-label">ส่ง</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="text" class="form-control" id="re_group_out" name="re_group_out" placeholder="Email">
+						      	<input type="date" class="form-control" id="re_group_out_date" name="re_group_out_date">
+						      	<input type="time" class="form-control" id="re_group_out_time" name="re_group_out_time">
 						    </div>
 						    <label for="re_group_flight_out" class="col-sm-2 col-sm-pull-1 control-label">Flight-Out</label>
 						    <div class="col-sm-2 col-sm-pull-1">
@@ -122,19 +124,19 @@
 						    <div class="col-sm-3 col-sm-offset-2">
 						      	<div class="radio">
 								  <label for="plan">
-								    <input type="checkbox" name="plan" id="plan" value="Plan">
+								    <input type="checkbox" name="plan" id="plan" value="10">
 								    Plan
 								  </label>
 								</div>
 								<div class="radio">
 								  <label for="call">
-								    <input type="checkbox" name="call" id="call" value="Call">
+								    <input type="checkbox" name="call" id="call" value="30">
 								    Call
 								  </label>
 								</div>
 								<div class="radio">
 								  <label for="confirm">
-								    <input type="checkbox" name="confirm" id="confirm" value="Confirm">
+								    <input type="checkbox" name="confirm" id="confirm" value="50">
 								    Confirm
 								  </label>
 								</div>
@@ -142,13 +144,13 @@
 						    <div class="col-sm-3">
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="fit" id="fit" value="Fit">
+								    <input type="checkbox" name="fit" id="fit" value="40">
 								    Fit
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="transfer" id="transfer" value="Transfer">
+								    <input type="checkbox" name="transfer" id="transfer" value="20">
 								    Transfer
 								  </label>
 								</div>
