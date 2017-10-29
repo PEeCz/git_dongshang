@@ -98,13 +98,9 @@
 					<!--mainpage chit-chating-->
 					<div class="chit-chat-layer1">
 						<div class="col-md-12 chit-chat-layer1-left">
-				           <div class="work-progres">
-				                <div class="chit-chat-heading">
-				                	<a id="<?php echo $rs['user_id']; ?>" class="btn btn-sm btn-success btn_addGuide">เพิ่มข้อมูลไกด์</a>
-				                	รายงานข้อมูลไกด์
-				                </div>
-				                
-				        	</div>
+			                <div class="chit-chat-heading">
+			                	<a id="<?php echo $rs['user_id']; ?>" class="btn btn-lg btn-success btn_addGuide">เพิ่มข้อมูลกรุ๊ป</a>
+			                </div>
 						</div>
 					</div>
 					<!--main page chit chating end here-->
