@@ -100,7 +100,7 @@
 						<div class="col-md-12 chit-chat-layer1-left">
 				           <div class="work-progres">
 				                <div class="chit-chat-heading">
-				                	<a id="<?php echo $rs['user_id']; ?>" class="btn btn-xs btn-success btn_addGuide">เพิ่มข้อมูลไกด์</a>
+				                	<a id="<?php echo $rs['user_id']; ?>" class="btn btn-sm btn-success btn_addGuide">เพิ่มข้อมูลไกด์</a>
 				                	รายงานข้อมูลไกด์
 				                </div>
 				                
@@ -115,32 +115,32 @@
             <div class="panel-heading">
                 <h3 class="panel-title">รายงานข้อมูล Group</h3>
                 <div class="pull-right">
-                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> ค้นหา</button>
+                    <button class="btn btn-warning btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> ค้นหา</button>
                 </div>
             </div>
-            <table class="table">
+            <table class="table table-bordered">
                 <thead>
                     <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="No" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="#" disabled></th>
                         <th><input type="text" class="form-control" placeholder="No. Group" disabled></th>
                         <th><input type="text" class="form-control" placeholder="ชื่อไกด์" disabled></th>
                         <th><input type="text" class="form-control" placeholder="ชื่อหัวหน้าทัวร์" disabled></th>
                     </tr>
                     <tr>
-						<th>No.</th>
-						<th>No. Group</th>
-						<th>ชื่อไกด์</th>
-						<th>ชื่อหัวหน้าทัวร์</th>
-						<th>ชื่อเอเยนต์</th>
-						<th>ชื่อรายการ</th>
-						<th>จำนวนคน</th>
-						<th>รับ</th>
-						<th>ส่ง</th>
-						<th>โรงแรม 1</th>
-						<th>โรงแรม 2</th>
-						<th>โรงแรม 3</th>
-						<th>โรงแรม 4</th>
-						<th>รายละเอียด</th>
+						<th style="width: 70px;">No.</th>
+						<th style="width: 150px;">No. Group</th>
+						<th style="width: 100px;">ชื่อ<BR>ไกด์</th>
+						<th style="width: 100px;">ชื่อ<BR>หัวหน้าทัวร์</th>
+						<th style="width: 100px;">ชื่อ<BR>เอเยนต์</th>
+						<th style="width: 100px;">ชื่อ<BR>รายการ</th>
+						<th style="width: 40px;">จำนวน<BR>(คน)</th>
+						<th style="width: 200px;">รับ</th>
+						<th style="width: 200px;">ส่ง</th>
+						<th style="width: 50px;">โรงแรม <BR>1</th>
+						<th style="width: 50px;">โรงแรม <BR>2</th>
+						<th style="width: 50px;">โรงแรม <BR>3</th>
+						<th style="width: 50px;">โรงแรม <BR>4</th>
+						<th style="width: 40px;">รายละเอียด</th>
                     </tr>
                 </thead>
                 <?php
@@ -165,7 +165,7 @@
                       	<td><?php echo $rs['re_group_hotel2']; ?></td>
                       	<td><?php echo $rs['re_group_hotel3']; ?></td>
                       	<td><?php echo $rs['re_group_hotel4']; ?></td>
-                      	<td></td>
+                      	<td><a href="#" class="btn btn-sm btn-primary">คลิก</a></td>
                   	</tr>
                   	<?php } ?>
               	</tbody>
