@@ -153,7 +153,15 @@
                 	?>
                     <tr>
                       	<td><?php echo (int)$rs['re_group_id']; ?></td>
-                      	<td><?php echo $rs['re_group_code']; ?></td>
+                      	<td style="background: 
+									<?php
+										if($rs['re_group_kb']!=''){
+											echo "linear-gradient(to bottom, #ff9999 0%, #ff3300 100%);";
+										}
+									?>
+                      	">
+                      		<?php echo $rs['re_group_code']; ?>
+                      	</td>
                       	<td style="background-color:
 									<?php
 										if($rs['re_group_p_t_c_f_con']=='10'){
@@ -223,12 +231,12 @@
 				        </li>
 				        <li>
 				        	<a href="#">
-				        		<i class="fa fa-cogs"></i><span>บอร์ด</span><span class="fa fa-angle-right" style="float: right"></span>
+				        		<i class="fa fa-cogs"></i><span>บอร์ด</span></span>
 				        	</a>
 				        </li>
 				        <li id="menu-comunicacao" >
 				        	<a href="#">
-				        		<i class="fa fa-book nav_icon"></i><span>ยอดชอปปิ้ง</span><span class="fa fa-angle-right" style="float: right"></span>
+				        		<i class="fa fa-book nav_icon"></i><span>ยอดชอปปิ้ง</span></span>
 				        	</a>
 				        </li>
 				        <li>
@@ -237,7 +245,7 @@
 				        </li>
 				        <li id="menu-academico" >
 				        	<a href="#">
-				        		<i class="fa fa-file-text"></i><span>โรงแรมและกอล์ฟ</span><span class="fa fa-angle-right" style="float: right"></span>
+				        		<i class="fa fa-file-text"></i><span>โรงแรมและกอล์ฟ</span></span>
 				        	</a>
 				        </li>
 			      	</ul>

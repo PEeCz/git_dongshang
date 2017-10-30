@@ -4,7 +4,7 @@
     $conn = connect();
 
     $id = $_GET['id'];
-    $sqlDescrip = "SELECT re_group_description FROM report_group WHERE re_group_id='$id'";
+    $sqlDescrip = "SELECT re_group_description,re_group_kb FROM report_group WHERE re_group_id='$id'";
     $qryDescrip = $conn->query($sqlDescrip);
     $rs = $qryDescrip->fetch_assoc();
 ?>
@@ -13,9 +13,9 @@
 		    <div class="modal-content">
 		      	<div class="modal-header">
 		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        	<h4 class="modal-title text-center">รายละเอียด ( Append )</h4>
 		      	</div>
 		      	<div class="modal-body">
+		      		<h4 class="modal-title text-center bg-info">รายละเอียด ( Append ) <i class="fa fa-hand-o-down"></i></h4>
 			      	<div class="well">
 						<?php 
 							if(isset($rs['re_group_description'])!==''){
@@ -25,6 +25,17 @@
 							}
 						?>
 			      	</div>
+			      	<?php 
+						if($rs['re_group_kb']!=''){
+					
+							echo '<h4 class="modal-title text-center bg-danger">รายละเอียด ( KB ไม่ปกติ ) <i class="fa fa-hand-o-down"></i></h4>';
+			      			echo '<div class="well">';
+						
+							echo $rs['re_group_kb']; 
+						
+			      			echo '</div>';
+			      		}
+			      	?>
 				</div>
 		      	<div class="modal-footer">
 		        	<a href="edit_report/edit_group.php?id=<?php echo $id; ?>" class=" btn btn-warning">Edit</a>
