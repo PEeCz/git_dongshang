@@ -107,9 +107,9 @@
 				</div>
 				<!--inner block end here-->
 
-		<div class="panel panel-primary filterable table-responsive">
+		<div class="panel panel-primary filterable table-responsive" style="min-width: 1500px;">
             <div class="panel-heading">
-                <h3 class="panel-title">รายงานข้อมูล Group</h3>
+                <h3 class="panel-title">รายงานข้อมูล Shopping</h3>
                 <div class="pull-right">
                     <button class="btn btn-warning btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> ค้นหา</button>
                 </div>
@@ -120,27 +120,32 @@
                         <th><input type="text" class="form-control" placeholder="ค้นหาจาก ID ของแถว" disabled></th>
                         <th><input type="text" class="form-control" placeholder="ค้นหาจาก กรุ๊ปโค้ด" disabled></th>
                         <th><input type="text" class="form-control" placeholder="ค้นหาจาก ชื่อไกด์" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="ค้นหาจาก ชื่อหัวหน้าทัวร์" disabled></th>
                     </tr>
                 </thead>
             </table>
-            <table class="table table-bordered">
-                <thead class="bg-info">
-                    <tr style="font-size: 12px;">
-						<th style="width: 70px;">No.</th>
-						<th style="width: 150px;">No. Group</th>
-						<th style="width: 100px;">ชื่อ<BR>ไกด์</th>
-						<th style="width: 100px;">ชื่อ<BR>หัวหน้าทัวร์</th>
-						<th style="width: 100px;">ชื่อ<BR>เอเยนต์</th>
-						<th style="width: 100px;">ชื่อ<BR>รายการ</th>
-						<th style="width: 40px;">จำนวน<BR>(คน)</th>
-						<th style="width: 200px;">รับ</th>
-						<th style="width: 200px;">ส่ง</th>
-						<th style="width: 50px;">โรงแรม <BR>1</th>
-						<th style="width: 50px;">โรงแรม <BR>2</th>
-						<th style="width: 50px;">โรงแรม <BR>3</th>
-						<th style="width: 50px;">โรงแรม <BR>4</th>
-						<th style="width: 40px;">รายละเอียด</th>
+            <table class="table table-bordered" style="white-space: nowrap;">
+                <thead>
+                    <tr style="font-size: 12px; table-layout: auto;">
+						<th>No.</th>
+						<th>No.<BR>Group</th>
+						<th>ชื่อ<BR>เอเยนต์</th>
+						<th>จำนวน<BR>(คน)</th>
+						<th>รับ</th>
+						<th>ส่ง</th>
+						<th>จำนวนคน<BR>(เข้าร้าน)</th>
+						<th>จิวเวอรี่</th>
+						<th>กระเป๋า</th>
+						<th>สวนงู</th>
+						<th>ยางพารา</th>
+						<th>GM</th>
+						<th>รังนก<BR><HR>ผ้าไหม</th>
+						<th>วัดประชุม<BR><HR>วัดหนองเกตุ</th>
+						<th>Option<BR>(ไม่คืน)</th>
+						<th>Option<BR>(35%)</th>
+						<th>Option<BR>(50%)</th>
+						<th>เฉลี่ย</th>
+						<th>เฉลี่ย<BR>ไม่รวมผ้าไหม</th>
+						<th>เฉลี่ย<BR>รวมผ้าไหม</th>
                     </tr>
                 </thead>
                 <?php
@@ -151,49 +156,27 @@
                 	<?php
                 		while($rs = $qryReport->fetch_assoc()){
                 	?>
-                    <tr>
+                    <tr style="font-size: 14px;">
                       	<td><?php echo (int)$rs['re_group_id']; ?></td>
                       	<td><?php echo $rs['re_group_code']; ?></td>
-                      	<td style="background-color:
-									<?php
-										if($rs['re_group_p_t_c_f_con']=='10'){
-											echo "#FFFFF;";
-										}elseif($rs['re_group_p_t_c_f_con']=='20'){
-											echo "";
-										}elseif($rs['re_group_p_t_c_f_con']=='30'){
-											echo "#eeee00;";
-										}elseif($rs['re_group_p_t_c_f_con']=='40'){
-											echo "#ff8c00;";
-										}elseif($rs['re_group_p_t_c_f_con']=='50'){
-											echo "#00fa9a;";
-										}
-									?>
-                      	">
-                      		<?php echo $rs['re_group_nameguide_th']; ?>
-                      	</td>
-                      	<td><span class="label label-danger"><?php echo $rs['re_group_leadertour']; ?></span></td>
-                      	<td><span class="badge badge-info"><?php echo $rs['re_group_nameagent']; ?></span></td>
-                      	<td><?php echo $rs['re_group_program']; ?></td>
-                      	<td style="background-color: 
-                      				<?php
-										if($rs['re_group_final']=='10'){
-											echo "#FFFFFF;";
-										}elseif($rs['re_group_final']=='20'){
-											echo "#FF9933;";
-										}elseif($rs['re_group_final']=='30'){
-											echo "#F0F;";
-										}
-									?>
-                      	">
-                      		<?php echo $rs['re_group_personqty']; ?>
-                      	</td>
+                      	<td><?php echo $rs['re_group_nameagent']; ?></td>
+                      	<td><?php echo $rs['re_group_personqty']; ?></td>
                       	<td><?php echo $rs['re_group_in_date'].' <BR> '.$rs['re_group_in_time']; ?></td>
                       	<td><?php echo $rs['re_group_out_date'].' <BR> '.$rs['re_group_out_time']; ?></td>
-                      	<td><?php echo $rs['re_group_hotel1']; ?></td>
-                      	<td><?php echo $rs['re_group_hotel2']; ?></td>
-                      	<td><?php echo $rs['re_group_hotel3']; ?></td>
-                      	<td><?php echo $rs['re_group_hotel4']; ?></td>
-                      	<td><a id="<?php echo $rs['re_group_id']; ?>" class="btn btn-sm btn-primary btn_description">คลิก</a></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
+                      	<td></td>
                   	</tr>
                   	<?php } ?>
               	</tbody>
@@ -323,9 +306,9 @@
 			});	
 		});
 		$(function(){
-			$(".btn_description").on('click',function(){
+			$(".btn_useRoomDescrip_Hotel").on('click',function(){
 				$.ajax({
-				  url :"report_description.php" , // -> Go to use_room_description.php
+				  url :"hotel/use_room_description.php" , // -> Go to use_room_description.php
 				  data:"id="+$(this).attr("id"), // -> data json = send id
 				  type:"GET", // -> Send Method = "GET"
 				  beforeSend: function(){
