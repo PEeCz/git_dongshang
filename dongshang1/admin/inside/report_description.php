@@ -27,7 +27,7 @@
 			      	</div>
 				</div>
 		      	<div class="modal-footer">
-		        	<a href="#" class=" btn btn-warning">Edit</a>
+		        	<a href="edit_report/edit_group.php?id=<?php echo $id; ?>" class=" btn btn-warning">Edit</a>
 		        	<button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
 		      	</div>
 		    </div><!-- /.modal-content -->

@@ -3,7 +3,7 @@
     require '../../static/db.class.php';
     $conn = connect();
 
-    if(!isset($_SESSION['user_status'])!= '100' && !isset($_SESSION['user_status'])!= '500'){
+    if(!isset($_SESSION['user_status'])!= '100' && !isset($_SESSION['user_status'])!= '200' && !isset($_SESSION['user_status'])!= '400' && !isset($_SESSION['user_status'])!= '500'){
         header("Location: ../../index.php");
     }
 
@@ -14,7 +14,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Dongshang Report Guide</title>
+<title>Dongshang Report Group</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Dongshang, ตงซ่าง, ท่องเที่ยว, สถานที่ท่องเที่ยว, สนามกอล์ฟ, โรงแรม, บริษัททัวร์, ทัวร์"/>
@@ -171,8 +171,8 @@
                       	">
                       		<?php echo $rs['re_group_nameguide_th']; ?>
                       	</td>
-                      	<td><span class="label label-danger"><?php echo $rs['re_group_leadertour']; ?></span></td>
-                      	<td><span class="badge badge-info"><?php echo $rs['re_group_nameagent']; ?></span></td>
+                      	<td><?php echo $rs['re_group_leadertour']; ?></td>
+                      	<td><?php echo $rs['re_group_nameagent']; ?></span></td>
                       	<td><?php echo $rs['re_group_program']; ?></td>
                       	<td style="background-color: 
                       				<?php

@@ -3,7 +3,7 @@
     require '../../static/db.class.php';
     $conn = connect();
 
-    if(!isset($_SESSION['user_status'])!= '100' && !isset($_SESSION['user_status'])!= '500'){
+    if(!isset($_SESSION['user_status'])!= '200' && !isset($_SESSION['user_status'])!= '400' && !isset($_SESSION['user_status'])!= '500'){
         header("Location: ../../index.php");
     }
 
