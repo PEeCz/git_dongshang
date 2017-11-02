@@ -14,7 +14,7 @@
                 <ul class="menu">
                     <li><a href="#" data-toggle="modal" data-target="#login-modal">ล็อคอิน</a>
                     </li>
-                    <li><a href="register.php">สมัครสมาชิก</a>
+                    <li><a href="main/register.php">สมัครสมาชิก</a>
                     </li>
                     <li><a href="contact.php">ติดต่อเรา</a>
                     </li>

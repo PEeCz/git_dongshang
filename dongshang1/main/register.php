@@ -32,7 +32,7 @@
 
                         <hr>
 
-                        <form action="chk/register_chk.php" method="post">
+                        <form action="../chk/register_chk.php" method="post">
                             <div class="form-group">
                                 <label for="fullname">Firstname - Surname</label>
                                 <input type="text" class="form-control" id="name" name="fullname">

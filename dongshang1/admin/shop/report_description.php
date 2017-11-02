@@ -28,8 +28,8 @@
 			      	<?php 
 						if($rs['re_group_kb']!=''){
 					
-							echo '<h4 class="modal-title text-center bg-danger kb_text">รายละเอียด ( KB ไม่ปกติ ) <i class="fa fa-hand-o-down"></i></h4>';
-			      			echo '<div class="well kb_text">';
+							echo '<h4 class="modal-title text-center bg-danger">รายละเอียด ( KB ไม่ปกติ ) <i class="fa fa-hand-o-down"></i></h4>';
+			      			echo '<div class="well">';
 						
 							echo $rs['re_group_kb']; 
 						
@@ -38,7 +38,7 @@
 			      	?>
 				</div>
 		      	<div class="modal-footer">
-		        	<a href="edit_report/edit_group.php?id=<?php echo $id; ?>" class=" btn btn-warning">Edit</a>
+		        	<a href="edit_shopping/edit_shop.php?id=<?php echo $id; ?>" class=" btn btn-warning">Edit</a>
 		        	<button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
 		      	</div>
 		    </div><!-- /.modal-content -->

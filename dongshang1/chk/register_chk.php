@@ -1,6 +1,5 @@
 <?php
-require '../static/db.class.php';
-connect();
+require '../static/connect.php';
 
 	$login_user = $_POST['user'];
 	$login_pass = $_POST['pass'];

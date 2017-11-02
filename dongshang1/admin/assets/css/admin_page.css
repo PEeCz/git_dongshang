@@ -1,0 +1,63 @@
+.kb_text{
+	color: #ff0000;
+	font-weight: bolder;
+}
+
+.edit_bgpage{
+	background-color: #f3ae6a;
+}
+
+label#cancel_text{
+	color: #ff0000;
+}
+label#canceled_text{
+	color: #a52a2a;
+}
+
+.square_final{
+	color: #FF9933;
+}
+.square_nofinal{
+	color: #FFFFFF;
+}
+.square_edit{
+	color: #9f79ef;
+}
+.square_plan{
+	color: #FFFFFF;
+}
+.square_fit{
+	color: #ffb3e5;
+}
+.square_call{
+	color: #f5ca0a;
+}
+.square_transfer{
+	color: #FFFFFF;
+}
+.square_confirm{
+	color: #2dd03f;
+}
+
+
+#bgdiv{
+	background-color: #524e52;
+}
+#final{
+	color: #FF9933;
+}
+#edit{
+	color: #9f79ef;
+}
+#plan{
+	color: #FFFFFF;
+}
+#fit{
+	color: #ffb3e5;
+}
+#call{
+	color: #f5ca0a;
+}
+#confirm{
+	color: #2dd03f;
+}

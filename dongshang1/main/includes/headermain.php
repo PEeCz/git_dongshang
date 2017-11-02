@@ -30,24 +30,24 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
 
     <!-- styles -->
-    <link href="../../src/css/font-awesome.css" rel="stylesheet">
-    <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../src/css/animate.min.css" rel="stylesheet">
-    <link href="../../src/css/owl.carousel.css" rel="stylesheet">
-    <link href="../../src/css/owl.theme.css" rel="stylesheet">
+    <link href="../src/css/font-awesome.css" rel="stylesheet">
+    <link href="../src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../src/css/animate.min.css" rel="stylesheet">
+    <link href="../src/css/owl.carousel.css" rel="stylesheet">
+    <link href="../src/css/owl.theme.css" rel="stylesheet">
 
     <!-- theme stylesheet -->
-    <link href="../../src/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="../src/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- your stylesheet with modifications -->
-    <link href="../../src/css/custom.css" rel="stylesheet">
+    <link href="../src/css/custom.css" rel="stylesheet">
 
-    <script src="../../src/js/respond.min.js"></script>
+    <script src="../src/js/respond.min.js"></script>
 
     <link rel="shortcut icon" href="favicon.png">
 
     <!-- Side Bar Dropdown Menu -->
-    <link rel="stylesheet" href="../../src/css/dropdown-sidebar.css">
+    <link rel="stylesheet" href="../src/css/dropdown-sidebar.css">
     
     <style>
     .box-hidden{

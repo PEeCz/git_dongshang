@@ -2,12 +2,12 @@
 	
 		<div class="modal-dialog1" role="document">
 		    <div class="modal-content">
-		      	<div class="modal-header">
+		      	<div class="modal-header bg-primary">
 		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		        	<h4 class="modal-title text-center">ข้อมูลไกด์</h4>
 		      	</div>
 		      	<form method="post" class="form-horizontal" name="frmAddGuide" action="add_report/ins_guidechk.php">
-			      	<div class="modal-body">
+			      	<div class="modal-body" style="background-color: #DCDCDC">
 				      	<div class="form-group">
 						    <label for="re_group_code" class="col-sm-2 control-label">กรุ๊ปโค้ด</label>
 						    <div class="col-sm-2">
@@ -18,16 +18,14 @@
 						    </div>
 						    <label for="re_group_personqty" class="col-sm-2 col-sm-pull-1 control-label">จำนวนคน</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<select class="form-control" id="re_group_personqty" name="re_group_personqty">
+						      	<select class="form-control-static" id="re_group_personqty" name="re_group_personqty">
 						      		<?php 
 						      			for($i=1; $i<=50; $i++){
 						      		?>
 									<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
 									<?php } ?>
 						      	</select>
-						    </div>
-						    <div class="col-sm-2 col-sm-pull-1">
-						    	<label class="control-label"> คน</label>
+						      	<label class="control-label"> คน</label>
 						    </div>
 						</div>
 

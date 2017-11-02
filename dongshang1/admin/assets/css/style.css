@@ -25,9 +25,9 @@ a:hover {
   text-decoration:none;
 }
 .fixed{
-	position: fixed;
+	position: relative;
 	top: 0;
-	 width:87%;
+	 width:100%;
     margin: 0 auto;
 	z-index: 1;
 	background:#fff;
@@ -320,7 +320,7 @@ span.logo-clr{
     outline: none;
 }
 ::-webkit-input-placeholder{
-   color:#7A7B78 !important;
+   color:#bfbfbf !important;
 }
 /*--//search-ends --*/
 /*--- Progress Bar ----*/
@@ -1251,7 +1251,7 @@ span.malorum-pro {
 }
 /*--chit chart layer start here--*/
 .panel {
-    padding: 1em 1em;
+    padding: 1em 0em;
     margin-bottom:0px;
     background: none;
     box-shadow: none;
