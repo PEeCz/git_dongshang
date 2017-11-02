@@ -55,11 +55,18 @@
 						    <label for="re_group_personqty" class="col-sm-2 col-sm-pull-1 control-label">จำนวนคน</label>
 						    <div class="col-sm-2 col-sm-pull-1">
 						      	<select class="form-control-static" id="re_group_personqty" name="re_group_personqty">
-						      		<?php 
+						      		<option value="<?php echo $rs['re_group_personqty']; ?>" selected><?php echo $rs['re_group_personqty']; ?></option>"
+						      		<?php
 						      			for($i=1; $i<=50; $i++){
 						      		?>
-									<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-									<?php } ?>
+						      		<option value="">
+						      		<?php 
+					      				if($i != $rs['re_group_personqty']){
+					      					echo $i; 
+						      				}
+						      		} 
+						      		?>
+									</option>
 						      	</select>
 						      	<label class="control-label"> คน</label>
 						    </div>
