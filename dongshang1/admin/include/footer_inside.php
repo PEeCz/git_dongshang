@@ -33,6 +33,11 @@
 	<!--skycons-icons-->
 	<script src="../assets/js/skycons.js"></script>
 	<!--//skycons-icons-->
+	
+	<!-- pagination -->
+	<script src="../assets/js/jquery.Pagination.js"></script>
+	<!--//pagination -->
+
 	<!-- script-for sticky-nav -->
 		<script>
 			$(document).ready(function() {
@@ -99,6 +104,22 @@
 		});
 
 		</script>
+		<!-- End Modal JS -->
+
+
+		<!-- Pagination JS -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.pagination').pagination({
+			        items: <?php echo $total_records;?>,
+			        itemsOnPage: <?php echo $limit;?>,
+			        cssStyle: 'light-theme',
+					currentPage : <?php echo $page;?>,
+					hrefTextPrefix : 'index.php?page='
+			    });
+			});
+		</script>
+		<!-- End Pagination JS -->
 		<button type="button" class="btn btn-primary btn-lg  sr-only" id="btn_msg1" data-toggle="modal" data-target="#exampleModal">Launch demo modal</button>
 		<div class="modal fade" id="addbookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 			<div class="modal-dialog" id="addbook_dialog_modal" role="document"></div>

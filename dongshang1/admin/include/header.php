@@ -20,5 +20,8 @@
 
 <!-- Admin Page CSS -->
 <link href="../assets/css/admin_page.css" rel="stylesheet" type="text/css">
-	
+
+<!-- Pagination CSS -->
+<link href="../assets/css/Pagination.css" rel="stylesheet" type="text/css">
+
 </head>

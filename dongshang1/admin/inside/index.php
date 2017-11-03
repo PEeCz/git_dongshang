@@ -22,7 +22,20 @@
 
     $sql = "SELECT * FROM user WHERE user_status='100' OR user_status='500'";
     $qry = $conn->query($sql);
-    $rs = $qry->fetch_assoc();
+    $rsUser = $qry->fetch_assoc();
+
+    // Start Pagination And SELECT .. ORDER BY .. And LIMIT ..... , ..... -------------------
+	$limit = 20;  
+	if (isset($_GET["page"])) { 
+		$page  = $_GET["page"]; 
+	} else {
+	 	$page=1; 
+	};  
+
+	$start_from = ($page-1) * $limit;  
+
+	$sqlPagination = "SELECT * FROM report_group WHERE re_group_id LIMIT $start_from, $limit";  
+	$qryPagination  = $conn->query($sqlPagination);
 
 
     require '../include/header.php';
@@ -105,12 +118,16 @@
                     </tr>
                 </thead>
                 <?php
+
+                /*
             		$selReport = "SELECT * FROM report_group";
             		$qryReport = $conn->query($selReport);
+            		*/
             	?>
                 <tbody>
                 	<?php
-                		while($rs = $qryReport->fetch_assoc()){
+                		while($rs = $qryPagination->fetch_assoc()){
+                		//while($rs = $qryReport->fetch_assoc()){
                 	?>
                     <tr style="font-size: 14px; background-color: 
 									<?php
@@ -177,7 +194,20 @@
                   	<?php } ?>
               	</tbody>
             </table>
+            
         </div>
+        <?php  
+				$sql = "SELECT COUNT(re_group_id) FROM report_group";  
+				$rs_result = $conn->query($sql);  
+				$row = mysqli_fetch_row($rs_result);  
+				$total_records = $row[0];  
+				$total_pages = ceil($total_records / $limit);  
+				$pagLink = "<nav><ul class='pagination'>";  
+				for ($i=1; $i<=$total_pages; $i++) {  
+				             $pagLink .= "<li><a href='index.php?page=".$i."'>".$i."</a></li>";  
+				};  
+				echo $pagLink . "</ul></nav>";  
+		?>
 
 				<!--copy rights start here-->
 				<div class="copyrights">
