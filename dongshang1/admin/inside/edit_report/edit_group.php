@@ -42,7 +42,7 @@
 	<div class="container">
 		<div class="well edit_bgpage">
 			<div class="row">
-				<form method="post" class="form-horizontal" name="frmAddGuide" action="update_edit_group.php">
+				<form method="post" class="form-horizontal" name="frmAddGuide" action="update_edit_group.php?id_user=<?php echo $_SESSION['user_id'] ?>">
 			      	<div class="modal-body">
 				      	<div class="form-group">
 						    <label for="ed_group_code" class="col-sm-2 control-label">กรุ๊ปโค้ด</label>
@@ -59,7 +59,7 @@
 						      		<?php
 						      			for($i=1; $i<=50; $i++){
 						      		?>
-						      		<option value="">
+						      		<option value="<?php echo $i; ?>">
 						      		<?php 
 					      				if($i != $rs['re_group_personqty']){
 					      					echo $i; 
@@ -303,9 +303,8 @@
 			      	<div class="form-group">
 			      		<div class="col-sm-12 text-center">
 				        	<input type="submit" name="save" class=" btn btn-lg btn-success" value="แก้ไข">
-				        	<input type="hidden" name="id" value="<?php echo $id; ?>">
 				        	<a href="../index.php" class="btn btn-lg btn-danger" data-dismiss="modal">กลับหน้าหลัก</a>
-			        </div>
+			        	</div>
 			      	</div>
 		      	</form>
 		    </div>

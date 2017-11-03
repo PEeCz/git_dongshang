@@ -5,6 +5,8 @@
 
 	$conn = connect();
 
+	$id_user = $_GET['id_user'];
+
 	$ed_group_in_date = strtotime($_POST['ed_group_in_date']);
 	$ed_group_in_time = strtotime($_POST['ed_group_in_time']);
 
@@ -37,7 +39,7 @@
 	$ed_group_description = $_POST['ed_group_description'];
 	$ed_group_kb = $_POST['ed_group_kb'];
 	$ed_group_cancel_group = $_POST['cancel_group1'].''.$_POST['cancel_group2'];
-	$edit_by_id = $_POST['id'];
+	$edit_by_iduser = $id_user;
 
 
 	/*$nameTable = 'edit_group';
@@ -130,7 +132,7 @@
 								'$ed_group_p_t_c_f_con',
 								'$ed_group_cancel_group',
 								NOW(),
-								'$edit_by_id'
+								'$edit_by_iduser'
 							)";
 	$qry = mysqli_query($conn, $insEdit);
 	if($qry){
