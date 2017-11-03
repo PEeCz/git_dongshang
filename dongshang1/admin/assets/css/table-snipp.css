@@ -2,6 +2,7 @@
     background-color: #fff;
     margin-top: 15px;
     margin-left: 10px;
+    float: left;
 }
 .filterable .panel-heading .pull-right {
     margin-top: -20px;

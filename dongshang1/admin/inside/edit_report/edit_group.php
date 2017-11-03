@@ -42,19 +42,19 @@
 	<div class="container">
 		<div class="well edit_bgpage">
 			<div class="row">
-				<form method="post" class="form-horizontal" name="frmAddGuide" action="add_report/ins_guidechk.php">
+				<form method="post" class="form-horizontal" name="frmAddGuide" action="update_edit_group.php">
 			      	<div class="modal-body">
 				      	<div class="form-group">
-						    <label for="re_group_code" class="col-sm-2 control-label">กรุ๊ปโค้ด</label>
+						    <label for="ed_group_code" class="col-sm-2 control-label">กรุ๊ปโค้ด</label>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_code" name="re_group_code" value="<?php echo $rs['re_group_code']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_code" name="ed_group_code" value="<?php echo $rs['re_group_code']; ?>">
 						    </div>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_agent" name="re_group_agent" value="<?php echo $rs['re_group_agent']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_agent" name="ed_group_agent" value="<?php echo $rs['re_group_agent']; ?>">
 						    </div>
-						    <label for="re_group_personqty" class="col-sm-2 col-sm-pull-1 control-label">จำนวนคน</label>
+						    <label for="ed_group_personqty" class="col-sm-2 col-sm-pull-1 control-label">จำนวนคน</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<select class="form-control-static" id="re_group_personqty" name="re_group_personqty">
+						      	<select class="form-control-static" id="ed_group_personqty" name="ed_group_personqty">
 						      		<option value="<?php echo $rs['re_group_personqty']; ?>" selected><?php echo $rs['re_group_personqty']; ?></option>"
 						      		<?php
 						      			for($i=1; $i<=50; $i++){
@@ -73,13 +73,13 @@
 						    <div class="col-sm-2">
 							    <div class="radio">
 								  	<label id="cancel_text">
-								  		<input type="radio" name="cancel_group" value="10">
+								  		<input type="radio" name="cancel_group1" value="10">
 								  		Cancel Group
 								  	</label>
 								</div>
 								<div class="radio">
 								  	<label id="canceled_text">
-								  		<input type="radio" name="cancel_group" value="20">
+								  		<input type="radio" name="cancel_group2" value="20">
 								  		ยกเลิกการ Cancel
 								  	</label>
 								</div>
@@ -87,9 +87,9 @@
 						</div>
 
 						<div class="form-group">
-						    <label for="re_group_leadertour" class="col-sm-2 control-label">ชื่อหัวหน้าทัวร์</label>
+						    <label for="ed_group_leadertour" class="col-sm-2 control-label">ชื่อหัวหน้าทัวร์</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_leadertour" name="re_group_leadertour" value="<?php echo $rs['re_group_leadertour']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_leadertour" name="ed_group_leadertour" value="<?php echo $rs['re_group_leadertour']; ?>">
 						    </div>
 						    <div class="col-sm-3">
 						      	<div class="radio">
@@ -158,51 +158,51 @@
 						</div>
 
 						<div class="form-group">
-						    <label for="re_group_nameagent" class="col-sm-2 control-label">ชื่อเอเย่นต์</label>
+						    <label for="ed_group_nameagent" class="col-sm-2 control-label">ชื่อเอเย่นต์</label>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_nameagent" name="re_group_nameagent" value="<?php echo $rs['re_group_nameagent']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_nameagent" name="ed_group_nameagent" value="<?php echo $rs['re_group_nameagent']; ?>">
 						    </div>
-						    <label for="re_group_in" class="col-sm-2 col-sm-pull-1 control-label">รับ</label>
+						    <label for="ed_group_in" class="col-sm-2 col-sm-pull-1 control-label">รับ</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="date" class="form-control" id="re_group_in_date" name="re_group_in_date" value="<?php echo $rs['re_group_in_date']; ?>">
-						      	<input type="time" class="form-control" id="re_group_in_time" name="re_group_in_time" value="<?php echo $rs['re_group_in_time']; ?>">
+						      	<input type="date" class="form-control" id="ed_group_in_date" name="ed_group_in_date" value="<?php echo $rs['re_group_in_date']; ?>">
+						      	<input type="time" class="form-control" id="ed_group_in_time" name="ed_group_in_time" value="<?php echo $rs['re_group_in_time']; ?>">
 						    </div>
-						    <label for="re_group_flight_in" class="col-sm-2 col-sm-pull-1 control-label">Flight-In</label>
+						    <label for="ed_group_flight_in" class="col-sm-2 col-sm-pull-1 control-label">Flight-In</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="text" class="form-control" id="re_group_flight_in" name="re_group_flight_in" value="<?php echo $rs['re_group_flight_in']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_flight_in" name="ed_group_flight_in" value="<?php echo $rs['re_group_flight_in']; ?>">
 						    </div>
 						</div>
 
 						<div class="form-group">
-						    <label for="re_group_program" class="col-sm-2 control-label">ชื่อรายการ</label>
+						    <label for="ed_group_program" class="col-sm-2 control-label">ชื่อรายการ</label>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_program" name="re_group_program" value="<?php echo $rs['re_group_program']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_program" name="ed_group_program" value="<?php echo $rs['re_group_program']; ?>">
 						    </div>
-						    <label for="re_group_out" class="col-sm-2 col-sm-pull-1 control-label">ส่ง</label>
+						    <label for="ed_group_out" class="col-sm-2 col-sm-pull-1 control-label">ส่ง</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="date" class="form-control" id="re_group_out_date" name="re_group_out_date" value="<?php echo $rs['re_group_out_date']; ?>">
-						      	<input type="time" class="form-control" id="re_group_out_time" name="re_group_out_time" value="<?php echo $rs['re_group_out_time']; ?>">
+						      	<input type="date" class="form-control" id="ed_group_out_date" name="ed_group_out_date" value="<?php echo $rs['re_group_out_date']; ?>">
+						      	<input type="time" class="form-control" id="ed_group_out_time" name="ed_group_out_time" value="<?php echo $rs['re_group_out_time']; ?>">
 						    </div>
-						    <label for="re_group_flight_out" class="col-sm-2 col-sm-pull-1 control-label">Flight-Out</label>
+						    <label for="ed_group_flight_out" class="col-sm-2 col-sm-pull-1 control-label">Flight-Out</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="text" class="form-control" id="re_group_flight_out" name="re_group_flight_out" value="<?php echo $rs['re_group_flight_out']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_flight_out" name="ed_group_flight_out" value="<?php echo $rs['re_group_flight_out']; ?>">
 						    </div>
 						</div>
 						<div class="form-group">
-						    <label for="re_group_description" class="col-sm-2 control-label">รายละเอียด</label>
+						    <label for="ed_group_description" class="col-sm-2 control-label">รายละเอียด</label>
 						    <div class="col-sm-10">
-						      	<textarea class="form-control" rows="5" id="re_group_description" name="re_group_description"><?php echo $rs['re_group_description']; ?></textarea>
+						      	<textarea class="form-control" rows="5" id="ed_group_description" name="ed_group_description"><?php echo $rs['re_group_description']; ?></textarea>
 						    </div>
 						</div>
 						<HR style="border-width: 5px;">
 						<div class="form-group">
-						    <label for="re_group_nameguide_th" class="col-sm-2 control-label">ชื่อไกด์ (ไทย)</label>
+						    <label for="ed_group_nameguide_th" class="col-sm-2 control-label">ชื่อไกด์ (ไทย)</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_nameguide_th" name="re_group_nameguide_th" value="<?php echo $rs['re_group_nameguide_th']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_nameguide_th" name="ed_group_nameguide_th" value="<?php echo $rs['re_group_nameguide_th']; ?>">
 						    </div>
-						    <label for="re_group_nameguide_cn" class="col-sm-2 control-label">ชื่อไกด์ (จีน)</label>
+						    <label for="ed_group_nameguide_cn" class="col-sm-2 control-label">ชื่อไกด์ (จีน)</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_nameguide_cn" name="re_group_nameguide_cn" value="<?php echo $rs['re_group_nameguide_cn']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_nameguide_cn" name="ed_group_nameguide_cn" value="<?php echo $rs['re_group_nameguide_cn']; ?>">
 						    </div>
 						</div>
 						<div class="form-group">
@@ -272,37 +272,38 @@
 						    </div>
 						</div>
 						<div class="form-group">
-						    <label for="re_group_kb" class="col-sm-2 control-label">KB ไม่ปกติ</label>
+						    <label for="ed_group_kb" class="col-sm-2 control-label">KB ไม่ปกติ</label>
 						    <div class="col-sm-10">
-						      	<textarea class="form-control kb_text" rows="5" id="re_group_kb" name="re_group_kb">
+						      	<textarea class="form-control kb_text" rows="5" id="ed_group_kb" name="ed_group_kb">
 						      		<?php echo $rs['re_group_kb']; ?>
 						      	</textarea>
 						    </div>
 						</div>
 						<div class="form-group">
-						    <label for="re_group_hotel1" class="col-sm-2 control-label">โรงแรมที่ 1</label>
+						    <label for="ed_group_hotel1" class="col-sm-2 control-label">โรงแรมที่ 1</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_hotel1" name="re_group_hotel1" value="<?php echo $rs['re_group_hotel1']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_hotel1" name="ed_group_hotel1" value="<?php echo $rs['re_group_hotel1']; ?>">
 						    </div>
-						    <label for="re_group_hotel2" class="col-sm-2 control-label">โรงแรมที่ 2</label>
+						    <label for="ed_group_hotel2" class="col-sm-2 control-label">โรงแรมที่ 2</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_hotel2" name="re_group_hotel2" value="<?php echo $rs['re_group_hotel2']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_hotel2" name="ed_group_hotel2" value="<?php echo $rs['re_group_hotel2']; ?>">
 						    </div>
 						</div>
 						<div class="form-group">
-						    <label for="re_group_hotel3" class="col-sm-2 control-label">โรงแรมที่ 3</label>
+						    <label for="ed_group_hotel3" class="col-sm-2 control-label">โรงแรมที่ 3</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_hotel3" name="re_group_hotel3" value="<?php echo $rs['re_group_hotel3']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_hotel3" name="ed_group_hotel3" value="<?php echo $rs['re_group_hotel3']; ?>">
 						    </div>
-						    <label for="re_group_hotel4" class="col-sm-2 control-label">โรงแรมที่ 4</label>
+						    <label for="ed_group_hotel4" class="col-sm-2 control-label">โรงแรมที่ 4</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_hotel4" name="re_group_hotel4" value="<?php echo $rs['re_group_hotel4']; ?>">
+						      	<input type="text" class="form-control" id="ed_group_hotel4" name="ed_group_hotel4" value="<?php echo $rs['re_group_hotel4']; ?>">
 						    </div>
 						</div>
 					</div>
 			      	<div class="form-group">
 			      		<div class="col-sm-12 text-center">
 				        	<input type="submit" name="save" class=" btn btn-lg btn-success" value="แก้ไข">
+				        	<input type="hidden" name="id" value="<?php echo $id; ?>">
 				        	<a href="../index.php" class="btn btn-lg btn-danger" data-dismiss="modal">กลับหน้าหลัก</a>
 			        </div>
 			      	</div>

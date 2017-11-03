@@ -125,7 +125,7 @@ a:hover {
   transition-delay: 300ms;
 }
 .sidebar-menu {
-  position: absolute;
+  position: fixed;
   float: left;
   width: 220px;
   top: 0px;
@@ -3236,7 +3236,7 @@ li.dropdown.head-dpdn a.dropdown-toggle {
     width: 50%;
 }
 .fixed {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 85%;
 }
@@ -3727,7 +3727,6 @@ span.malorum-pro {
 }
 @media (max-width:768px){
 .page-container {
-	min-width:650px;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -3738,13 +3737,14 @@ span.malorum-pro {
 	margin: 0px auto;
  }
 .sidebar-menu {
-	position:absolute;
+	position:fixed;
 	float: left;
 	width: 170px;
 }
 .left-content {
 	float: right;
     width: 92%;
+    padding-left: 150px;
 }
 .page-container.sidebar-collapsed {
 	transition: all 100ms linear;
@@ -3758,6 +3758,7 @@ span.malorum-pro {
 }
 .page-container.sidebar-collapsed-back {
 	transition: all 100ms linear;
+  margin-left: -150px;
 }
 .page-container.sidebar-collapsed-back .left-content {
 	transition: all 100ms linear;
@@ -3766,6 +3767,7 @@ span.malorum-pro {
 	transition: all 0.3s ease;
 	float: right;
 	width: 92%;
+  padding-left: 150px;
 }
 .page-container.sidebar-collapsed .sidebar-menu {
 	 width:180px;	
@@ -3997,7 +3999,7 @@ canvas#line {
 }
 @media (max-width:600px){
 .page-container {
-    min-width: 600px;
+    min-width: 800px;
 }
 canvas#bar {
     width: 445px !important;
@@ -4011,7 +4013,7 @@ canvas#line {
 }
 @media (max-width:568px){
 .page-container {
-    min-width: 565px;
+    min-width: 700px;
 }
 canvas#bar {
     width: 409px !important;
@@ -4215,7 +4217,7 @@ canvas#line {
 }
 @media (max-width:414px){
 .page-container {
-    min-width: 410px;
+    min-width: 600px;
 }
 canvas#bar {
     width: 295px !important;
@@ -4235,7 +4237,7 @@ canvas#line {
 }
 @media (max-width:384px){
 .page-container {
-    min-width: 380px;
+    min-width: 600px;
 }
 .left-content {
     width: 83%;
@@ -4310,12 +4312,12 @@ canvas#pie {
 }
 @media (max-width:375px){
 .page-container {
-    min-width: 375px;
+    min-width: 600px;
 }
 }
 @media (max-width:320px){
 .page-container {
-    min-width: 303px;
+    min-width: 500px;
 }
 .logo-name h1 {
     font-size: 1.4em;

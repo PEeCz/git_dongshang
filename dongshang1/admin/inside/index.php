@@ -45,19 +45,19 @@
 			                	<a id="<?php echo $rs['user_id']; ?>" class="btn btn-lg btn-success btn_addGuide">เพิ่มข้อมูลกรุ๊ป</a>
 			                </div>
 						</div>
-						<div class="col-md-3 chit-chat-layer1-left" id="bgdiv">
+						<div class="col-md-3 chit-chat-layer1-right" id="bgdiv">
 			                <div class="chit-chat-heading">
 			                	<p id="confirm">สีเขียว = Confirm</p>
 			                	<p id="call">สีเหลืองอ่อน = Call</p>
 			                </div>
 						</div>
-						<div class="col-md-3 chit-chat-layer1-left" id="bgdiv">
+						<div class="col-md-3 chit-chat-layer1-right" id="bgdiv">
 			                <div class="chit-chat-heading">
 			                	<p id="fit">สีชมพูอ่อน = FIT</p>
 			                	<p id="plan">สีขาว = Plan / No Final</p>
 			                </div>
 						</div>
-						<div class="col-md-3 chit-chat-layer1-left" id="bgdiv">
+						<div class="col-md-3 chit-chat-layer1-right" id="bgdiv">
 			                <div class="chit-chat-heading">
 								<p id="edit">สีม่วง = มีการแก้ไข</p>
 								<p id="final">สีส้ม = Final</p>
