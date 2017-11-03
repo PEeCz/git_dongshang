@@ -42,7 +42,7 @@
 	<div class="container">
 		<div class="well edit_bgpage">
 			<div class="row">
-				<form method="post" class="form-horizontal" name="frmAddGuide" action="update_edit_group.php?id_user=<?php echo $_SESSION['user_id'] ?>">
+				<form method="post" class="form-horizontal" name="frmAddGuide" action="update_edit_group.php?id_user=<?php echo $_SESSION['user_id'] ?>&group_id=<?php echo $id; ?>">
 			      	<div class="modal-body">
 				      	<div class="form-group">
 						    <label for="ed_group_code" class="col-sm-2 control-label">กรุ๊ปโค้ด</label>
@@ -73,13 +73,13 @@
 						    <div class="col-sm-2">
 							    <div class="radio">
 								  	<label id="cancel_text">
-								  		<input type="radio" name="cancel_group1" value="10">
+								  		<input type="radio" name="cancel[]" value="10">
 								  		Cancel Group
 								  	</label>
 								</div>
 								<div class="radio">
 								  	<label id="canceled_text">
-								  		<input type="radio" name="cancel_group2" value="20">
+								  		<input type="radio" name="cancel[]" value="20">
 								  		ยกเลิกการ Cancel
 								  	</label>
 								</div>
@@ -94,7 +94,7 @@
 						    <div class="col-sm-3">
 						      	<div class="radio">
 								  <label>
-								    <input type="checkbox" name="final" id="final" value="10" 
+								    <input type="checkbox" name="final[]" id="final[]" value="10" 
 										<?php
 											if($rs['re_group_final']=='10'){
 												echo "checked";
@@ -106,7 +106,7 @@
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="no_final" id="no_final" value="20"
+								    <input type="checkbox" name="final[]" id="final[]" value="20"
 										<?php
 											if($rs['re_group_final']=='20'){
 												echo "checked";
@@ -118,7 +118,7 @@
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="edit" id="edit" value="30"
+								    <input type="checkbox" name="final[]" id="final[]" value="30"
 										<?php
 											if($rs['re_group_final']=='30'){
 												echo "checked";
@@ -132,7 +132,7 @@
 						    <div class="col-sm-3">
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="normal" id="normal" value="10"
+								    <input type="checkbox" name="normal_noshop[]" id="normal_noshop[]" value="10"
 										<?php
 											if($rs['re_group_normal_noshop']=='10'){
 												echo "checked";
@@ -144,7 +144,7 @@
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="no_shop" id="no_shop" value="20"
+								    <input type="checkbox" name="normal_noshop[]" id="normal_noshop[]" value="20"
 										<?php
 											if($rs['re_group_normal_noshop']=='20'){
 												echo "checked";
@@ -209,7 +209,7 @@
 						    <div class="col-sm-3 col-sm-offset-2">
 						      	<div class="radio">
 								  <label for="plan">
-								    <input type="checkbox" name="plan" id="plan" value="10"
+								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="10"
 										<?php
 											if($rs['re_group_p_t_c_f_con']=='10'){
 												echo "checked";
@@ -221,7 +221,7 @@
 								</div>
 								<div class="radio">
 								  <label for="call">
-								    <input type="checkbox" name="call" id="call" value="30"
+								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="30"
 										<?php
 											if($rs['re_group_p_t_c_f_con']=='30'){
 												echo "checked";
@@ -233,7 +233,7 @@
 								</div>
 								<div class="radio">
 								  <label for="confirm">
-								    <input type="checkbox" name="confirm" id="confirm" value="50"
+								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="50"
 										<?php
 											if($rs['re_group_p_t_c_f_con']=='50'){
 												echo "checked";
@@ -247,7 +247,7 @@
 						    <div class="col-sm-3">
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="fit" id="fit" value="40"
+								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="40"
 										<?php
 											if($rs['re_group_p_t_c_f_con']=='40'){
 												echo "checked";
@@ -259,7 +259,7 @@
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="transfer" id="transfer" value="20"
+								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="20"
 										<?php
 											if($rs['re_group_p_t_c_f_con']=='20'){
 												echo "checked";

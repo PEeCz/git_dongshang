@@ -37,19 +37,19 @@
 						    <div class="col-sm-3">
 						      	<div class="radio">
 								  <label>
-								    <input type="checkbox" name="final" id="final" value="10">
+								    <input type="checkbox" name="final[]" id="final[]" value="10">
 								    Final
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="no_final" id="no_final" value="20">
+								    <input type="checkbox" name="final[]" id="final[]" value="20">
 								    No Final
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="edit" id="edit" value="30">
+								    <input type="checkbox" name="final[]" id="final[]" value="30">
 								    มีการแก้ไข
 								  </label>
 								</div>
@@ -57,13 +57,13 @@
 						    <div class="col-sm-3">
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="normal" id="normal" value="10">
+								    <input type="checkbox" name="normal_noshop[]" id="normal_noshop[]" value="10">
 								    Normal
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="no_shop" id="no_shop" value="20">
+								    <input type="checkbox" name="normal_noshop[]" id="normal_noshop[]" value="20">
 								    No Shop
 								  </label>
 								</div>
@@ -122,19 +122,19 @@
 						    <div class="col-sm-3 col-sm-offset-2">
 						      	<div class="radio">
 								  <label for="plan">
-								    <input type="checkbox" name="plan" id="plan" value="10">
+								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="10">
 								    Plan
 								  </label>
 								</div>
 								<div class="radio">
 								  <label for="call">
-								    <input type="checkbox" name="call" id="call" value="30">
+								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="30">
 								    Call
 								  </label>
 								</div>
 								<div class="radio">
 								  <label for="confirm">
-								    <input type="checkbox" name="confirm" id="confirm" value="50">
+								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="50">
 								    Confirm
 								  </label>
 								</div>
@@ -142,13 +142,13 @@
 						    <div class="col-sm-3">
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="fit" id="fit" value="40">
+								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="40">
 								    Fit
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
-								    <input type="checkbox" name="transfer" id="transfer" value="20">
+								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="20">
 								    Transfer
 								  </label>
 								</div>

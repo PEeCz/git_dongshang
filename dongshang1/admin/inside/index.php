@@ -64,7 +64,7 @@
 							</div>
 						</div>
 					</div>
-					<BR><BR>
+					<BR><BR><BR>
 					<!--main page chit chating end here-->
 				
 
@@ -135,9 +135,7 @@
                       	</td>
                       	<td class="text-center" style="background-color:
 									<?php
-										if($rs['re_group_p_t_c_f_con']=='40'){
-											echo "#ffb3e5;";
-										}elseif($rs['re_group_p_t_c_f_con']=='10'){
+										if(['re_group_p_t_c_f_con']=='10'){
 											echo "#FFFFF;";
 										}elseif($rs['re_group_p_t_c_f_con']=='20'){
 											echo "";
@@ -157,12 +155,10 @@
                       	<td class="text-center"><?php echo $rs['re_group_program']; ?></td>
                       	<td class="text-center" style="background-color: 
                       				<?php
-										if($rs['re_group_p_t_c_f_con']=='40'){
-											echo "#ffb3e5;";
-										}else if($rs['re_group_final']=='10'){
-											echo "#FFFFFF;";
-										}elseif($rs['re_group_final']=='20'){
+										if($rs['re_group_final']=='10'){
 											echo "#FF9933;";
+										}elseif($rs['re_group_final']=='20'){
+											echo "#FFFFFF;";
 										}elseif($rs['re_group_final']=='30'){
 											echo "#9f79ef;";
 										}
