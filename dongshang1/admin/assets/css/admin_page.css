@@ -61,3 +61,36 @@ label#canceled_text{
 #confirm{
 	color: #2dd03f;
 }
+
+/* Shopping */
+
+.yellow{
+	 color: #FFCC66;
+}
+.white{
+	 color: #FFFFFF;
+}
+.purple{
+	 color: #F0F;
+}
+.green{
+	 color: #999966;
+}
+
+
+.input_bg{
+	background-color: #34ca67;
+	color: 	#2b4ae3;
+}
+.input_bgoption{
+	background-color: #78aacc;
+	color: 	#8b1a1a;
+}
+.input_bgaverage{
+	background-color: #ab82c1;
+	color: #eeee00;
+}
+.kb_textcolor{
+	color: #ff0000;
+	font-weight: bolder;
+}

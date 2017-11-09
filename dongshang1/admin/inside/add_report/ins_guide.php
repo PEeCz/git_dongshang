@@ -1,4 +1,6 @@
-
+<?php
+	$user_id = $_GET['id'];
+?>
 	
 		<div class="modal-dialog1" role="document">
 		    <div class="modal-content">
@@ -6,15 +8,15 @@
 		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		        	<h4 class="modal-title text-center">ข้อมูลไกด์</h4>
 		      	</div>
-		      	<form method="post" class="form-horizontal" name="frmAddGuide" action="add_report/ins_guidechk.php">
+		      	<form method="post" class="form-horizontal" name="frmAddGuide" action="add_report/ins_guidechk.php?id=<?php echo $user_id; ?>">
 			      	<div class="modal-body" style="background-color: #DCDCDC">
 				      	<div class="form-group">
 						    <label for="re_group_code" class="col-sm-2 control-label">กรุ๊ปโค้ด</label>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_code" name="re_group_code" placeholder="กรุ๊ปโค้ด">
+						      	<input type="text" class="form-control" id="re_group_code" name="re_group_code" placeholder="กรุ๊ปโค้ด" required="โปรดใส่ข้อมูล">
 						    </div>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_agent" name="re_group_agent" placeholder="เอเย่นต์โค้ด">
+						      	<input type="text" class="form-control" id="re_group_agent" name="re_group_agent" placeholder="เอเย่นต์โค้ด" required="โปรดใส่ข้อมูล">
 						    </div>
 						    <label for="re_group_personqty" class="col-sm-2 col-sm-pull-1 control-label">จำนวนคน</label>
 						    <div class="col-sm-2 col-sm-pull-1">
@@ -73,7 +75,7 @@
 						<div class="form-group">
 						    <label for="re_group_nameagent" class="col-sm-2 control-label">ชื่อเอเย่นต์</label>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_nameagent" name="re_group_nameagent" placeholder="ชื่อเอเย่นต์">
+						      	<input type="text" class="form-control" id="re_group_nameagent" name="re_group_nameagent" placeholder="ชื่อเอเย่นต์" required="โปรดใส่ข้อมูล">
 						    </div>
 						    <label for="re_group_in" class="col-sm-2 col-sm-pull-1 control-label">รับ</label>
 						    <div class="col-sm-2 col-sm-pull-1">
@@ -82,14 +84,14 @@
 						    </div>
 						    <label for="re_group_flight_in" class="col-sm-2 col-sm-pull-1 control-label">Flight-In</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="text" class="form-control" id="re_group_flight_in" name="re_group_flight_in" placeholder="Email">
+						      	<input type="text" class="form-control" id="re_group_flight_in" name="re_group_flight_in" placeholder="Flight รับ" required="โปรดใส่ข้อมูล">
 						    </div>
 						</div>
 
 						<div class="form-group">
 						    <label for="re_group_program" class="col-sm-2 control-label">ชื่อรายการ</label>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_program" name="re_group_program" placeholder="ชื่อรายการ">
+						      	<input type="text" class="form-control" id="re_group_program" name="re_group_program" placeholder="ชื่อรายการ" required="โปรดใส่ข้อมูล">
 						    </div>
 						    <label for="re_group_out" class="col-sm-2 col-sm-pull-1 control-label">ส่ง</label>
 						    <div class="col-sm-2 col-sm-pull-1">
@@ -98,7 +100,7 @@
 						    </div>
 						    <label for="re_group_flight_out" class="col-sm-2 col-sm-pull-1 control-label">Flight-Out</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="text" class="form-control" id="re_group_flight_out" name="re_group_flight_out" placeholder="Email">
+						      	<input type="text" class="form-control" id="re_group_flight_out" name="re_group_flight_out" placeholder="Flight ส่ง" required="โปรดใส่ข้อมูล">
 						    </div>
 						</div>
 						<div class="form-group">
@@ -111,11 +113,11 @@
 						<div class="form-group">
 						    <label for="re_group_nameguide_th" class="col-sm-2 control-label">ชื่อไกด์ (ไทย)</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_nameguide_th" name="re_group_nameguide_th" placeholder="ชื่อไกด์ (ไทย)">
+						      	<input type="text" class="form-control" id="re_group_nameguide_th" name="re_group_nameguide_th" placeholder="ชื่อไกด์ (ไทย)" required="โปรดใส่ข้อมูล">
 						    </div>
 						    <label for="re_group_nameguide_cn" class="col-sm-2 control-label">ชื่อไกด์ (จีน)</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_nameguide_cn" name="re_group_nameguide_cn" placeholder="ชื่อไกด์ (จีน)">
+						      	<input type="text" class="form-control" id="re_group_nameguide_cn" name="re_group_nameguide_cn" placeholder="ชื่อไกด์ (จีน)" required="โปรดใส่ข้อมูล">
 						    </div>
 						</div>
 						<div class="form-group">

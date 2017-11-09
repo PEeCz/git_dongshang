@@ -125,3 +125,20 @@
 			<div class="modal-dialog" id="addbook_dialog_modal" role="document"></div>
 		</div>
 	<!-- End Add Modal JS -->
+
+		<script>
+			$(document).ready(function(){
+				$("#search").keyup(function(){
+					var txtSearch=$(this).val();
+					$('#result').html('');
+					$.ajax({
+						url: "fetch.php",
+						method: "POST",
+						data: {search:txtSearch},
+						success: function(data){
+							$('#result').html(data);
+						}
+					});
+				});
+			});
+		</script>

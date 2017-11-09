@@ -55,7 +55,7 @@
 					<div class="chit-chat-layer1">
 						<div class="col-md-3 chit-chat-layer1-left">
 			                <div class="chit-chat-heading">
-			                	<a id="<?php echo $rs['user_id']; ?>" class="btn btn-lg btn-success btn_addGuide">เพิ่มข้อมูลกรุ๊ป</a>
+			                	<a id="<?php echo $rsUser['user_id']; ?>" class="btn btn-lg btn-success btn_addGuide">เพิ่มข้อมูลกรุ๊ป</a>
 			                </div>
 						</div>
 						<div class="col-md-3 chit-chat-layer1-right" id="bgdiv">
@@ -85,6 +85,7 @@
             <div class="panel-heading">
                 <h3 class="panel-title">รายงานข้อมูล Group</h3>
                 <div class="pull-right">
+                	<a href="search_advance.php" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-filter"></span> ค้นหาแบบละเอียด</a>
                     <button class="btn btn-warning btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> ค้นหา</button>
                 </div>
             </div>
@@ -131,7 +132,9 @@
                 	?>
                     <tr style="font-size: 14px; background-color: 
 									<?php
-										if($rs['re_group_p_t_c_f_con']=='40'){
+										if($rs['re_group_edit_cancel_group']=='10'){
+											echo "#8c8a8a;";
+										}else if($rs['re_group_p_t_c_f_con']=='40' && $rs['re_group_p_t_c_f_con']!='10'){
 											echo "#ffb3e5;";
 										}
 									?>
@@ -141,7 +144,9 @@
                       	</td>
                       	<td class="text-center" style="background: 
 									<?php
-										if($rs['re_group_p_t_c_f_con']=='40'){
+										if($rs['re_group_edit_cancel_group']=='10'){
+											echo "#8c8a8a;";
+										}elseif($rs['re_group_p_t_c_f_con']=='40'){
 											echo "#ffb3e5;";
 										}elseif($rs['re_group_kb']!=''){
 											echo "linear-gradient(to bottom, #ff9999 0%, #ff3300 100%);";
@@ -152,7 +157,9 @@
                       	</td>
                       	<td class="text-center" style="background-color:
 									<?php
-										if(['re_group_p_t_c_f_con']=='10'){
+										if($rs['re_group_edit_cancel_group']=='10'){
+											echo "#8c8a8a;";
+										}elseif(['re_group_p_t_c_f_con']=='10'){
 											echo "#FFFFF;";
 										}elseif($rs['re_group_p_t_c_f_con']=='20'){
 											echo "";
@@ -172,7 +179,9 @@
                       	<td class="text-center"><?php echo $rs['re_group_program']; ?></td>
                       	<td class="text-center" style="background-color: 
                       				<?php
-										if($rs['re_group_final']=='10'){
+										if($rs['re_group_edit_cancel_group']=='10'){
+											echo "#8c8a8a;";
+										}elseif($rs['re_group_final']=='10'){
 											echo "#FF9933;";
 										}elseif($rs['re_group_final']=='20'){
 											echo "#FFFFFF;";
@@ -197,7 +206,7 @@
             
         </div>
         <?php  
-				$sql = "SELECT COUNT(re_group_id) FROM report_group";  
+				$sql = "SELECT COUNT(re_group_id) FROM report_group";
 				$rs_result = $conn->query($sql);  
 				$row = mysqli_fetch_row($rs_result);  
 				$total_records = $row[0];  

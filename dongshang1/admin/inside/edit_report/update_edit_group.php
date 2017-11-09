@@ -112,7 +112,8 @@
 								ed_group_final='$final',
 								ed_group_p_t_c_f_con='$p_t_c_f_con',
 								ed_group_cancel_group='$cancel',
-								edit_by_id='$edit_by_iduser'
+								edit_by_id='$edit_by_iduser',
+								edit_by_date=NOW()
 
 					WHERE ed_group_id='$group_id'";
 				$editQry1 = mysqli_query($conn, $editSql1);

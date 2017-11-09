@@ -71,7 +71,7 @@
 						<th>รังนก<BR><HR>ผ้าไหม</th>
 						<th>วัดประชุม<BR><HR>วัดหนองเกตุ</th>
 						<th>Option<BR>(ไม่คืน)</th>
-						<th>Option<BR>(35%)</th>
+						<th>Option<BR>(10%)</th>
 						<th>Option<BR>(50%)</th>
 						<th>เฉลี่ย</th>
 						<th>เฉลี่ย<BR>ไม่รวมผ้าไหม</th>
@@ -79,17 +79,43 @@
                     </tr>
                 </thead>
                 <?php
-            		$selReport = "SELECT * FROM report_group";
-            		$qryReport = $conn->query($selReport);
-            	?>
+            		  $selReport = "SELECT 
+                                    rg.re_group_id,rg.re_group_code,rg.re_group_nameagent
+                                    ,rg.re_group_personqty,rg.re_group_in_date
+                                    ,rg.re_group_in_time,rg.re_group_out_date
+                                    ,rg.re_group_out_time,rg.re_group_edit_cancel_group
+                                    ,rg.re_group_nameguide_th,rg.re_group_program
+                                    ,rg.re_group_final,rg.re_group_kb
+                                    ,rg.re_group_p_t_c_f_con
+                                    ,rs.re_shopping_personqty,rs.re_shopping_jewelry
+                                    ,rs.re_shopping_leather,rs.re_shopping_snake_park
+                                    ,rs.re_shopping_rubber,rs.re_shopping_gm
+                                    ,rs.re_shopping_red88,rs.re_shopping_silk
+                                    ,rs.re_shopping_watprachum,rs.re_shopping_watnongket
+                                    
+                                FROM report_group rg
+                                    LEFT OUTER JOIN
+                                        report_shopping rs
+                                ON rg.re_group_id = rs.re_group_id
+                                WHERE rg.re_group_id";
+                  $qryReport = $conn->query($selReport);
+            	 ?>
                 <tbody>
                 	<?php
                 		while($rs = $qryReport->fetch_assoc()){
                 	?>
-                    <tr style="font-size: 14px;">
+                    <tr style="font-size: 14px;"
+                        <?php
+                          if($rs['re_group_edit_cancel_group']=='10'){
+
+                          }else{
+
+                        ?>
+                    >
                       	<td class="text-center">
                       		<?php echo (int)$rs['re_group_id'].' <HR> '; ?>
-                      		<a id="<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-success btn_editShop">Edit</a>
+                      		<a id="<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-success btn_editShop">Add</a>
+                          <a id="<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-warning btn_editShop">Edit</a>
                       	</td>
                       	<td style="background: 
 									<?php
@@ -106,35 +132,35 @@
                       	</td>
                       	<td style="background-color: 
                       				<?php
-										if($rs['re_group_final']=='10'){
-											echo "#FFFFFF;";
-										}elseif($rs['re_group_final']=='20'){
-											echo "#FF9933;";
-										}elseif($rs['re_group_final']=='30'){
-											echo "#F0F;";
-										}
-									?>
+                                  if($rs['re_group_final']=='10'){
+                                    echo "#FF9933;";
+                                  }elseif($rs['re_group_final']=='20'){
+                                    echo "#FFFFFF;";
+                                  }elseif($rs['re_group_final']=='30'){
+                                    echo "#9f79ef;";
+                                  }
+          									  ?>
                       	">
                       		<?php echo $rs['re_group_personqty']; ?>
                       			
                       	</td>
                       	<td><?php echo $rs['re_group_in_date'].' <HR> '.$rs['re_group_in_time']; ?></td>
                       	<td><?php echo $rs['re_group_out_date'].' <HR> '.$rs['re_group_out_time']; ?></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                      	<td></td>
-                  	</tr>
+                      	<td class="text-center"><?php echo $rs['re_shopping_personqty']; ?></td>
+                      	<td class="text-center"><?php echo $rs['re_shopping_jewelry']; ?></td>
+                      	<td class="text-center"><?php echo $rs['re_shopping_leather']; ?></td>
+                      	<td class="text-center"><?php echo $rs['re_shopping_snake_park']; ?></td>
+                      	<td class="text-center"><?php echo $rs['re_shopping_rubber']; ?></td>
+                      	<td class="text-center"><?php echo $rs['re_shopping_gm']; ?></td>
+                      	<td class="text-center"><?php echo $rs['re_shopping_red88'].'<HR>'.$rs['re_shopping_silk']; ?></td>
+                      	<td class="text-center"><?php echo $rs['re_shopping_watprachum'].'<HR>'.$rs['re_shopping_watnongket']; ?></td>
+                      	<td class="text-center"></td>
+                      	<td class="text-center"></td>
+                      	<td class="text-center"></td>
+                      	<td class="text-center"></td>
+                      	<td class="text-center"></td>
+                      	<td class="text-center"></td>
+                  	</tr <?php } ?>>
                   	<?php } ?>
               	</tbody>
             </table>

@@ -28,8 +28,8 @@
 			      	<?php 
 						if($rs['re_group_kb']!=''){
 					
-							echo '<h4 class="modal-title text-center bg-danger">รายละเอียด ( KB ไม่ปกติ ) <i class="fa fa-hand-o-down"></i></h4>';
-			      			echo '<div class="well">';
+							echo '<h4 class="modal-title text-center bg-danger kb_textcolor">รายละเอียด ( KB ไม่ปกติ ) <i class="fa fa-hand-o-down"></i></h4>';
+			      			echo '<div class="well kb_textcolor">';
 						
 							echo $rs['re_group_kb']; 
 						
