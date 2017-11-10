@@ -274,9 +274,7 @@
 						<div class="form-group">
 						    <label for="ed_group_kb" class="col-sm-2 control-label">KB ไม่ปกติ</label>
 						    <div class="col-sm-10">
-						      	<textarea class="form-control kb_text" rows="5" id="ed_group_kb" name="ed_group_kb">
-						      		<?php echo $rs['re_group_kb']; ?>
-						      	</textarea>
+						      	<textarea class="form-control kb_text" rows="5" id="ed_group_kb" name="ed_group_kb"><?php echo $rs['re_group_kb']; ?></textarea>
 						    </div>
 						</div>
 						<div class="form-group">

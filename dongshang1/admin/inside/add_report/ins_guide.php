@@ -16,7 +16,7 @@
 						      	<input type="text" class="form-control" id="re_group_code" name="re_group_code" placeholder="กรุ๊ปโค้ด" required="โปรดใส่ข้อมูล">
 						    </div>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_agent" name="re_group_agent" placeholder="เอเย่นต์โค้ด" required="โปรดใส่ข้อมูล">
+						      	<input type="text" class="form-control" id="re_group_agent" name="re_group_agent" placeholder="เอเย่นต์โค้ด">
 						    </div>
 						    <label for="re_group_personqty" class="col-sm-2 col-sm-pull-1 control-label">จำนวนคน</label>
 						    <div class="col-sm-2 col-sm-pull-1">
@@ -75,32 +75,32 @@
 						<div class="form-group">
 						    <label for="re_group_nameagent" class="col-sm-2 control-label">ชื่อเอเย่นต์</label>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_nameagent" name="re_group_nameagent" placeholder="ชื่อเอเย่นต์" required="โปรดใส่ข้อมูล">
+						      	<input type="text" class="form-control" id="re_group_nameagent" name="re_group_nameagent" placeholder="ชื่อเอเย่นต์">
 						    </div>
 						    <label for="re_group_in" class="col-sm-2 col-sm-pull-1 control-label">รับ</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="date" class="form-control" id="re_group_in_date" name="re_group_in_date">
-						      	<input type="time" class="form-control" id="re_group_in_time" name="re_group_in_time">
+						      	<input type="date" class="form-control" id="re_group_in_date" name="re_group_in_date" required>
+						      	<input type="time" class="form-control" id="re_group_in_time" name="re_group_in_time" >
 						    </div>
 						    <label for="re_group_flight_in" class="col-sm-2 col-sm-pull-1 control-label">Flight-In</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="text" class="form-control" id="re_group_flight_in" name="re_group_flight_in" placeholder="Flight รับ" required="โปรดใส่ข้อมูล">
+						      	<input type="text" class="form-control" id="re_group_flight_in" name="re_group_flight_in" placeholder="Flight รับ">
 						    </div>
 						</div>
 
 						<div class="form-group">
 						    <label for="re_group_program" class="col-sm-2 control-label">ชื่อรายการ</label>
 						    <div class="col-sm-2">
-						      	<input type="text" class="form-control" id="re_group_program" name="re_group_program" placeholder="ชื่อรายการ" required="โปรดใส่ข้อมูล">
+						      	<input type="text" class="form-control" id="re_group_program" name="re_group_program" placeholder="ชื่อรายการ">
 						    </div>
 						    <label for="re_group_out" class="col-sm-2 col-sm-pull-1 control-label">ส่ง</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="date" class="form-control" id="re_group_out_date" name="re_group_out_date">
+						      	<input type="date" class="form-control" id="re_group_out_date" name="re_group_out_date" required>
 						      	<input type="time" class="form-control" id="re_group_out_time" name="re_group_out_time">
 						    </div>
 						    <label for="re_group_flight_out" class="col-sm-2 col-sm-pull-1 control-label">Flight-Out</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="text" class="form-control" id="re_group_flight_out" name="re_group_flight_out" placeholder="Flight ส่ง" required="โปรดใส่ข้อมูล">
+						      	<input type="text" class="form-control" id="re_group_flight_out" name="re_group_flight_out" placeholder="Flight ส่ง">
 						    </div>
 						</div>
 						<div class="form-group">
@@ -113,11 +113,11 @@
 						<div class="form-group">
 						    <label for="re_group_nameguide_th" class="col-sm-2 control-label">ชื่อไกด์ (ไทย)</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_nameguide_th" name="re_group_nameguide_th" placeholder="ชื่อไกด์ (ไทย)" required="โปรดใส่ข้อมูล">
+						      	<input type="text" class="form-control" id="re_group_nameguide_th" name="re_group_nameguide_th" placeholder="ชื่อไกด์ (ไทย)">
 						    </div>
 						    <label for="re_group_nameguide_cn" class="col-sm-2 control-label">ชื่อไกด์ (จีน)</label>
 						    <div class="col-sm-4">
-						      	<input type="text" class="form-control" id="re_group_nameguide_cn" name="re_group_nameguide_cn" placeholder="ชื่อไกด์ (จีน)" required="โปรดใส่ข้อมูล">
+						      	<input type="text" class="form-control" id="re_group_nameguide_cn" name="re_group_nameguide_cn" placeholder="ชื่อไกด์ (จีน)">
 						    </div>
 						</div>
 						<div class="form-group">

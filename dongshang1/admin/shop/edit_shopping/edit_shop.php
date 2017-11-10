@@ -100,17 +100,13 @@
 		      		<div class="form-group">
 					    <div class="col-sm-12">
 					    	รายละเอียด
-					    	<textarea class="form-control" rows="6" id="re_group_description" name="re_group_description" disabled>
-					    		<?php echo $rs['re_group_description']; ?>
-					    	</textarea>
+					    	<textarea class="form-control" rows="6" id="re_group_description" name="re_group_description" disabled><?php echo $rs['re_group_description']; ?></textarea>
 					    </div>
 		      		</div>
 		      		<div class="form-group">
 		      			<div class="col-sm-12">
 		      				KB ไม่ปกติ
-		      				<textarea class="form-control kb_textcolor" rows="6" id="re_group_kb" name="re_group_kb" disabled>
-		      					<?php echo $rs['re_group_kb']; ?>
-		      				</textarea>
+		      				<textarea class="form-control kb_textcolor" rows="6" id="re_group_kb" name="re_group_kb" disabled><?php echo $rs['re_group_kb']; ?></textarea>
 		      			</div>
 		      		</div>
 			    </form>

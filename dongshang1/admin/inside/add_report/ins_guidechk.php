@@ -1,11 +1,14 @@
 <?php
 	session_start();
+	date_default_timezone_set('Asia/Bangkok');
 	require '../../../static/db.class.php';
 	require '../../../static/db.qry.php';
 
 	$conn = connect();
 
 	$user_id = $_GET['id'];
+
+	$create_by = date('Y/m/d H:i:s');
 
 	$re_group_in_date = strtotime($_POST['re_group_in_date']);
 	$re_group_in_time = strtotime($_POST['re_group_in_time']);
@@ -54,12 +57,12 @@
 				're_group_hotel3'=>$_POST['re_group_hotel3'],
 				're_group_hotel4'=>$_POST['re_group_hotel4'],
 				're_group_description'=>$_POST['re_group_description'],
-				're_group_kb'=>$_POST['re_group_kb'],
+				're_group_kb'=>trim($_POST['re_group_kb']),
 				're_group_final'=>$final,
 				're_group_normal_noshop'=>$normal_noshop,
 				're_group_p_t_c_f_con'=>$p_t_c_f_con,
 				'create_by_iduser'=>$user_id,
-				'create_by_date'=>date('Y-m-d H:i:s',NOW())
+				'create_by_date'=>$create_by
 
 			);
 
@@ -88,7 +91,7 @@
 					'ed_group_hotel3'=>$_POST['re_group_hotel3'],
 					'ed_group_hotel4'=>$_POST['re_group_hotel4'],
 					'ed_group_description'=>$_POST['re_group_description'],
-					'ed_group_kb'=>$_POST['re_group_kb'],
+					'ed_group_kb'=>trim($_POST['re_group_kb']),
 					'ed_group_final'=>$final,
 					'ed_group_normal_noshop'=>$normal_noshop,
 					'ed_group_p_t_c_f_con'=>$p_t_c_f_con

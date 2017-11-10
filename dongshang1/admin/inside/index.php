@@ -148,8 +148,8 @@
 											echo "#8c8a8a;";
 										}elseif($rs['re_group_p_t_c_f_con']=='40'){
 											echo "#ffb3e5;";
-										}elseif($rs['re_group_kb']!=''){
-											echo "linear-gradient(to bottom, #ff9999 0%, #ff3300 100%);";
+										}elseif(!empty($rs['re_group_kb'])!=''){
+											echo "linear-gradient(to bottom, #ff9999 0%, #ff3300 100%)";
 										}
 									?>
                       	">

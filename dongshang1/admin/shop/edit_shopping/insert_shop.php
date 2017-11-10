@@ -1,11 +1,15 @@
 <?php
 	session_start();
+	date_default_timezone_set('Asia/Bangkok');
 	require '../../../static/db.class.php';
 	require '../../../static/db.qry.php';
 
 	$conn = connect();
 
 	$re_group_id = $_GET['id'];
+
+	$create_by = date('Y/m/d H:i:s');
+	$edit_by = date('Y/m/d H:i:s');
 
 	foreach($_POST['jewel_color'] as $row1=>$art1){
  
@@ -72,7 +76,8 @@
 				're_shopping_option_percent'=>$_POST['option_percent'],
 				're_shopping_option_money'=>$_POST['option'],
 				're_shopping_comment'=>$_POST['re_shopping_comment'],
-				're_group_id'=>$re_group_id
+				're_group_id'=>$re_group_id,
+				'create_by'=>$create_by
 
 			);
 
@@ -108,7 +113,8 @@
 					're_shopping_option_percent'=>$_POST['option_percent'],
 					're_shopping_option_money'=>$_POST['option'],
 					're_shopping_comment'=>$_POST['re_shopping_comment'],
-					're_group_id'=>$re_group_id
+					're_group_id'=>$re_group_id,
+					'edit_by_date'=>$edit_by
 
 				);
 
