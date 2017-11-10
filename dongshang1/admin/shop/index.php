@@ -1,5 +1,6 @@
 <?php
 	session_start();
+  
     require '../../static/db.class.php';
     $conn = connect();
 
@@ -7,7 +8,8 @@
     	&& !isset($_SESSION['is_fd'])
     	&& !isset($_SESSION['is_am'])
     	&& !isset($_SESSION['is_boss'])
-    	&& !isset($_SESSION['is_admin'])){
+    	&& !isset($_SESSION['is_admin'])
+    ){
 
     	header("Location: ../inside/index.php");
 

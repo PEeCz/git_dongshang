@@ -20,7 +20,7 @@
     	header("Location: ../../index.php");
     }
 
-    $sql = "SELECT * FROM user WHERE user_status='100' OR user_status='500'";
+    $sql = "SELECT * FROM user WHERE user_status='100' OR user_status='200' OR user_status='300' OR user_status='350' OR user_status='400' OR user_status='450' OR user_status='500'";
     $qry = $conn->query($sql);
     $rsUser = $qry->fetch_assoc();
 
