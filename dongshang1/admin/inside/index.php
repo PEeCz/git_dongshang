@@ -32,7 +32,7 @@
 	 	$page=1; 
 	};  
 
-	$start_from = ($page-1) * $limit;  
+	$start_from = ($page-1) * $limit;
 
 	$sqlPagination = "SELECT * FROM report_group WHERE re_group_id LIMIT $start_from, $limit";  
 	$qryPagination  = $conn->query($sqlPagination);
@@ -55,7 +55,11 @@
 					<div class="chit-chat-layer1">
 						<div class="col-md-3 chit-chat-layer1-left">
 			                <div class="chit-chat-heading">
+			                	<?php if(!isset($_SESSION['is_ot']) && !isset($_SESSION['is_of']) && !isset($_SESSION['is_boss']) && !isset($_SESSION['is_admin'])){ 
+			                		  }else{
+			                		  	?>
 			                	<a id="<?php echo $rsUser['user_id']; ?>" class="btn btn-lg btn-success btn_addGuide">เพิ่มข้อมูลกรุ๊ป</a>
+			                	<?php } ?>
 			                </div>
 						</div>
 						<div class="col-md-3 chit-chat-layer1-right" id="bgdiv">

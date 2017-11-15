@@ -75,7 +75,7 @@
 				're_shopping_watnongket'=>$_POST['watnongket'],
 				're_shopping_option_percent'=>$_POST['option_percent'],
 				're_shopping_option_money'=>$_POST['option'],
-				're_shopping_comment'=>$_POST['re_shopping_comment'],
+				're_shopping_comment'=>$_POST['comment'],
 				're_group_id'=>$re_group_id,
 				'create_by'=>$create_by
 
@@ -112,14 +112,13 @@
 					're_shopping_watnongket'=>$_POST['watnongket'],
 					're_shopping_option_percent'=>$_POST['option_percent'],
 					're_shopping_option_money'=>$_POST['option'],
-					're_shopping_comment'=>$_POST['re_shopping_comment'],
+					're_shopping_comment'=>$_POST['comment'],
 					're_group_id'=>$re_group_id,
 					'edit_by_date'=>$edit_by
 
 				);
 
 		$sql = insert_db($nameTable, $data);
-		echo $sql;
 		$qry = $conn->query($sql);
 		if($qry){
 			header("Location: ../index.php");

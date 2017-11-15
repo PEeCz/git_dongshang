@@ -22,8 +22,8 @@
 				        	</a>
 				        </li>
 				        <li>
-				        	<a href="#">
-				        		<i class="fa fa-map-marker"></i><span>รายชื่อไกด์</span></a>
+				        	<a href="../../repair/index.php">
+				        		<i class="fa fa-map-marker"></i><span>ใบเอกสาร</span></a>
 				        </li>
 				        <li id="menu-academico" >
 				        	<a href="#">

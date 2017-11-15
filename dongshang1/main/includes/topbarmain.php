@@ -17,9 +17,9 @@
                     <li><a href="../../contact.php">ติดต่อเรา</a>
                     </li>
                     <li>
-                        <a href="../src/lang/aboutchange.php?lang=TH"><img name="TH" id="TH" src="../img/dongshang/icon/thailand-icon.png" width="30px" height="30px"></a>
-                        <a href="#"><img src="../img/dongshang/icon/english-icon.png" width="30px" height="37px"></a>
-                        <a href="../src/lang/aboutchange.php?lang=CN"><img name="CN" id="CN" src="../img/dongshang/icon/china-icon.png" width="30px" height="30px"></a>
+                        <a href="../src/lang/aboutchange.php?lang=TH"><img name="TH" id="TH" src="../../img/dongshang/icon/thailand-icon.png" width="30px" height="30px"></a>
+                        <a href="#"><img src="../../img/dongshang/icon/english-icon.png" width="30px" height="37px"></a>
+                        <a href="../src/lang/aboutchange.php?lang=CN"><img name="CN" id="CN" src="../../img/dongshang/icon/china-icon.png" width="30px" height="30px"></a>
                     </li>
                 </ul>
             </div>
