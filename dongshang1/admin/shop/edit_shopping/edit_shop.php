@@ -3,8 +3,15 @@
     require '../../../static/db.class.php';
     $conn = connect();
 
-    if(!isset($_SESSION['user_status'])!= '100' && !isset($_SESSION['user_status'])!= '400'){
-        header("Location: ../../index.php");
+    if(!isset($_SESSION['is_ad'])
+    	&& !isset($_SESSION['is_fd'])
+    	&& !isset($_SESSION['is_am'])
+    	&& !isset($_SESSION['is_boss'])
+    	&& !isset($_SESSION['is_admin'])
+    ){
+
+    	header("Location: ../inside/index.php");
+
     }
 
     $id = $_GET['id'];

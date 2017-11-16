@@ -8,6 +8,10 @@
 
 	$re_group_id = $_GET['id'];
 
+	$selReGroup = "SELECT re_group_personqty FROM report_group WHERE re_group_id='$re_group_id'";
+	$qryReGroup = $conn->query($selReGroup);
+	$rsReGroup = $qryReGroup->fetch_assoc();
+
 	$create_by = date('Y/m/d H:i:s');
 	$edit_by = date('Y/m/d H:i:s');
 
@@ -48,6 +52,30 @@
 		$re_shopping_watnongket_color = $_POST['watnongket_color'][$row9];
 	}
 
+	$jewelry = $_POST['jewelry'];
+  	$leather = $_POST['leather'];
+  	$snakepark = $_POST['snake_park'];
+  	$rubber = $_POST['rubber'];
+  	$red88 = $_POST['red88'];
+  	$silk = $_POST['silk'];
+  	$watprachum = $_POST['watprachum'];
+  	$watnongket = $_POST['watnongket'];
+  	$personqty = $_POST['re_shopping_personqty'];
+ 	$allperson = $rsReGroup['re_group_personqty'];
+
+ 	$overall1 = $jewelry+$leather+$snakepark+$rubber+$red88;
+ 	$overall2 = $jewelry+$leather+$snakepark+$rubber+$red88+$watprachum+$watnongket;
+
+ 	$calc1 = $jewelry+$leather+$snakepark+$rubber+$red88;
+    $calc2 = $calc1/$personqty;
+
+    $overall3 = $calc2;
+
+    $calc3 = $jewelry+$leather+$snakepark+$rubber+$red88+$silk+$watprachum+$watnongket;
+    $calc4 = $calc3/$allperson;
+
+    $overall4 = $calc4;
+
 
 	$nameTable = 'report_shopping';
 	$data = array(
@@ -76,6 +104,10 @@
 				're_shopping_option_percent'=>$_POST['option_percent'],
 				're_shopping_option_money'=>$_POST['option'],
 				're_shopping_comment'=>$_POST['comment'],
+				're_shopping_overall_1'=>$overall1,
+				're_shopping_overall_2'=>$overall2,
+				're_shopping_overall_3'=>$overall3,
+				're_shopping_overall_4'=>$overall4,
 				're_group_id'=>$re_group_id,
 				'create_by'=>$create_by
 
@@ -113,6 +145,10 @@
 					're_shopping_option_percent'=>$_POST['option_percent'],
 					're_shopping_option_money'=>$_POST['option'],
 					're_shopping_comment'=>$_POST['comment'],
+					're_shopping_overall_1'=>$overall1,
+					're_shopping_overall_2'=>$overall2,
+					're_shopping_overall_3'=>$overall3,
+					're_shopping_overall_4'=>$overall4,
 					're_group_id'=>$re_group_id,
 					'edit_by_date'=>$edit_by
 

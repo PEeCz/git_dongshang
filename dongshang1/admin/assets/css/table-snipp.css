@@ -24,3 +24,12 @@
 .filterable .filters input[disabled]:-ms-input-placeholder {
     color: #333;
 }
+
+.bgthead {
+  background-color: #333333;
+}
+
+.textcolorth{
+    color: #FFFFFF;
+}
+

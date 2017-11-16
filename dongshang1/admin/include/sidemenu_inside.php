@@ -13,17 +13,17 @@
 				        </li>
 				        <li>
 				        	<a href="index.php">
-				        		<i class="fa fa-cogs"></i><span>บอร์ด</span>
+				        		<i class="fa fa-table"></i><span>บอร์ด</span>
 				        	</a>
 				        </li>
 				        <li id="menu-comunicacao" >
 				        	<a href="../shop/index.php">
-				        		<i class="fa fa-book nav_icon"></i><span>ยอดชอปปิ้ง</span>
+				        		<i class="fa fa-shopping-bag"></i><span>ยอดชอปปิ้ง</span>
 				        	</a>
 				        </li>
 				        <li>
 				        	<a href="../../repair/index.php">
-				        		<i class="fa fa-map-marker"></i><span>ใบเอกสาร</span></a>
+				        		<i class="fa fa-file-pdf-o"></i><span>ใบเอกสาร</span></a>
 				        </li>
 				        <li id="menu-academico" >
 				        	<a href="#">

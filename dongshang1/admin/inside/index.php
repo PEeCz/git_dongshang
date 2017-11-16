@@ -1,5 +1,7 @@
 <?php
 	session_start();
+  	error_reporting(error_reporting() & ~E_NOTICE);
+
     require '../../static/db.class.php';
     $conn = connect();
 
@@ -104,8 +106,8 @@
                 </thead>
             </table>
             <table class="table table-bordered">
-                <thead class="bg-info">
-                    <tr style="font-size: 12px;">
+                <thead class="bgthead">
+                    <tr class="text-center" style="font-size: 12px;">
 						<th style="width: 70px;">No.</th>
 						<th style="width: 150px;">No. Group</th>
 						<th style="width: 100px;">ชื่อ<BR>ไกด์</th>
@@ -115,10 +117,10 @@
 						<th style="width: 40px;">จำนวน<BR>(คน)</th>
 						<th style="width: 200px;">รับ</th>
 						<th style="width: 200px;">ส่ง</th>
-						<th style="width: 50px;">โรงแรม <BR>1</th>
-						<th style="width: 50px;">โรงแรม <BR>2</th>
-						<th style="width: 50px;">โรงแรม <BR>3</th>
-						<th style="width: 50px;">โรงแรม <BR>4</th>
+						<th style="width: 50px;">โรงแรม 1</th>
+						<th style="width: 50px;">โรงแรม 2</th>
+						<th style="width: 50px;">โรงแรม 3</th>
+						<th style="width: 50px;">โรงแรม 4</th>
 						<th style="width: 40px;">รายละเอียด</th>
                     </tr>
                 </thead>
@@ -144,7 +146,15 @@
 									?>
                     ">
                       	<td class="text-center">
-                      		<?php echo (int)$rs['re_group_id']; ?>
+                      		<div style="color: 
+								<?php
+									if($rs['edit_by_iduser']!=''){
+										echo "#580bf9";
+									}
+								?>
+	                      	">
+                      			<?php echo (int)$rs['re_group_id']; ?>
+                      		</div>
                       	</td>
                       	<td class="text-center" style="background: 
 									<?php
@@ -157,7 +167,15 @@
 										}
 									?>
                       	">
-                      		<?php echo $rs['re_group_code']; ?>
+	                      	<div style="color: 
+								<?php
+									if($rs['edit_by_iduser']!=''){
+										echo "#580bf9";
+									}
+								?>
+		                    ">
+                      			<?php echo $rs['re_group_code']; ?>
+                      		</div>
                       	</td>
                       	<td class="text-center" style="background-color:
 									<?php
@@ -176,7 +194,15 @@
 										}
 									?>
                       	">
-                      		<?php echo $rs['re_group_nameguide_th']; ?>
+                      		<div style="color: 
+								<?php
+									if($rs['edit_by_iduser']!=''){
+										echo "#580bf9";
+									}
+								?>
+	                      	">
+                      			<?php echo $rs['re_group_nameguide_th']; ?>
+                      		</div>
                       	</td>
                       	<td class="text-center"><?php echo $rs['re_group_leadertour']; ?></td>
                       	<td class="text-center"><?php echo $rs['re_group_nameagent']; ?></td>

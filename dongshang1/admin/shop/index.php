@@ -1,5 +1,6 @@
 <?php
 	session_start();
+  error_reporting(error_reporting() & ~E_NOTICE);
   
     require '../../static/db.class.php';
     $conn = connect();
@@ -56,7 +57,7 @@
                 </thead>
             </table>
             <table class="table table-bordered" style="white-space: nowrap;">
-                <thead style="background-color: #333333;color: #FFFFFF;">
+                <thead class="bgthead">
                     <tr style="font-size: 12px; table-layout: auto;">
           						<th>No.</th>
           						<th>No. Group <HR> ชื่อไกด์</th>
@@ -70,8 +71,8 @@
           						<th>สวนงู</th>
           						<th>ยางพารา</th>
           						<th>GM</th>
-          						<th>รังนก<BR><HR>ผ้าไหม</th>
-          						<th>วัดประชุม<BR><HR>วัดหนองเกตุ</th>
+          						<th>รังนก<HR>ผ้าไหม</th>
+          						<th>วัดประชุม<HR>วัดหนองเกตุ</th>
           						<th>Option<BR>(ไม่คืน)</th>
           						<th>Option<BR>(10%)</th>
           						<th>Option<BR>(50%)</th>
@@ -101,19 +102,21 @@
                                     ,rs.re_shopping_silk,rs.re_shopping_silk_color
                                     ,rs.re_shopping_watprachum,rs.re_shopping_watprachum_color
                                     ,rs.re_shopping_watnongket,rs.re_shopping_watnongket_color
+                                    ,rs.re_shopping_overall_1,rs.re_shopping_overall_2
+                                    ,rs.re_shopping_overall_3,rs.re_shopping_overall_4
                                     
                                 FROM report_group rg
                                     LEFT OUTER JOIN
                                         report_shopping rs
                                 ON rg.re_group_id = rs.re_group_id
-                                WHERE rg.re_group_id";
+                                WHERE rg.re_group_id ORDER BY rg.re_group_code DESC";
                   $qryReport = $conn->query($selReport);
             	 ?>
                 <tbody>
                 	<?php
                 		while($rs = $qryReport->fetch_assoc()){
                 	?>
-                    <tr style="font-size: 14px;"
+                    <tr
                         <?php
                           if($rs['re_group_edit_cancel_group']=='10'){
 
@@ -121,12 +124,12 @@
 
                         ?>
                     >
-                      	<td class="text-center">
+                      	<td class="text-center" style="font-size: 12px;">
                       		<?php echo (int)$rs['re_group_id'].' <HR> '; ?>
                       		<a id="<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-success btn_editShop">Add</a>
                           <a href="edit_shopping.php?id=<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-warning">Edit</a>
                       	</td>
-                      	<td style="background: 
+                      	<td style="font-size:12px; background: 
         									<?php
         										if($rs['re_group_kb']!=''){
         											echo "linear-gradient(to bottom, #ff9999 0%, #ff3300 100%);";
@@ -135,11 +138,11 @@
                       	">
                       		<?php echo $rs['re_group_code'].' <HR> '.$rs['re_group_nameguide_th']; ?>
                       	</td>
-                      	<td>
+                      	<td style="font-size:12px;">
                       		<?php echo '<span style="color: #F00;">'.''.$rs['re_group_nameagent'].''.'</span>'.' <HR> '.'<span style="color: #2B63C1;">'.''.$rs['re_group_program'].''.'</span>'; ?>
                       		
                       	</td>
-                      	<td style="background-color: 
+                      	<td style="font-size:12px; background-color: 
                       				<?php
                                   if($rs['re_group_final']=='10'){
                                     echo "#FF9933;";
@@ -153,9 +156,9 @@
                       		<?php echo $rs['re_group_personqty']; ?>
                       			
                       	</td>
-                      	<td><?php echo $rs['re_group_in_date'].' <HR> '.$rs['re_group_in_time']; ?></td>
-                      	<td><?php echo $rs['re_group_out_date'].' <HR> '.$rs['re_group_out_time']; ?></td>
-                      	<td class="text-center" style="background-color: 
+                      	<td style="font-size:12px;"><?php echo $rs['re_group_in_date'].' <HR> '.$rs['re_group_in_time']; ?></td>
+                      	<td style="font-size:12px;"><?php echo $rs['re_group_out_date'].' <HR> '.$rs['re_group_out_time']; ?></td>
+                      	<td class="text-center" style="font-size:12px; background-color: 
                               <?php
                                   if($rs['re_shopping_personqty']=='' && $rs['re_shopping_personqty_color']=='0'){
                                     echo "#FFFFFF";
@@ -168,7 +171,7 @@
                         ">
                           <?php echo $rs['re_shopping_personqty']; ?>
                         </td>
-                      	<td class="text-center" style="background-color: 
+                      	<td class="text-center" style="font-size:12px; background-color: 
                               <?php
                                   if($rs['re_group_p_t_c_f_con']=='40'){
                                     echo "#FFCC66";
@@ -185,9 +188,9 @@
                                   }
                               ?>
                         ">
-                          <?php echo $rs['re_shopping_jewelry']; ?>
+                          <?php echo number_format(round($rs['re_shopping_jewelry'])); ?>
                         </td>
-                      	<td class="text-center" style="background-color: 
+                      	<td class="text-center" style="font-size:12px; background-color: 
                               <?php
                                   if($rs['re_group_p_t_c_f_con']=='40'){
                                     echo "#FFCC66";
@@ -204,9 +207,9 @@
                                   }
                               ?>
                         ">
-                          <?php echo $rs['re_shopping_leather']; ?>
+                          <?php echo number_format(round($rs['re_shopping_leather'])); ?>
                         </td>
-                      	<td class="text-center" style="background-color: 
+                      	<td class="text-center" style="font-size:12px; background-color: 
                               <?php
                                   if($rs['re_group_p_t_c_f_con']=='40'){
                                     echo "#FFCC66";
@@ -223,9 +226,9 @@
                                   }
                               ?>
                         ">
-                          <?php echo $rs['re_shopping_snake_park']; ?>
+                          <?php echo number_format(round($rs['re_shopping_snake_park'])); ?>
                         </td>
-                      	<td class="text-center" style="background-color: 
+                      	<td class="text-center" style="font-size:12px; background-color: 
                               <?php
                                   if($rs['re_group_p_t_c_f_con']=='40'){
                                     echo "#FFCC66";
@@ -242,9 +245,9 @@
                                   }
                               ?>
                         ">
-                          <?php echo $rs['re_shopping_rubber']; ?>
+                          <?php echo number_format(round($rs['re_shopping_rubber'])); ?>
                         </td>
-                      	<td class="text-center" style="background-color: 
+                      	<td class="text-center" style="font-size:12px; background-color: 
                               <?php
                                   if($rs['re_group_p_t_c_f_con']=='40'){
                                     echo "#FFCC66";
@@ -261,9 +264,9 @@
                                   }
                               ?>
                         ">
-                          <?php echo $rs['re_shopping_gm']; ?>
+                          <?php echo number_format(round($rs['re_shopping_gm'])); ?>
                         </td>
-                      	<td class="text-center" style="background-color: 
+                      	<td class="text-center" style="font-size:12px; background-color: 
                               <?php
                                   if($rs['re_group_p_t_c_f_con']=='40'){
                                     echo "#FFCC66";
@@ -272,7 +275,7 @@
                                   } 
                               ?>
                         ">
-                          <div class="panel-heading" style="background-color:
+                          <div class="panel-heading" style="font-size:12px; background-color:
                                 <?php
                                     if(!empty($rs['re_shopping_red88']!='') && !empty($rs['re_shopping_red88_color']=='10')){
                                         echo "#FFCC66";
@@ -285,12 +288,12 @@
                                     }
                                 ?>
                           ">
-                            <?php echo $rs['re_shopping_red88']; ?>
+                            <?php echo number_format(round($rs['re_shopping_red88'])); ?>
                           </div>
-                          <div class="panel-heading" style="background-color:
+                          <div class="panel-heading" style="font-size:12px; background-color:
                                 <?php
-                                    if(!empty($rs['re_shopping_silk']!='') && !empty($rs['re_shopping_silk_color']=='40')){
-                                        echo "#999966";
+                                    if(!empty($rs['re_shopping_silk']!='') && !empty($rs['re_shopping_silk_color']=='10')){
+                                        echo "#FFCC66";
                                     }else if(!empty($rs['re_shopping_silk']!='') && !empty($rs['re_shopping_silk_color']=='20')){
                                         echo "#FFFFFF";
                                     }else if(!empty($rs['re_shopping_silk']!='') && !empty($rs['re_shopping_silk_color']=='30')){
@@ -300,10 +303,10 @@
                                     }
                                 ?>
                           ">
-                            <?php echo $rs['re_shopping_silk']; ?>
+                            <?php echo number_format(round($rs['re_shopping_silk'])); ?>
                           </div>
                         </td>
-                      	<td class="text-center" style="background-color: 
+                      	<td class="text-center" style="font-size:12px; background-color: 
                               <?php
                                   if($rs['re_group_p_t_c_f_con']=='40'){
                                     echo "#FFCC66";
@@ -312,7 +315,7 @@
                                   } 
                               ?>
                         ">
-                           <div class="panel-heading" style="background-color:
+                           <div class="panel-heading" style="font-size:12px; background-color:
                                 <?php
                                     if(!empty($rs['re_shopping_watprachum']!='') && !empty($rs['re_shopping_watprachum_color']=='10')){
                                         echo "#FFCC66";
@@ -325,9 +328,9 @@
                                     }
                                 ?>
                           ">
-                            <?php echo $rs['re_shopping_watprachum']; ?>
+                            <?php echo number_format(round($rs['re_shopping_watprachum'])); ?>
                           </div>
-                           <div class="panel-heading" style="background-color:
+                           <div class="panel-heading" style="font-size:12px; background-color:
                                 <?php
                                     if(!empty($rs['re_shopping_watnongket']!='') && !empty($rs['re_shopping_watnongket_color']=='10')){
                                         echo "#FFCC66";
@@ -340,19 +343,21 @@
                                     }
                                 ?>
                           ">
-                            <?php echo $rs['re_shopping_watnongket']; ?>
+                            <?php echo number_format(round($rs['re_shopping_watnongket'])); ?>
                           </div>
                         </td>
-                      	<td class="text-center" style="background-color: #CCCCCC;
+                      	<td class="text-center" style="font-size:12px; background-color: #CCCCCC;
                                 <?php
-                                    if(!empty($rs['re_shopping_option_percent']=='0') && !empty($rs['re_shopping_complete']=='10')){
+                                    if(!empty($rs['re_shopping_option_percent']=='0') && !empty($rs['re_shopping_complete']=='0')){
                                         echo "#CCCCCC";
                                     }
                                 ?>
                         ">
-                          <div class="panel-heading" style="background-color:
+                          <div class="panel-heading" style="font-size:12px; background-color:
                                 <?php
-                                    if(!empty($rs['re_shopping_option_percent']=='5') && !empty($rs['re_shopping_complete']=='30')){
+                                    if(!empty($rs['re_shopping_complete']=='0')){
+                                        echo "#CCCCCC";
+                                    }else if(!empty($rs['re_shopping_option_percent']=='5') && !empty($rs['re_shopping_complete']=='30')){
                                         echo "#66FF99";
                                     }else if(!empty($rs['re_shopping_option_money']!='')){
                                         echo "#66FF99";
@@ -363,15 +368,17 @@
                           ">
                             <?php 
                               if(!empty($rs['re_shopping_option_percent']=='5')){
-                                  echo $rs['re_shopping_option_money']; 
+                                  echo number_format(round($rs['re_shopping_option_money'])); 
                               }else{
                                   echo "-";
                               }
                             ?>
                           </div>
-                          <div class="panel-heading" style="background-color:
+                          <div class="panel-heading" style="font-size:12px; background-color:
                                 <?php
-                                    if(!empty($rs['re_shopping_option_percent']=='5') && !empty($rs['re_shopping_complete']=='30')){
+                                    if(!empty($rs['re_shopping_complete']=='0')){
+                                        echo "#CCCCCC";
+                                    }else if(!empty($rs['re_shopping_option_percent']=='5') && !empty($rs['re_shopping_complete']=='30')){
                                         echo "#66FF99";
                                     }else if(!empty($rs['re_shopping_option_money']!='')){
                                         echo "#66FF99";
@@ -382,23 +389,30 @@
                           ">
                             <?php 
                               if(!empty($rs['re_shopping_option_percent']=='5')){
-                                  echo $rs['re_shopping_option_money']; 
+
+                                $percent5 = $rs['re_shopping_option_money'];
+                                $re_group_personqty = $rs['re_group_personqty'];
+                                $calc_percent5 = $percent5/$re_group_personqty;
+
+                                  echo number_format(round($calc_percent5)); 
                               }else{
                                   echo "-";
                               }
                             ?>
                           </div>
                         </td>
-                      	<td class="text-center" style="background-color: #CCCCCC;
+                      	<td class="text-center" style="font-size:12px; background-color: #CCCCCC;
                                 <?php
                                     if(!empty($rs['re_shopping_option_percent']=='10') && !empty($rs['re_shopping_complete']=='10')){
                                         echo "#CCCCCC";
                                     }
                                 ?>
                         ">
-                          <div class="panel-heading" style="background-color:
+                          <div class="panel-heading" style="font-size:12px; background-color:
                                 <?php
-                                    if(!empty($rs['re_shopping_option_percent']=='10') && !empty($rs['re_shopping_complete']=='30')){
+                                    if(!empty($rs['re_shopping_complete']=='0')){
+                                        echo "#CCCCCC";
+                                    }else if(!empty($rs['re_shopping_option_percent']=='10') && !empty($rs['re_shopping_complete']=='30')){
                                         echo "#FF33CC";
                                     }else if(!empty($rs['re_shopping_option_money']!='')){
                                         echo "#FF33CC";
@@ -409,15 +423,17 @@
                           ">
                             <?php 
                               if(!empty($rs['re_shopping_option_percent']=='10')){
-                                  echo $rs['re_shopping_option_money']; 
+                                  echo number_format(round($rs['re_shopping_option_money'])); 
                               }else{
                                   echo "-";
                               }
                             ?>
                           </div>
-                          <div class="panel-heading" style="background-color:
+                          <div class="panel-heading" style="font-size:12px; background-color:
                                 <?php
-                                    if(!empty($rs['re_shopping_option_percent']=='10') && !empty($rs['re_shopping_complete']=='30')){
+                                    if(!empty($rs['re_shopping_complete']=='0')){
+                                        echo "#CCCCCC";
+                                    }else if(!empty($rs['re_shopping_option_percent']=='10') && !empty($rs['re_shopping_complete']=='30')){
                                         echo "#FF33CC";
                                     }else if(!empty($rs['re_shopping_option_money']!='')){
                                         echo "#FF33CC";
@@ -428,23 +444,30 @@
                           ">
                             <?php 
                               if(!empty($rs['re_shopping_option_percent']=='10')){
-                                  echo $rs['re_shopping_option_money']; 
+
+                                  $percent10 = $rs['re_shopping_option_money'];
+                                  $re_group_personqty = $rs['re_group_personqty'];
+                                  $calc_percent10 = $percent10/$re_group_personqty;
+
+                                    echo number_format(round($calc_percent10)); 
                               }else{
                                   echo "-";
                               }
                             ?>
                           </div>
                         </td>
-                      	<td class="text-center" style="background-color: #CCCCCC;
+                      	<td class="text-center" style="font-size:12px; background-color: #CCCCCC;
                                 <?php
                                     if(!empty($rs['re_shopping_option_percent']=='50') && !empty($rs['re_shopping_complete']=='10')){
                                         echo "#CCCCCC";
                                     }
                                 ?>
                         ">
-                          <div class="panel-heading" style="background-color:
+                          <div class="panel-heading" style="font-size:12px; background-color:
                                 <?php
-                                    if(!empty($rs['re_shopping_option_percent']=='50') && !empty($rs['re_shopping_complete']=='30')){
+                                    if(!empty($rs['re_shopping_complete']=='0')){
+                                        echo "#CCCCCC";
+                                    }else if(!empty($rs['re_shopping_option_percent']=='50') && !empty($rs['re_shopping_complete']=='30')){
                                         echo "#FF99FF";
                                     }else if(!empty($rs['re_shopping_option_money']!='')){
                                         echo "#FF99FF";
@@ -455,15 +478,17 @@
                           ">
                             <?php 
                               if(!empty($rs['re_shopping_option_percent']=='50')){
-                                  echo $rs['re_shopping_option_money']; 
+                                  echo number_format(round($rs['re_shopping_option_money'])); 
                               }else{
                                   echo "-";
                               }
                             ?> 
                           </div>
-                          <div class="panel-heading" style="background-color:
+                          <div class="panel-heading" style="font-size:12px; background-color:
                                 <?php
-                                    if(!empty($rs['re_shopping_option_percent']=='50') && !empty($rs['re_shopping_complete']=='30')){
+                                    if(!empty($rs['re_shopping_complete']=='0')){
+                                        echo "#CCCCCC";
+                                    }else if(!empty($rs['re_shopping_option_percent']=='50') && !empty($rs['re_shopping_complete']=='30')){
                                         echo "#FF99FF";
                                     }else if(!empty($rs['re_shopping_option_money']!='')){
                                         echo "#FF99FF";
@@ -472,18 +497,85 @@
                                     }
                                 ?>
                           ">
-                            <?php 
+                            <?php
                               if(!empty($rs['re_shopping_option_percent']=='50')){
-                                  echo $rs['re_shopping_option_money']; 
+
+                                  $percent50 = $rs['re_shopping_option_money'];
+                                  $re_group_personqty = $rs['re_group_personqty'];
+                                  $calc_percent50 = $percent50/$re_group_personqty;
+
+                                    echo number_format(round($calc_percent50)); 
                               }else{
                                   echo "-";
                               }
                             ?>
                           </div>
                         </td>
-                      	<td class="text-center"></td>
-                      	<td class="text-center"></td>
-                      	<td class="text-center"></td>
+                      	<td class="text-center" style="font-size:12px;">
+                          <div class="panel-heading" style="font-size:12px; background-color: #FCF;border-bottom: solid 1px; color: #90C;">
+                            <?php 
+                              $jewelry = $rs['re_shopping_jewelry'];
+                              $leather = $rs['re_shopping_leather'];
+                              $snakepark = $rs['re_shopping_snake_park'];
+                              $rubber = $rs['re_shopping_rubber'];
+                              $red88 = $rs['re_shopping_red88'];
+                              $silk = $rs['re_shopping_silk'];
+                              $watprachum = $rs['re_shopping_watprachum'];
+                              $watnongket = $rs['re_shopping_watnongket'];
+                              $personqty = $rs['re_shopping_personqty'];
+                              $allperson = $rs['re_group_personqty'];
+
+                              echo number_format(round($rs['re_shopping_overall_1']));
+                            ?> 
+                          </div>
+                          <div class="panel-heading" style="font-size:12px;">
+                            <?php 
+                              echo number_format(round($rs['re_shopping_overall_2']));
+                            ?>
+                          </div>
+                        </td>
+                      	<td class="text-center" style="font-size:12px; color: 
+                                    <?php
+                                      if($rs['re_shopping_overall_3']<=18000){
+                                        echo "#1703af;";
+                                      }else{
+                                        echo "#FFFFFF;";
+                                      }
+                                    ?>
+                        background-color: 
+                                    <?php
+                                      if($rs['re_shopping_overall_3']<=18000){
+                                        echo "#33CC66;";
+                                      }else{
+                                        echo "#039;";
+                                      }
+                                    ?>
+                        ">
+                            <?php
+                              if($jewelry!=0 || $leather!=0 || $snakepark!=0 || $rubber!=0 || $red88!=0 || $personqty!=0){
+                                echo number_format(round($rs['re_shopping_overall_3']));
+                              }else{
+                                echo "0";
+                              }
+                            ?> 
+                        </td>
+                      	<td class="text-center" style="font-size:12px; color: #FFFFFF; background-color: 
+                                    <?php
+                                      if($rs['re_shopping_overall_4']<=18000){
+                                        echo "#FF0000;";
+                                      }else{
+                                        echo "#039;";
+                                      }
+                                    ?>
+                        ">
+                            <?php
+                              if($jewelry!=0 || $leather!=0 || $snakepark!=0 || $rubber!=0 || $red88!=0 || $silk!=0 || $watprachum!=0 || $watnongket!=0 || $allperson!=0){
+                                echo number_format(round($rs['re_shopping_overall_4']));
+                              }else{
+                                echo "0";
+                              }
+                            ?> 
+                        </td>
                   	</tr <?php } ?>
                   	<?php } ?>
               	</tbody>

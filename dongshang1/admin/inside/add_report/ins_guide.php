@@ -43,19 +43,19 @@
 						      	<div class="radio">
 								  <label>
 								    <input type="checkbox" name="final[]" id="final[]" value="10">
-								    Final
+								    Final <i class="fa fa-square square_final"></i>
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
 								    <input type="checkbox" name="final[]" id="final[]" value="20">
-								    No Final
+								    No Final <i class="fa fa-square square_nofinal"></i>
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
 								    <input type="checkbox" name="final[]" id="final[]" value="30">
-								    มีการแก้ไข
+								    มีการแก้ไข <i class="fa fa-square square_edit"></i>
 								  </label>
 								</div>
 						    </div>
@@ -128,19 +128,19 @@
 						      	<div class="radio">
 								  <label for="plan">
 								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="10">
-								    Plan
+								    Plan <i class="fa fa-square square_plan"></i>
 								  </label>
 								</div>
 								<div class="radio">
 								  <label for="call">
 								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="30">
-								    Call
+								    Call <i class="fa fa-square square_call"></i>
 								  </label>
 								</div>
 								<div class="radio">
 								  <label for="confirm">
 								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="50">
-								    Confirm
+								    Confirm <i class="fa fa-square square_confirm"></i>
 								  </label>
 								</div>
 						    </div>
@@ -148,13 +148,13 @@
 								<div class="radio">
 								  <label>
 								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="40">
-								    Fit
+								    Fit <i class="fa fa-square square_fit"></i>
 								  </label>
 								</div>
 								<div class="radio">
 								  <label>
 								    <input type="checkbox" name="p_t_c_f_con[]" id="p_t_c_f_con[]" value="20">
-								    Transfer
+								    Transfer <i class="fa fa-square square_transfer"></i>
 								  </label>
 								</div>
 						    </div>

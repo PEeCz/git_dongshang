@@ -46,7 +46,7 @@
 																}else if(isset($_SESSION['is_admin'])){
 																	echo $_SESSION['is_position'];
 																}
-																	 ?>
+															?>
 															
 														</span>
 													</div>

@@ -12,10 +12,42 @@
             </div>
             <div class="col-md-6" data-animate="fadeInDown">
                 <ul class="menu">
+                    <?php
+                        if(isset($_SESSION['is_ot'])){
+                            echo "<li>"."<a href=''>".$_SESSION['is_fullnameuser']."</a>"."</li>";
+                            echo "<li>"."<a href='admin/inside/index.php'>เข้าหน้าจัดการภายใน</a>"."</li>";
+                            echo "<li>"."<a href='chk/logout.php'>ล็อคเอ้าท์</a>"."</li>";
+                        }else if(isset($_SESSION['is_of'])){
+                            echo "<li>"."<a href=''>".$_SESSION['is_fullnameuser']."</a>"."</li>";
+                            echo "<li>"."<a href='admin/inside/index.php'>เข้าหน้าจัดการภายใน</a>"."</li>";
+                            echo "<li>"."<a href='chk/logout.php'>ล็อคเอ้าท์</a>"."</li>";
+                        }else if(isset($_SESSION['is_ad'])){
+                            echo "<li>"."<a href=''>".$_SESSION['is_fullnameuser']."</a>"."</li>";
+                            echo "<li>"."<a href='admin/shop/index.php'>เข้าหน้าจัดการภายใน</a>"."</li>";
+                            echo "<li>"."<a href='chk/logout.php'>ล็อคเอ้าท์</a>"."</li>";
+                        }else if(isset($_SESSION['is_fd'])){
+                            echo "<li>"."<a href=''>".$_SESSION['is_fullnameuser']."</a>"."</li>";
+                            echo "<li>"."<a href='admin/shop/index.php'>เข้าหน้าจัดการภายใน</a>"."</li>";
+                            echo "<li>"."<a href='chk/logout.php'>ล็อคเอ้าท์</a>"."</li>";
+                        }else if(isset($_SESSION['is_am'])){
+                            echo "<li>"."<a href=''>".$_SESSION['is_fullnameuser']."</a>"."</li>";
+                            echo "<li>"."<a href='admin/shop/index.php'>เข้าหน้าจัดการภายใน</a>"."</li>";
+                            echo "<li>"."<a href='chk/logout.php'>ล็อคเอ้าท์</a>"."</li>";
+                        }else if(isset($_SESSION['is_boss'])){
+                            echo "<li>"."<a href=''>".$_SESSION['is_fullnameuser']."</a>"."</li>";
+                            echo "<li>"."<a href='admin/inside/index.php'>เข้าหน้าจัดการภายใน</a>"."</li>";
+                            echo "<li>"."<a href='chk/logout.php'>ล็อคเอ้าท์</a>"."</li>";
+                        }else if(isset($_SESSION['is_admin'])){
+                            echo "<li>"."<a href=''>".$_SESSION['is_fullnameuser']."</a>"."</li>";
+                            echo "<li>"."<a href='admin/inside/index.php'>เข้าหน้าจัดการภายใน</a>"."</li>";
+                            echo "<li>"."<a href='chk/logout.php'>ล็อคเอ้าท์</a>"."</li>";
+                        }else{
+                    ?>
                     <li><a href="#" data-toggle="modal" data-target="#login-modal">ล็อคอิน</a>
                     </li>
                     <li><a href="main/register.php">สมัครสมาชิก</a>
                     </li>
+                    <?php } ?>
                     <li><a href="contact.php">ติดต่อเรา</a>
                     </li>
                     <li>
