@@ -19,6 +19,7 @@
     $sqlReport = "SELECT * FROM report_group WHERE re_group_id='$id'";
     $qryReport = $conn->query($sqlReport);
     $rs = $qryReport->fetch_assoc();
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -46,85 +47,7 @@
 <body>	
 	<div class="container-fluid">
 		<div class="row" style="padding-top: 10px;">
-			<div class="col-sm-4" style="background-color: #a5b5d0;">
-				<h1 class="text-center">OP</h1>
-				<form class="form-horizontal" name="frmShowReport" action="#">
-		      		<div class="form-group">
-					    <div class="col-sm-6">
-					    	กรุ๊ปโค้ด
-					      	<input type="text" class="form-control" id="re_group_code" name="re_group_code" value="<?php echo $rs['re_group_code']; ?>" disabled>
-					    </div>
-					    <div class="col-sm-6">
-					    	เอเย่นต์โค้ด
-					      	<input type="text" class="form-control" id="re_group_agent" name="re_group_agent" value="<?php echo $rs['re_group_agent']; ?>" disabled>
-					    </div>
-		      		</div>
-		      		<div class="form-group">
-					    <div class="col-sm-6">
-					    	จำนวนคน
-					      	<input type="text" class="form-control" id="re_group_code" name="re_group_code" value="<?php echo $rs['re_group_personqty']; ?> คน" disabled>
-					    </div>
-					    <div class="col-sm-6">
-					    	ชื่อหัวหน้าทัวร์
-					      	<input type="text" class="form-control" id="re_group_leadertour" name="re_group_leadertour" value="<?php echo $rs['re_group_leadertour']; ?>" disabled>
-					    </div>
-		      		</div>
-		      		<div class="form-group">
-					    <div class="col-sm-6">
-					      	<input type="text" class="form-control" id="re_group_leadertour" name="re_group_leadertour" value=<?php 
-						      		if($rs['re_group_final']=='10'){
-						      			echo 'Final';
-						      		}else if($rs['re_group_final']=='20'){
-						      			echo 'No&nbsp;Final';
-						      		}else if($rs['re_group_final']=='30'){
-						      			echo 'มีการแก้ไข';
-						      		}
-						      	?> disabled>
-					    </div>
-					    <div class="col-sm-6">
-					      	<input type="text" disabled class="form-control" id="re_group_leadertour" name="re_group_leadertour" value=<?php 
-						      		if($rs['re_group_normal_noshop']=='10'){
-						      			echo 'Normal';
-						      		}else if($rs['re_group_normal_noshop']=='20'){
-						      			echo 'No&nbsp;Shop';
-						      		}else if($rs['re_group_normal_noshop']==''){
-						      			echo '';
-						      		}
-						      	?>>
-					    </div>
-		      		</div>
-		      		<div class="form-group">
-					    <div class="col-sm-6">
-					    	ชื่อรายการ
-		      				<input type="text" class="form-control" id="re_group_program" name="re_group_program" value=<?php echo $rs['re_group_program']; ?> disabled>
-		      			</div>
-		      			<div class="col-sm-6">
-		      				ชื่อไกด์
-					      	<input type="text" class="form-control" id="re_group_nameguide_th" name="re_group_nameguide_th" value=<?php echo $rs['re_group_nameguide_th']; ?> disabled>
-					    </div>
-		      		</div>
-		      		<div class="form-group">
-					    <div class="col-sm-12">
-					    	รายละเอียด
-					    	<textarea class="form-control" rows="6" id="re_group_description" name="re_group_description" disabled><?php echo $rs['re_group_description']; ?></textarea>
-					    </div>
-		      		</div>
-		      		<div class="form-group">
-		      			<div class="col-sm-12">
-		      				KB ไม่ปกติ
-		      				<textarea class="form-control kb_textcolor" rows="6" id="re_group_kb" name="re_group_kb" disabled><?php echo $rs['re_group_kb']; ?></textarea>
-		      			</div>
-		      		</div>
-			    </form>
-		    </div>
-
-
-
-
-
-
-
-		    <div class="col-sm-8" style="background-color: #D2B48C;">
+		    <div class="col-sm-12" style="background-color: #D2B48C;">
 		    	<h1 class="text-center">Accounting</h1>
 				<form class="form-horizontal" method="POST" name="frmAccounting" action="insert_shop.php?id=<?php echo $id; ?>">
 		      		<div class="form-group">
@@ -166,7 +89,7 @@
 					    </div>
 		      		</div>
 		      		<div class="form-group">
-		      			<div class="col-sm-4">
+		      			<div class="col-sm-4 col-sm-push-1">
 		      				<div class="radio">
 								<label>
 								   	<input type="radio" name="jewel_color[]" id="jewel_color[]" value="10" checked>
@@ -198,12 +121,12 @@
 		      					<label>เฉลี่ยจิวเวอรี่ :</label>
 		      				</div>
 		      				<div class="col-sm-3">
-		      					<input type="text" class="form-control input_bgaverage text-right" name="jewelry_average" id="jewelry_average" value="0" disabled>
+		      					<input type="text" class="form-control input_bgaverage text-right" name="jewelry_average" id="jewelry_average" value="0" onkeyup="averageJewel()" disabled>
 		      				</div>
 		      			</div>
 		      		</div>
 		      		<div class="form-group">
-		      			<div class="col-sm-4">
+		      			<div class="col-sm-4 col-sm-push-1">
 		      				<div class="radio">
 								<label>
 								   	<input type="radio" name="leather_color[]" id="leather_color[]" value="10" checked>
@@ -239,7 +162,7 @@
 		      			</div>
 		      		</div>
 		      		<div class="form-group">
-		      			<div class="col-sm-4">
+		      			<div class="col-sm-4 col-sm-push-1">
 		      				<div class="radio">
 								<label>
 								   	<input type="radio" name="snake_color[]" id="snake_color[]" value="10" checked>
@@ -276,7 +199,7 @@
 		      			</div>
 		      		</div>
 		      		<div class="form-group">
-		      			<div class="col-sm-4">
+		      			<div class="col-sm-4 col-sm-push-1">
 		      				<div class="radio">
 								<label>
 								   	<input type="radio" name="rubber_color[]" id="rubber_color[]" value="10" checked>
@@ -313,7 +236,7 @@
 		      			</div>
 		      		</div>
 		      		<div class="form-group">
-		      			<div class="col-sm-4">
+		      			<div class="col-sm-4 col-sm-push-1">
 		      				<div class="radio">
 								<label>
 								   	<input type="radio" name="red88_color[]" id="red88_color[]" value="10" checked>
@@ -350,7 +273,7 @@
 		      			</div>
 		      		</div>
 		      		<div class="form-group">
-		      			<div class="col-sm-4">
+		      			<div class="col-sm-4 col-sm-push-1">
 		      				<div class="radio">
 								<label>
 								   	<input type="radio" name="gm_color[]" id="gm_color[]" value="10" checked>
@@ -387,7 +310,7 @@
 		      			</div>
 		      		</div>
 		      		<div class="form-group">
-		      			<div class="col-sm-4">
+		      			<div class="col-sm-4 col-sm-push-1">
 		      				<div class="radio">
 								<label>
 								   	<input type="radio" name="silk_color[]" id="silk_color[]" value="10" checked>
@@ -443,7 +366,7 @@
 		      			</div>
 		      		</div>
 		      		<div class="form-group">
-		      			<div class="col-sm-4">
+		      			<div class="col-sm-4 col-sm-push-1">
 		      				<div class="radio">
 								<label>
 								   	<input type="radio" name="watprachum_color[]" id="watprachum_color[]" value="10" checked>
@@ -480,7 +403,7 @@
 		      			</div>
 		      		</div>
 		      		<div class="form-group">
-		      			<div class="col-sm-4">
+		      			<div class="col-sm-4 col-sm-push-1">
 		      				<div class="radio">
 								<label>
 								   	<input type="radio" name="watnongket_color[]" id="watnongket_color[]" value="10" checked>

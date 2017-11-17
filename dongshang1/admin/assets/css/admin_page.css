@@ -1,3 +1,5 @@
+/* ----------------OP---------------- */
+
 .kb_text{
 	color: #ff0000;
 	font-weight: bolder;
@@ -62,7 +64,9 @@ label#canceled_text{
 	color: #2dd03f;
 }
 
-/* Shopping */
+
+
+/* ----------------Shopping---------------- */
 
 .yellow{
 	 color: #FFCC66;
@@ -78,10 +82,7 @@ label#canceled_text{
 }
 
 
-.input_bg{
-	background-color: #34ca67;
-	color: 	#2b4ae3;
-}
+
 .input_bgoption{
 	background-color: #78aacc;
 	color: 	#8b1a1a;
@@ -89,8 +90,26 @@ label#canceled_text{
 .input_bgaverage{
 	background-color: #ab82c1;
 	color: #eeee00;
+	font-weight: bold;
 }
 .kb_textcolor{
 	color: #ff0000;
 	font-weight: bolder;
+}
+
+.input_Overall{
+	color: red; 
+	font-weight: bold; 
+	background-color: orange;
+}
+
+.input_OverallAvr{
+	color: blue;
+	font-weight: bold;
+	background-color: #34ca67;
+}
+
+.input_txt{
+	color: #000000;
+	font-weight: bold;
 }

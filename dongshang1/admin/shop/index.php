@@ -127,7 +127,7 @@
                       	<td class="text-center" style="font-size: 12px;">
                       		<?php echo (int)$rs['re_group_id'].' <HR> '; ?>
                       		<a id="<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-success btn_editShop">Add</a>
-                          <a href="edit_shopping.php?id=<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-warning">Edit</a>
+                          <a href="edit_shopping/edit_shopping.php?id=<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-warning">Edit</a>
                       	</td>
                       	<td style="font-size:12px; background: 
         									<?php

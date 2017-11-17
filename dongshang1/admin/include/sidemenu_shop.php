@@ -13,7 +13,7 @@
 				        </li>
 				        <li>
 				        	<a href="../inside/index.php">
-				        		<i class="fa fa-table"></i><span>บอร์ด</span>
+				        		<i class="fa fa-table"></i><span>บอร์ดกรุ๊ป</span>
 				        	</a>
 				        </li>
 				        <li id="menu-comunicacao" >
