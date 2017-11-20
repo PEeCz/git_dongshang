@@ -41,7 +41,7 @@
 <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
 <!-- Admin Page CSS -->
 <link href="../../assets/css/admin_page.css" rel="stylesheet" type="text/css">
-	
+
 </head>
 <body>	
 	<div class="container-fluid">
@@ -134,7 +134,7 @@
 					      		<?php 
 					      			for($i=0; $i<=150; $i++){
 					      		?>
-								<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+								<option value="<?php echo $i; ?>" required="required"><?php echo $i; ?></option>
 								<?php } ?>
 					      	</select>
 
@@ -541,7 +541,7 @@
 		      		</div>
 		      		<div class="form-group">
 		      			<div class="col-sm-12 text-center">
-		      				<input type="submit" class="btn btn-lg btn-success" value="แก้ไข">
+		      				<input type="submit" class="btn btn-lg btn-success" onclick="return confirm('คุณต้องการเพิ่มข้อมูลหรือไม่ ?')" value="เพิ่มข้อมูล">
 		      				<button class="btn btn-lg btn-danger" onclick="window.location='../index.php'">ยกเลิก</button>
 		      			</div>
 		      		</div>
@@ -567,6 +567,6 @@
 
 	<!-- Calculate JavaScript -->
 	<script src="../../function/func.js"></script>
-
+	
 </body>
 </html>

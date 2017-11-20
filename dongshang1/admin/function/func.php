@@ -9,8 +9,8 @@ function redirect_to($url){
 }
 
 function check_admin(){
-    if(isset($_SESSION['user'])){
-        if($_SESSION['user']['status']!='admin'){
+    if(isset($_SESSION['user_id'])){
+        if($_SESSION['user_id']['user_status']!='admin'){
             redirect_to('index.php');
         }
     }else{

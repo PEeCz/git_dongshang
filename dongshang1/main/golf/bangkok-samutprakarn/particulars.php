@@ -3,11 +3,11 @@
     $particularsid = $_GET['particularsid'];
     if($particularsid == 'bkklegacy'){
 
-    require 'header.php';
+    require '../includes_service/headermain.php';
 
-    require 'topbar.php';
+    require '../includes_service/topbarmain.php';
 
-    require 'navbar.php';
+    require '../includes_service/navbarmain.php';
 ?>
 
     <div id="all">
@@ -218,6 +218,6 @@
 
 
 <?php
-    require 'footer.php';
+    require '../includes_service/footermain.php';
 
     } ?>

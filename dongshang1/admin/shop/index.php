@@ -90,7 +90,7 @@
                                     ,rg.re_group_nameguide_th,rg.re_group_program
                                     ,rg.re_group_final,rg.re_group_kb
                                     ,rg.re_group_p_t_c_f_con
-                                    ,rs.re_shopping_option_money
+                                    ,rs.re_shopping_id,rs.re_shopping_option_money
                                     ,rs.re_shopping_complete,rs.re_shopping_option_percent
                                     ,rs.re_shopping_personqty,rs.re_shopping_personqty_color
                                     ,rs.re_shopping_jewelry,rs.re_shopping_jewelry_color
@@ -109,7 +109,7 @@
                                     LEFT OUTER JOIN
                                         report_shopping rs
                                 ON rg.re_group_id = rs.re_group_id
-                                WHERE rg.re_group_id ORDER BY rg.re_group_code DESC";
+                                WHERE rg.re_group_id ORDER BY rg.re_group_id DESC";
                   $qryReport = $conn->query($selReport);
             	 ?>
                 <tbody>

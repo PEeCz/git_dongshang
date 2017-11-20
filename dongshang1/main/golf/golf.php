@@ -1,9 +1,9 @@
 <?php
-    require '../includes/headermain.php';
+    require '../includes_service/headermain.php';
 
-    require '../includes/topbarmain.php';
+    require '../includes_service/topbarmain.php';
 
-    require '../includes/navbarmain.php';
+    require '../includes_service/navbarmain.php';
 
     require '../resizeimg/gen_thumbnail.php';
 
@@ -28,7 +28,7 @@
 
                 <div class="col-md-3">
                     <?php
-                        require '../includes/menu_side.php';
+                        require '../includes_service/menu_side.php';
                     ?>
                     <div class="banner">
                         <a href="#">
@@ -516,6 +516,6 @@
 
 
 <?php
-    require '../includes/footermain.php';
+    require '../includes_service/footermain.php';
 ?>
 

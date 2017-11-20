@@ -146,13 +146,7 @@
 									?>
                     ">
                       	<td class="text-center">
-                      		<div style="color: 
-								<?php
-									if($rs['edit_by_iduser']!=''){
-										echo "#580bf9";
-									}
-								?>
-	                      	">
+                      		<div>
                       			<?php echo (int)$rs['re_group_id']; ?>
                       		</div>
                       	</td>
@@ -167,13 +161,7 @@
 										}
 									?>
                       	">
-	                      	<div style="color: 
-								<?php
-									if($rs['edit_by_iduser']!=''){
-										echo "#580bf9";
-									}
-								?>
-		                    ">
+	                      	<div>
                       			<?php echo $rs['re_group_code']; ?>
                       		</div>
                       	</td>
@@ -194,13 +182,7 @@
 										}
 									?>
                       	">
-                      		<div style="color: 
-								<?php
-									if($rs['edit_by_iduser']!=''){
-										echo "#580bf9";
-									}
-								?>
-	                      	">
+                      		<div>
                       			<?php echo $rs['re_group_nameguide_th']; ?>
                       		</div>
                       	</td>

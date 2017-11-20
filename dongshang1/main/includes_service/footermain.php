@@ -146,15 +146,15 @@
     
     <!-- *** SCRIPTS TO INCLUDE ***
  _________________________________________________________ -->
-    <script src="../src/js/jquery-1.11.0.min.js"></script>
-    <script src="../src/js/bootstrap.min.js"></script>
-    <script src="../src/js/jquery.cookie.js"></script>
-    <script src="../src/js/waypoints.min.js"></script>
-    <script src="../src/js/modernizr.js"></script>
-    <script src="../src/js/bootstrap-hover-dropdown.js"></script>
-    <script src="../src/js/owl.carousel.min.js"></script>
-    <script src="../src/js/front.js"></script>
-    <script src="../src/js/dropdown-sidebar.js"></script>
+    <script src="../../src/js/jquery-1.11.0.min.js"></script>
+    <script src="../../src/js/bootstrap.min.js"></script>
+    <script src="../../src/js/jquery.cookie.js"></script>
+    <script src="../../src/js/waypoints.min.js"></script>
+    <script src="../../src/js/modernizr.js"></script>
+    <script src="../../src/js/bootstrap-hover-dropdown.js"></script>
+    <script src="../../src/js/owl.carousel.min.js"></script>
+    <script src="../../src/js/front.js"></script>
+    <script src="../../src/js/dropdown-sidebar.js"></script>
 
     <script type="text/javascript">
             $(function(){

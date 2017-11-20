@@ -1,9 +1,9 @@
 <?php
-    require '../includes/headermain.php';
+    require '../includes_service/headermain.php';
 
-    require '../includes/topbarmain.php';
+    require '../includes_service/topbarmain.php';
 
-    require '../includes/navbarmain.php';
+    require '../includes_service/navbarmain.php';
 
     require '../../static/connect.php';
 
@@ -125,5 +125,5 @@
 	</div>
 
 <?php
-    require '../includes/footermain.php';
+    require '../includes_service/footermain.php';
 ?>
