@@ -15,13 +15,134 @@
             <div class="container">
                 <div class="col-md-12">
                     <div id="main-slider">
-                        <div class="item">
                             <img src="img/dongshang/bg1.png" alt="" class="img-responsive">
-                        </div>
+                       
                     </div>
                     <!-- /#main-slider -->
                 </div>
             </div>
+            
+            <!-- Slider -->
+            <section id="slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#slider-carousel" data-slide-to="0" class=""></li>
+                                    <li data-target="#slider-carousel" data-slide-to="1" class=""></li>
+                                    <li data-target="#slider-carousel" data-slide-to="2" class=""></li>
+                                    <li data-target="#slider-carousel" data-slide-to="3" class="active"></li>
+                                    <li data-target="#slider-carousel" data-slide-to="4" class=""></li>
+                                    <li data-target="#slider-carousel" data-slide-to="5" class=""></li>
+                                    <li data-target="#slider-carousel" data-slide-to="6" class=""></li>
+                                </ol>
+                                
+                                <div class="carousel-inner">
+                                    <div class="item">
+                                        <div class="col-sm-6">
+                                            <h1><span>Travel</span>-Thailand</h1>
+                                            <h2>วัดคำชะโนด !</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                            <button type="button" class="btn btn-default get">Get it now</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <img src="..." class="girl img-responsive" alt="">
+                                            <img src="..." class="pricing" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="col-sm-6">
+                                            <h1><span>Golf</span>-Court</h1>
+                                            <h2>Sukhumvit Golf Club !</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                            <button type="button" class="btn btn-default get">Get it now</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <img src="..." class="girl img-responsive" alt="">
+                                            <img src="..." class="pricing" alt="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <div class="col-sm-6">
+                                            <h1><span>Hotel</span>-Online</h1>
+                                            <h2>Avana Hotel & Spa</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                            <button type="button" class="btn btn-default get">Get it now</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <img src="..." class="girl img-responsive" alt="">
+                                            <img src="..." class="pricing" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="item active">
+                                        <div class="col-sm-6">
+                                            <h1><span>IT</span>-Online</h1>
+                                            <h2>Hardware Comp !</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                            <button type="button" class="btn btn-default get">Get it now</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <img src="..." class="girl img-responsive" alt="">
+                                            <img src="..." class="pricing" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-sm-6">
+                                            <h1><span>IT</span>-Online</h1>
+                                            <h2>Printer</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                            <button type="button" class="btn btn-default get">Get it now</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <img src="..." class="girl img-responsive" alt="">
+                                            <img src="..." class="pricing" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-sm-6">
+                                            <h1><span>IT</span>-Online</h1>
+                                            <h2>Network</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                            <button type="button" class="btn btn-default get">Get it now</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <img src="..." class="girl img-responsive" alt="">
+                                            <img src="..." class="pricing" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-sm-6">
+                                            <h1><span>IT</span>-Online</h1>
+                                            <h2>Sound</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                            <button type="button" class="btn btn-default get">Get it now</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <img src="..." class="girl img-responsive" alt="">
+                                            <img src="..." class="pricing" alt="">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                                    <i class="fa fa-angle-left"></i>
+                                </a>
+                                <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             <!-- *** ADVANTAGES HOMEPAGE ***
  _________________________________________________________ -->

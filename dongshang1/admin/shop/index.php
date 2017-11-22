@@ -82,6 +82,16 @@
                     </tr>
                 </thead>
                 <?php
+                  // Start Pagination And SELECT .. ORDER BY .. And LIMIT ..... , ..... -------------------
+                  $limit = 10;  
+                  if (isset($_GET["page"])) { 
+                    $page  = $_GET["page"]; 
+                  } else {
+                    $page=1; 
+                  };  
+
+                  $start_from = ($page-1) * $limit;
+
             		  $selReport = "SELECT 
                                     rg.re_group_id,rg.re_group_code,rg.re_group_nameagent
                                     ,rg.re_group_personqty,rg.re_group_in_date
@@ -109,11 +119,12 @@
                                     LEFT OUTER JOIN
                                         report_shopping rs
                                 ON rg.re_group_id = rs.re_group_id
-                                WHERE rg.re_group_id ORDER BY rg.re_group_id DESC";
+                                WHERE rg.re_group_id ORDER BY rg.re_group_id DESC LIMIT $start_from, $limit";
                   $qryReport = $conn->query($selReport);
             	 ?>
                 <tbody>
                 	<?php
+                    $j=1;
                 		while($rs = $qryReport->fetch_assoc()){
                 	?>
                     <tr
@@ -125,8 +136,10 @@
                         ?>
                     >
                       	<td class="text-center" style="font-size: 12px;">
-                      		<?php echo (int)$rs['re_group_id'].' <HR> '; ?>
-                      		<a id="<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-success btn_editShop">Add</a>
+                      		<?php /*echo (int)$rs['re_group_id'].' <HR> ';*/
+                            echo ($start_from+$j).'<HR>';
+                          ?>
+                      		<a id="<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-success btn_addShop">Add</a>
                           <a href="edit_shopping/edit_shopping.php?id=<?php echo $rs['re_group_id']; ?>" class="btn btn-xs btn-warning">Edit</a>
                       	</td>
                       	<td style="font-size:12px; background: 
@@ -353,7 +366,7 @@
                                     }
                                 ?>
                         ">
-                          <div class="panel-heading" style="font-size:12px; background-color:
+                          <div class="panel-heading box_percent" style="font-size:12px; background-color:
                                 <?php
                                     if(!empty($rs['re_shopping_complete']=='0')){
                                         echo "#CCCCCC";
@@ -374,7 +387,7 @@
                               }
                             ?>
                           </div>
-                          <div class="panel-heading" style="font-size:12px; background-color:
+                          <div class="panel-heading box_percent" style="font-size:12px; background-color:
                                 <?php
                                     if(!empty($rs['re_shopping_complete']=='0')){
                                         echo "#CCCCCC";
@@ -408,7 +421,7 @@
                                     }
                                 ?>
                         ">
-                          <div class="panel-heading" style="font-size:12px; background-color:
+                          <div class="panel-heading box_percent" style="font-size:12px; background-color:
                                 <?php
                                     if(!empty($rs['re_shopping_complete']=='0')){
                                         echo "#CCCCCC";
@@ -429,7 +442,7 @@
                               }
                             ?>
                           </div>
-                          <div class="panel-heading" style="font-size:12px; background-color:
+                          <div class="panel-heading box_percent" style="font-size:12px; background-color:
                                 <?php
                                     if(!empty($rs['re_shopping_complete']=='0')){
                                         echo "#CCCCCC";
@@ -463,7 +476,7 @@
                                     }
                                 ?>
                         ">
-                          <div class="panel-heading" style="font-size:12px; background-color:
+                          <div class="panel-heading box_percent" style="font-size:12px; background-color:
                                 <?php
                                     if(!empty($rs['re_shopping_complete']=='0')){
                                         echo "#CCCCCC";
@@ -484,7 +497,7 @@
                               }
                             ?> 
                           </div>
-                          <div class="panel-heading" style="font-size:12px; background-color:
+                          <div class="panel-heading box_percent" style="font-size:12px; background-color:
                                 <?php
                                     if(!empty($rs['re_shopping_complete']=='0')){
                                         echo "#CCCCCC";
@@ -576,12 +589,23 @@
                               }
                             ?> 
                         </td>
-                  	</tr <?php } ?>
+                  	</tr <?php $j++; } ?>
                   	<?php } ?>
               	</tbody>
             </table>
         </div>
-
+    <?php  
+        $sql = "SELECT COUNT(re_group_id) FROM report_group";
+        $rs_result = $conn->query($sql);  
+        $row = mysqli_fetch_row($rs_result);  
+        $total_records = $row[0];  
+        $total_pages = ceil($total_records / $limit);  
+        $pagLink = "<nav><ul class='pagination'>";  
+        for ($i=1; $i<=$total_pages; $i++) {  
+                     $pagLink .= "<li><a href='index.php?page=".$i."'>".$i."</a></li>";  
+        };  
+        echo $pagLink . "</ul></nav>";  
+    ?>
 				<!--copy rights start here-->
 				<div class="copyrights">
 					 <p>© 2017 PEeCz. All Rights Reserved | Design by  <a href="www.dongshangtravel.com" target="_blank">Sorakrit Chinphet</a> </p>

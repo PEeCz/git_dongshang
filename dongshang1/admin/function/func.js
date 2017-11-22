@@ -17,16 +17,16 @@
 	   		}
 
 	   var sum = 0;
-	   var sum = 1;
-	   var sum = 2;
-	   var sum = 3;
-	   var sum = 4;
-	   var sum = 5;
-	   var sum = 6;
-	   var sum = 7;
-	   var sum = 8;
-	   var sum = 9;
-	   var sum = 10;
+	   var sum1 = 0;
+	   var sum2 = 0;
+	   var sum3 = 0;
+	   var sum4 = 0;
+	   var sum5 = 0;
+	   var sum6 = 0;
+	   var sum7 = 0;
+	   var sum8 = 0;
+	   var sum9 = 0;
+	   var sum10 = 0;
 	   sum = Number(jewelry) + Number(leather) + Number(snake_park) + Number(rubber) + Number(red88) + Number(gm) + Number(silk);
 	    frmAccounting.overall.value = sum;
 

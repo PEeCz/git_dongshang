@@ -3,11 +3,11 @@
     $detailid = $_GET['detailid'];
     if($detailid == 'avana'){
 
-    require 'header.php';
+    require 'includes/headermain.php';
 
-    require 'topbar.php';
+    require 'includes/topbarmain.php';
 
-    require 'navbar.php';
+    require 'includes/navbarmain.php';
 ?>
 
     <div id="all">
@@ -28,72 +28,12 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div id='cssmenu'>
-                        <ul>
-                           <li><a href='service.php'><span>บริการ (Service Page)</span></a></li>
-                           <li class='has-sub active'><a href='#'><span>กรุงเทพมหานคร</span></a>
-                              <ul>
-                                 <li><a href='#'>
-                                    <span> 4 ดาว 
-                                        (<i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>)
-                                    </span></a></li>
-                                 <li><a href='#'>
-                                    <span> 5 ดาว 
-                                        (<i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>)
-                                    </span></a></li>
-                              </ul>
-                           </li>
-                           <li class='has-sub'><a href='#'><span>พัทยา</span></a>
-                              <ul>
-                                 <li><a href='#'>
-                                    <span> 4 ดาว 
-                                        (<i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>)
-                                    </span></a></li>
-                                 <li><a href='#'>
-                                    <span> 5 ดาว 
-                                        (<i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>)
-                                    </span></a></li>
-                              </ul>
-                           </li>
-                           <li class='has-sub'><a href='#'><span>ระยอง</span></a>
-                              <ul>
-                                 <li><a href='#'>
-                                    <span> 4 ดาว 
-                                        (<i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>)
-                                    </span></a></li>
-                                 <li><a href='#'>
-                                    <span> 5 ดาว 
-                                        (<i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>
-                                        <i class="fa fa-star" style="color: orange;"></i>)
-                                    </span></a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                    </div>
-
+                    <?php
+                        require 'includes/menu_side.php';
+                    ?>
                     <div class="banner">
                         <a href="#">
-                            <img class="center-block" src="img/dongshang/label1.png" alt="sales 2014" class="img-responsive">
+                            <img class="center-block" src="../img/dongshang/label1.png" alt="sales 2014" class="img-responsive">
                         </a>
                     </div>
                 </div>
@@ -103,7 +43,7 @@
                     <div class="row" id="productMain">
                         <div class="col-sm-6">
                             <div id="mainImage">
-                                <img src="img/dongshang/hotel/bangkok/4star/avana/detailfullimg-avana1.jpg" alt="" class="img-responsive">
+                                <img src="../img/dongshang/hotel/bangkok/4star/avana/detailfullimg-avana1.jpg" alt="" class="img-responsive">
                             </div>
 
                             <div class="ribbon sale">
@@ -129,18 +69,18 @@
 
                             <div class="row" id="thumbs">
                                 <div class="col-xs-4">
-                                    <a href="img/dongshang/hotel/bangkok/4star/avana/detailfullimg-avana1.jpg" class="thumb">
-                                        <img src="img/dongshang/hotel/bangkok/4star/avana/avana1.jpg" alt="" class="img-responsive">
+                                    <a href="../img/dongshang/hotel/bangkok/4star/avana/detailfullimg-avana1.jpg" class="thumb">
+                                        <img src="../img/dongshang/hotel/bangkok/4star/avana/avana1.jpg" alt="" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="col-xs-4">
-                                    <a href="img/dongshang/hotel/bangkok/4star/avana/detailfullimg-avana3.jpg" class="thumb">
-                                        <img src="img/dongshang/hotel/bangkok/4star/avana/avana3.jpg" alt="" class="img-responsive">
+                                    <a href="../img/dongshang/hotel/bangkok/4star/avana/detailfullimg-avana3.jpg" class="thumb">
+                                        <img src="../img/dongshang/hotel/bangkok/4star/avana/avana3.jpg" alt="" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="col-xs-4">
-                                    <a href="img/dongshang/hotel/bangkok/4star/avana/detailfullimg-avana2.jpg" class="thumb">
-                                        <img src="img/dongshang/hotel/bangkok/4star/avana/avana2.jpg" alt="" class="img-responsive">
+                                    <a href="../img/dongshang/hotel/bangkok/4star/avana/detailfullimg-avana2.jpg" class="thumb">
+                                        <img src="../img/dongshang/hotel/bangkok/4star/avana/avana2.jpg" alt="" class="img-responsive">
                                     </a>
                                 </div>
                             </div>
@@ -218,6 +158,6 @@
 
 
 <?php
-    require 'footer.php';
+    require 'includes/footermain.php';
 
     } ?>

@@ -26,7 +26,7 @@
 						?>
 			      	</div>
 			      	<?php 
-						if($rs['re_group_kb']!=''){
+						if($rs['re_group_kb']!==''){
 					
 							echo '<h4 class="modal-title text-center bg-danger kb_textcolor">รายละเอียด ( KB ไม่ปกติ ) <i class="fa fa-hand-o-down"></i></h4>';
 			      			echo '<div class="well kb_textcolor">';
@@ -38,7 +38,7 @@
 			      	?>
 				</div>
 		      	<div class="modal-footer">
-		        	<a href="edit_shopping/edit_shop.php?id=<?php echo $id; ?>" class=" btn btn-success">Add</a>
+		        	<a href="edit_shopping/insert_shop.php?id=<?php echo $id; ?>" class=" btn btn-success">Add</a>
 		        	<button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
 		      	</div>
 		    </div><!-- /.modal-content -->

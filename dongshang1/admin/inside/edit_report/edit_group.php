@@ -77,7 +77,7 @@
 					      				if($i != $rs['re_group_personqty']){
 					      					echo $i; 
 						      				}
-						      		} 
+						      			} 
 						      		?>
 									</option>
 						      	</select>

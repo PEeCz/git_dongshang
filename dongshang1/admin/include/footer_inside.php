@@ -125,7 +125,8 @@
 			<div class="modal-dialog" id="addbook_dialog_modal" role="document"></div>
 		</div>
 	<!-- End Add Modal JS -->
-
+	
+	<!-- Search Advanced -->
 		<script>
 			$(document).ready(function(){
 				$("#search").keyup(function(){
@@ -140,5 +141,13 @@
 						}
 					});
 				});
+			});
+		</script>
+
+	<!-- Tooltip Side Menu -->
+		<script>
+			$(document).ready(function(){
+			    $('[data-toggle="tooltip"]').tooltip();   
+			    $('.tooltip1').tooltip({delay: {show: 500, hide: 100}});
 			});
 		</script>

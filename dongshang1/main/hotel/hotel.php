@@ -89,12 +89,12 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.php?detailid=avana">
+                                            <a href="../detail.php?detailid=avana">
                                                 <img src="../../img/dongshang/hotel/bangkok/4star/avana/avana1.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.php?detailid=avana">
+                                            <a href="../detail.php?detailid=avana">
                                                 <img src="../../img/dongshang/hotel/bangkok/4star/avana/avana3.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>

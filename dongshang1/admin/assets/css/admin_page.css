@@ -113,3 +113,11 @@ label#canceled_text{
 	color: #000000;
 	font-weight: bold;
 }
+
+.box_percent{
+  	background-position: left top;
+  	background-repeat: repeat;
+  	width: 65px;
+  	height: 38;
+  	margin-bottom: 1px;
+}

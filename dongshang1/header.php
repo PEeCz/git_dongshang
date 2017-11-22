@@ -42,6 +42,9 @@
     <!-- your stylesheet with modifications -->
     <link href="src/css/custom.css" rel="stylesheet">
 
+    <!-- Slider -->
+    <link href="src/css/main.css" rel="stylesheet">
+
     <script src="src/js/respond.min.js"></script>
 
     <link rel="shortcut icon" href="main/favicon.png">

@@ -27,7 +27,7 @@
     $rsUser = $qry->fetch_assoc();
 
     // Start Pagination And SELECT .. ORDER BY .. And LIMIT ..... , ..... -------------------
-	$limit = 20;  
+	$limit = 10;  
 	if (isset($_GET["page"])) { 
 		$page  = $_GET["page"]; 
 	} else {
@@ -36,7 +36,7 @@
 
 	$start_from = ($page-1) * $limit;
 
-	$sqlPagination = "SELECT * FROM report_group WHERE re_group_id LIMIT $start_from, $limit";  
+	$sqlPagination = "SELECT * FROM report_group WHERE re_group_id ORDER BY re_group_code ASC LIMIT $start_from, $limit ";  
 	$qryPagination  = $conn->query($sqlPagination);
 
 
@@ -98,17 +98,17 @@
             <table>
 				<thead class="table-bordered">
                     <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="ค้นหาจาก ID ของแถว" disabled></th>
+                        <!--<th><input type="text" class="form-control" placeholder="ค้นหาจาก ID ของแถว" disabled></th>-->
                         <th><input type="text" class="form-control" placeholder="ค้นหาจาก กรุ๊ปโค้ด" disabled></th>
                         <th><input type="text" class="form-control" placeholder="ค้นหาจาก ชื่อไกด์" disabled></th>
                         <th><input type="text" class="form-control" placeholder="ค้นหาจาก ชื่อหัวหน้าทัวร์" disabled></th>
                     </tr>
                 </thead>
             </table>
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="data_op">
                 <thead class="bgthead">
                     <tr class="text-center" style="font-size: 12px;">
-						<th style="width: 70px;">No.</th>
+                    	<th>No.</th>
 						<th style="width: 150px;">No. Group</th>
 						<th style="width: 100px;">ชื่อ<BR>ไกด์</th>
 						<th style="width: 100px;">ชื่อ<BR>หัวหน้าทัวร์</th>
@@ -133,6 +133,7 @@
             	?>
                 <tbody>
                 	<?php
+                		$j=1;
                 		while($rs = $qryPagination->fetch_assoc()){
                 		//while($rs = $qryReport->fetch_assoc()){
                 	?>
@@ -145,11 +146,14 @@
 										}
 									?>
                     ">
+                    <?php /*
                       	<td class="text-center">
                       		<div>
                       			<?php echo (int)$rs['re_group_id']; ?>
                       		</div>
-                      	</td>
+                      	</td>*/
+                      	echo '<td class="text-center"><div>'. ($start_from+$j) .'</div></td>';
+                    ?>
                       	<td class="text-center" style="background: 
 									<?php
 										if($rs['re_group_edit_cancel_group']=='10'){
@@ -212,7 +216,10 @@
                       	<td class="text-center"><?php echo $rs['re_group_hotel4']; ?></td>
                       	<td class="text-center"><a id="<?php echo $rs['re_group_id']; ?>" class="btn btn-sm btn-primary btn_description">คลิก</a></td>
                   	</tr>
-                  	<?php } ?>
+                  	<?php
+                  		$j++;
+                  		} 
+                  	?>
               	</tbody>
             </table>
             
