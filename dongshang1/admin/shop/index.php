@@ -130,7 +130,7 @@
                     <tr
                         <?php
                           if($rs['re_group_edit_cancel_group']=='10'){
-
+                            
                           }else{
 
                         ?>
@@ -589,8 +589,8 @@
                               }
                             ?> 
                         </td>
-                  	</tr <?php $j++; } ?>
-                  	<?php } ?>
+                  	</tr <?php } ?>
+                  	<?php $j++; } ?>
               	</tbody>
             </table>
         </div>

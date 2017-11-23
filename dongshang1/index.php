@@ -493,19 +493,19 @@
                         <h3 class="text-uppercase text-primary superspacebold"><?php echo $portfoliotitle; ?></h3>
                         <!--<p class="lead"></p>-->
                         <div id="get-inspired" class="owl-carousel owl-theme">
-                            <div class="item">
+                            <div class="item1">
                                 <p class="superspace text-warning"><strong>ทัวร์สวนประเพณีไทย กรุ๊ป DS170908 A</strong></p>
                                 <a href="gallery1.php">
                                     <img src="img/dongshang/tour/tour1.png" alt="Get inspired" class="img-responsive">
                                 </a>
                             </div>
-                            <div class="item">
+                            <div class="item1">
                                 <p class="superspace">Tour 2</p>
                                 <a href="gallery2.php">
                                     <img src="img/dongshang/tour/tour2.png" alt="Get inspired" class="img-responsive">
                                 </a>
                             </div>
-                            <div class="item">
+                            <div class="item1">
                                 <p class="superspace">Tour 3</p>
                                 <a href="gallery3.php">
                                     <img src="img/dongshang/tour/tour3.png" alt="Get inspired" class="img-responsive">
