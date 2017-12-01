@@ -58,7 +58,7 @@
         $Num_Pages = (int)$Num_Pages;
     }
 
-    $sqlPagination .= "ORDER BY re_group_id ASC LIMIT $Page_Start , $Per_Page";  
+    $sqlPagination .= "ORDER BY re_group_code ASC LIMIT $Page_Start , $Per_Page";  
     $qryPagination  = $conn->query($sqlPagination);
 ?>
 <body>
@@ -108,6 +108,7 @@
                 ?>
                 <tbody>
                     <?php
+                        $j=1;
                         while($rs = $qryPagination->fetch_assoc()){
                         //while($rs = $qryReport->fetch_assoc()){
                     ?>
@@ -122,7 +123,9 @@
                     ">
                         <td class="text-center">
                             <div>
-                                <?php echo (int)$rs['re_group_id']; ?>
+                                <?php //echo (int)$rs['re_group_id']; 
+                                    echo ($Page_Start+$j);
+                                ?>
                             </div>
                         </td>
                         <td class="text-center" style="background: 
@@ -187,7 +190,7 @@
                         <td class="text-center"><?php echo $rs['re_group_hotel4']; ?></td>
                         <td class="text-center"><a id="<?php echo $rs['re_group_id']; ?>" class="btn btn-sm btn-primary btn_description">คลิก</a></td>
                     </tr>
-                    <?php } ?>
+                    <?php $j++; } ?>
                 </tbody>
             </table>
     </div>

@@ -61,7 +61,9 @@
 			                		  }else{
 			                		  	?>
 			                	<a id="<?php echo $rsUser['user_id']; ?>" class="btn btn-lg btn-success btn_addGuide">เพิ่มข้อมูลกรุ๊ป</a>
+			                	<a href="old/index.php" class="btn btn-sm btn-info">ดูข้อมูลกรุ๊ปเก่า</a>
 			                	<?php } ?>
+
 			                </div>
 						</div>
 						<div class="col-md-3 chit-chat-layer1-right" id="bgdiv">
