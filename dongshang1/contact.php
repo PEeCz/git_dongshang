@@ -13,9 +13,9 @@
 
                 <div class="col-md-12">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a>
+                        <li><a href="#">หน้าหลัก</a>
                         </li>
-                        <li>Contact</li>
+                        <li>ติดต่อเรา</li>
                     </ul>
 
                 </div>
@@ -69,7 +69,7 @@
 
                         <div class="row">
                             <div class="col-sm-4">
-                                <h3><i class="fa fa-map-marker text-danger"></i> Address</h3>
+                                <h3><i class="fa fa-map-marker text-danger"></i> ที่อยู่</h3>
                                 <p>7/1
                                     <br>Oak's Building, 5th Floor
                                     <br>Soi Udomsuk 46 
@@ -80,17 +80,17 @@
                             </div>
                             <!-- /.col-sm-4 -->
                             <div class="col-sm-4">
-                                <h3><i class="fa fa-phone text-success"></i> Call Center</h3>
+                                <h3><i class="fa fa-phone text-success"></i> เบอร์ติดต่อ</h3>
                                 <p class="text-muted">This number is toll free if calling from Great Britain otherwise we advise you to use the electronic form of communication.</p>
                                 <p><strong>+33 555 444 333</strong>
                                 </p>
                             </div>
                             <!-- /.col-sm-4 -->
                             <div class="col-sm-4">
-                                <h3><i class="fa fa-envelope text-info"></i> Support</h3>
+                                <h3><i class="fa fa-envelope text-info"></i> อีเมลล์</h3>
                                 <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
                                 <ul>
-                                    <li><strong><a href="mailto:">info@fakeemail.com</a></strong>
+                                    <li><strong><a href="#sendmail">rsvn@dongshangtravel.com</a></strong>
                                     </li>
                                     <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
                                 </ul>
@@ -100,7 +100,7 @@
                         <!-- /.row -->
 
                         <hr>
-                        <h2>Contact form</h2>
+                        <h2 id="sendmail">Contact form</h2>
 
                         <form method="post" action="sendmail.php">
                             <div class="row">
@@ -146,9 +146,9 @@
 
                         <hr>
 
-                        <div id="map">
+                        <!--<div id="map">
 
-                        </div>
+                        </div>-->
 
                     </div>
 

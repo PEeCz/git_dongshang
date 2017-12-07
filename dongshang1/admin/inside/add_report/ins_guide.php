@@ -12,7 +12,7 @@
 		        	<h4 class="modal-title text-center">ข้อมูลไกด์</h4>
 		      	</div>
 		      	<form method="post" class="form-horizontal" name="frmAddGuide" action="add_report/ins_guidechk.php?id=<?php echo $user_id; ?>">
-			      	<div class="modal-body" style="background-color: #DCDCDC">
+			      	<div class="modal-body" style="background: linear-gradient(to bottom, #66ffff 0%, #3399ff 100%);">
 				      	<div class="form-group">
 						    <label for="re_group_code" class="col-sm-2 control-label">กรุ๊ปโค้ด</label>
 						    <div class="col-sm-2">
@@ -82,8 +82,8 @@
 						    </div>
 						    <label for="re_group_in" class="col-sm-2 col-sm-pull-1 control-label">รับ</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="date" class="form-control" id="re_group_in_date" name="re_group_in_date" required>
-						      	<input type="time" class="form-control" id="re_group_in_time" name="re_group_in_time" >
+						      	<input type="text" id="date1" class="form-control" id="re_group_in_date" name="re_group_in_date" placeholder="วันที่" required>
+						      	<input type="text" id="time1" class="form-control" id="re_group_in_time" name="re_group_in_time" placeholder="เวลา">
 						    </div>
 						    <label for="re_group_flight_in" class="col-sm-2 col-sm-pull-1 control-label">Flight-In</label>
 						    <div class="col-sm-2 col-sm-pull-1">
@@ -98,8 +98,8 @@
 						    </div>
 						    <label for="re_group_out" class="col-sm-2 col-sm-pull-1 control-label">ส่ง</label>
 						    <div class="col-sm-2 col-sm-pull-1">
-						      	<input type="date" class="form-control" id="re_group_out_date" name="re_group_out_date" required>
-						      	<input type="time" class="form-control" id="re_group_out_time" name="re_group_out_time">
+						    	<input type="text" id="date2" class="form-control" id="re_group_out_date" name="re_group_out_date" placeholder="วันที่" required>
+						      	<input type="text" id="time2" class="form-control" id="re_group_out_time" name="re_group_out_time" placeholder="เวลา">
 						    </div>
 						    <label for="re_group_flight_out" class="col-sm-2 col-sm-pull-1 control-label">Flight-Out</label>
 						    <div class="col-sm-2 col-sm-pull-1">
@@ -193,4 +193,65 @@
 		      	</form>
 		    </div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
+
+		<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#date1').bootstrapMaterialDatePicker
+			({
+				time: false,
+				clearButton: true
+			});
+
+			$('#date2').bootstrapMaterialDatePicker
+			({
+				time: false,
+				clearButton: true
+			});
+
+			$('#time1').bootstrapMaterialDatePicker
+			({
+				date: false,
+				shortTime: false,
+				format: 'HH:mm'
+			});
+
+			$('#time2').bootstrapMaterialDatePicker
+			({
+				date: false,
+				shortTime: false,
+				format: 'HH:mm'
+			});
+
+			$('#date-format').bootstrapMaterialDatePicker
+			({
+				format: 'dddd DD MMMM YYYY - HH:mm'
+			});
+			$('#date-fr').bootstrapMaterialDatePicker
+			({
+				format: 'DD/MM/YYYY HH:mm',
+				lang: 'fr',
+				weekStart: 1, 
+				cancelText : 'ANNULER',
+				nowButton : true,
+				switchOnClick : true
+			});
+
+			$('#date-end').bootstrapMaterialDatePicker
+			({
+				weekStart: 0, format: 'DD/MM/YYYY HH:mm'
+			});
+			$('#date-start').bootstrapMaterialDatePicker
+			({
+				weekStart: 0, format: 'DD/MM/YYYY HH:mm', shortTime : true
+			}).on('change', function(e, date)
+			{
+				$('#date-end').bootstrapMaterialDatePicker('setMinDate', date);
+			});
+
+			$('#min-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', minDate : new Date() });
+
+			$.material.init()
+		});
+		</script>
 	

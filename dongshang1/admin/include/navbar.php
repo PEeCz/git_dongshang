@@ -11,8 +11,8 @@
 								<div class="profile_details_left"><!--notifications of menu start -->
 									<ul class="nofitications-dropdown">
 										<li class="dropdown head-dpdn">
-											 <a href="../../src/lang/aboutchange.php?lang=TH"><img name="TH" id="TH" src="../../img/dongshang/icon/thailand-icon.png" width="30px" height="30px"></a>
-											 <a href="../../src/lang/aboutchange.php?lang=CN"><img name="CN" id="CN" src="../../img/dongshang/icon/china-icon.png" width="30px" height="30px"></a>
+											 <a href="#"><img name="TH" id="TH" src="../../img/dongshang/icon/thailand-icon.png" width="30px" height="30px"></a>
+											 <a href="#"><img name="CN" id="CN" src="../../img/dongshang/icon/china-icon.png" width="30px" height="30px"></a>
 										</li>
 									</ul>
 									<div class="clearfix"> </div>

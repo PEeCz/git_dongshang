@@ -10,7 +10,7 @@
     	&& !isset($_SESSION['is_admin'])
     ){
 
-    	header("Location: ../inside/index.php");
+    	header("Location: ../index.php");
 
     }
 
@@ -54,7 +54,7 @@
 		<div class="row" style="padding-top: 10px;">
 		    <div class="col-sm-12" style="background-color: #D2B48C;">
 		    	<h1 class="text-center">Accounting</h1>
-				<form class="form-horizontal" method="POST" name="frmAccounting" action="edit_shoppingchk.php?id=<?php echo $id; ?>">
+				<form class="form-horizontal" method="POST" name="frmAccounting" action="update_shopping.php?id=<?php echo $id; ?>">
 		      		<div class="form-group">
 					    <div class="col-sm-2">
 					    	จำนวนคนเข้าร้าน

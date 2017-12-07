@@ -1,4 +1,22 @@
 <?php
+	session_start();
+
+	if(!isset($_SESSION['is_ot'])
+    	&& 
+    	!isset($_SESSION['is_of'])
+    	&&
+    	!isset($_SESSION['is_ad'])
+    	&&
+    	!isset($_SESSION['is_fd']) 
+    	&&
+    	!isset($_SESSION['is_am'])
+    	&&
+    	!isset($_SESSION['is_boss'])
+    	&& 
+    	!isset($_SESSION['is_admin'])){
+
+    	header("Location: ../index.php");
+    }
 
 	require '../../../static/db.class.php';
 	require '../../../static/db.qry.php';

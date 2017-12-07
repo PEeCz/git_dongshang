@@ -83,7 +83,7 @@
 		$(function(){
 			$(".btn_description").on('click',function(){
 				$.ajax({
-				  url :"report_description.php" , // -> Go to use_room_description.php
+				  url :"old_report_description.php" , // -> Go to use_room_description.php
 				  data:"id="+$(this).attr("id"), // -> data json = send id
 				  type:"GET", // -> Send Method = "GET"
 				  beforeSend: function(){

@@ -151,3 +151,8 @@
 			    $('.tooltip1').tooltip({delay: {show: 500, hide: 100}});
 			});
 		</script>
+
+	<!-- Datetimepicker Material -->
+		<script src="../assets/js/date/material.min.js"></script>
+		<script type="text/javascript" src="../assets/js/date/moment-with-locales.min.js"></script>
+		<script type="text/javascript" src="../assets/js/date/bootstrap-material-datetimepicker.js"></script>

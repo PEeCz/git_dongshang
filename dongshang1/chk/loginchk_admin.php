@@ -120,6 +120,7 @@
 		<body>
 	<?php
 		echo "<BR><BR><BR><BR>";
+		echo "<img class='center-block' src='../img/error/error.png' width='400px' height='350px'>"."<BR><BR>";
 		echo "<div class='alert alert-danger text-center' role='alert'>ชื่อหรือรหัสไม่ถูกต้อง กรุณาลองใหม่อีกครั้งค่ะ</div>";
 		echo "<BR>";
 		echo "<a href='../index.php' class='btn btn-md btn-danger center-block'>กลับหน้าหลัก</a>";

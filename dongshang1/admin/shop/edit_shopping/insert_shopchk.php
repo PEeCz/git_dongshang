@@ -1,6 +1,18 @@
 <?php
 	session_start();
 	date_default_timezone_set('Asia/Bangkok');
+
+	if(!isset($_SESSION['is_ad'])
+    	&& !isset($_SESSION['is_fd'])
+    	&& !isset($_SESSION['is_am'])
+    	&& !isset($_SESSION['is_boss'])
+    	&& !isset($_SESSION['is_admin'])
+    ){
+
+    	header("Location: ../index.php");
+
+    }
+	
 	require '../../../static/db.class.php';
 	require '../../../static/db.qry.php';
 

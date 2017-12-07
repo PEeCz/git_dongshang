@@ -6,6 +6,7 @@
         require 'src/lang/cn.php';
     }
     
+
 ?>
 
 <!DOCTYPE html>

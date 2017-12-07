@@ -12,6 +12,10 @@
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="../assets/css/table-snipp.css" rel="stylesheet" type="text/css" media="all"/>
  
+<!-- Datetimepicker Masterial -->
+<link href="../assets/css/date/bootstrap-material-datetimepicker.css" rel="stylesheet">
+<link href="../assets/css/date/material-font.css" rel="stylesheet">
+
 <!--icons-css-->
 <link href="../assets/css/font-awesome.css" rel="stylesheet"> 
 <!--Google Fonts-->

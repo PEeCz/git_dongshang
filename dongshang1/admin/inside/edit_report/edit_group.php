@@ -17,7 +17,7 @@
     	&& 
     	!isset($_SESSION['is_admin'])){
 
-    	header("Location: ../../index.php");
+    	header("Location: ../index.php");
     }
 
     $id = $_GET['id'];
@@ -55,7 +55,7 @@
 	<div class="container">
 		<div class="well edit_bgpage">
 			<div class="row">
-				<form method="post" class="form-horizontal" name="frmAddGuide" action="update_edit_group.php?id_user=<?php echo $_SESSION['user_id'] ?>&group_id=<?php echo $id; ?>">
+				<form method="post" class="form-horizontal" name="frmAddGuide" action="update_edit_group.php?id_user=<?php echo $_SESSION['user_id']; ?>&group_id=<?php echo $id; ?>">
 			      	<div class="modal-body">
 				      	<div class="form-group">
 						    <label for="ed_group_code" class="col-sm-2 control-label">กรุ๊ปโค้ด</label>
