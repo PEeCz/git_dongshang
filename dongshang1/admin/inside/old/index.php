@@ -128,9 +128,9 @@
                         <td class="text-center"><?php echo $rs['dateout'].' <BR> '.$rs['no_flight_out']; ?></td>
                         <td class="text-center"><?php echo $rs['hotel_1']; ?></td>
                         <td class="text-center"><?php echo $rs['hotel_2']; ?></td>
-                        <td class="text-center"><?php echo $rs['hotel_3']; ?></td>
                         <td class="text-center"><?php echo $rs['hotel_4']; ?></td>
-                        <td class="text-center"><a id="<?php echo $rs['no_key']; ?>" class="btn btn-sm btn-primary btn_description">คลิก</a></td>
+                        <td class="text-center"><?php echo $rs['hotel_3']; ?></td>
+                        <td class="text-center"><a id="<?php echo $rs['no_group']; ?>" class="btn btn-sm btn-primary btn_description">คลิก</a></td>
                     </tr>
                     <?php
                         $j++;

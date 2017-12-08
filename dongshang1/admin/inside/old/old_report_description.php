@@ -4,7 +4,7 @@
     $conn = connect();
 
     $id = $_GET['id'];
-    $sqlDescrip = "SELECT append,kbcomment FROM report_shopping WHERE no_key='$id'";
+    $sqlDescrip = "SELECT no_group,append,kbcomment FROM report_shopping WHERE no_group='$id'";
     $qryDescrip = $conn->query($sqlDescrip);
     $rs = $qryDescrip->fetch_assoc();
 ?>
@@ -38,7 +38,7 @@
 			      	?>
 				</div>
 		      	<div class="modal-footer">
-		      		<a href="old_edit_report/old_edit_group.php?id=<?php echo $id; ?>" class=" btn btn-warning">Edit</a>
+		      		<a href="old_edit_report/old_edit_group.php?id=<?php echo $id; ?>" class="btn btn-warning">แก้ไข</a>
 		        	<button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
 		      	</div>
 		    </div><!-- /.modal-content -->

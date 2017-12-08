@@ -108,7 +108,7 @@
 
 
 		<!-- Pagination JS -->
-		<script type="text/javascript">
+		<!--<script type="text/javascript">
 			$(document).ready(function(){
 				$('.pagination').pagination({
 			        items: <?php echo $total_records;?>,
@@ -118,7 +118,7 @@
 					hrefTextPrefix : 'index.php?page='
 			    });
 			});
-		</script>
+		</script>-->
 		<!-- End Pagination JS -->
 		<button type="button" class="btn btn-primary btn-lg  sr-only" id="btn_msg1" data-toggle="modal" data-target="#exampleModal">Launch demo modal</button>
 		<div class="modal fade" id="addbookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -156,3 +156,27 @@
 		<script src="../assets/js/date/material.min.js"></script>
 		<script type="text/javascript" src="../assets/js/date/moment-with-locales.min.js"></script>
 		<script type="text/javascript" src="../assets/js/date/bootstrap-material-datetimepicker.js"></script>
+
+	<!-- DataTables -->
+		<script src="../assets/js/datatable/jquery.dataTables.min.js"></script>
+		<script src="../assets/js/datatable/dataTables.bootstrap.min.js"></script>
+		<script>
+		  $(function () {
+		    $('#example1').DataTable({
+		      'paging'      : true,
+		      'lengthChange': true,
+		      'searching'   : false,
+		      'ordering'    : true,
+		      'info'        : true,
+		      'autoWidth'   : false
+		    }),
+		    $('#example2').DataTable({
+		      'paging'      : true,
+		      'lengthChange': false,
+		      'searching'   : true,
+		      'ordering'    : true,
+		      'info'        : true,
+		      'autoWidth'   : false
+		    })
+		  });
+		</script>

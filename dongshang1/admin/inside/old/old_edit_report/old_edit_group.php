@@ -22,7 +22,7 @@
 
     $id = $_GET['id'];
 
-    $sqlReport = "SELECT * FROM report_shopping WHERE no_key='$id'";
+    $sqlReport = "SELECT * FROM report_shopping WHERE no_group='$id'";
     $qryReport = $conn->query($sqlReport);
     $rs = $qryReport->fetch_assoc();
 
@@ -94,29 +94,29 @@
 		      	</form>
 		      	*/ ?>
 
-				<form method="post" class="form-horizontal" name="frmAddGuide" action="update_edit_group.php?id_user=<?php echo $_SESSION['user_id']; ?>&group_id=<?php echo $id; ?>">
+				<form method="post" class="form-horizontal" name="frmAddGuide" action="update_old_edit_group.php?no_group=<?php echo $id; ?>">
 					<table id="a" border="0" cellspacing="1" cellpadding="0">  
 						<tbody>
 							<tr>
 							  	<td width="100px" align="right" title="No.Group">團號 :</td>
 							    <td></td>
-							    <td width="225px" align="right" title="團號 - No.Group"><input type="text" name="no_group" id="no_group" class="textbox form-control" value="DS 171123 A"> </td>
+							    <td width="225px" align="right" title="團號 - No.Group"><input type="text" name="no_group" id="no_group" class="textbox form-control" value="<?php echo $rs['no_group']; ?>"> </td>
 							    <td width="50px;" align="center" style="font-size: 25px;font-weight: bold">/</td>
-							    <td width="225px" align="center" title="组团社团号 - No. community"><input type="text" name="no_community" id="no_community" class="textbox form-control" value="PHT "></td>
+							    <td width="225px" align="center" title="组团社团号 - No. community"><input type="text" name="no_community" id="no_community" class="textbox form-control" value="<?php echo $rs['no_community']; ?>"></td>
 							    <td width="50px;"></td>
 							    <td width="225px">
 							     	<table style="border:#666 ridge 1px" align="center">
 							     		<tbody>
 							     			<tr>
-										        <td style="background-color:#FFF;width: 30px;" align="center"><input type="radio" id="tourist_status0" name="tourist_status" value="0" checked="checked"></td>
-										        <td style="background-color:#FFCC66;width: 30px;" align="center"><input type="radio" id="tourist_status1" name="tourist_status" value="1"></td> 
-										        <td style="background-color:#F0F;width: 30px;" align="center"><input type="radio" id="tourist_status2" name="tourist_status" value="2"></td>
+										        <td style="background-color:#FFF;width: 30px;" align="center"><input type="radio" id="tourist_status0" name="tourist_status[]" value="0" checked="checked"></td>
+										        <td style="background-color:#FFCC66;width: 30px;" align="center"><input type="radio" id="tourist_status1" name="tourist_status[]" value="1"></td> 
+										        <td style="background-color:#F0F;width: 30px;" align="center"><input type="radio" id="tourist_status2" name="tourist_status[]" value="2"></td>
 							        		</tr>
 							        	</tbody>
 							        </table>
 							    </td>
 							    <td width="100px" align="right" title="tourist ลูกทัวร์">人 :</td>
-							    <td width="225px" align="left" title="人 - tourist ลูกทัวร์"><input type="text" name="requiredtourist" id="tourist" class="textbox form-control" style="text-align:center" value="20"></td>
+							    <td width="225px" align="left" title="人 - tourist ลูกทัวร์"><input type="text" name="tourist" id="tourist" class="textbox form-control" style="text-align:center" value="<?php echo $rs['tourist']; ?>"></td>
 							</tr>
 						</tbody>
 					</table>
@@ -126,38 +126,42 @@
 						  	<tr>
 							    <td width="100px" align="right" title="Leader Guide">領隊 :</td>
 							    <td></td>
-							    <td width="225px" align="right" title="領隊 - Leader Guide"><input type="text" name="leader_giude" id="leader_giude" class="textbox form-control" value=""></td>
+							    <td width="225px" align="right" title="領隊 - Leader Guide"><input type="text" name="leader_giude" id="leader_giude" class="textbox form-control" value="<?php echo $rs['leader_giude']; ?>"></td>
 							    <td width="125px;"></td>
 							    <td width="125px;"></td>
-							    <td width="150px;" align="center" style="background-color: brown; border-radius: 10px; margin:-10px 0 0 10px; height:25px"><input type="radio" id="giude_status9" name="giude_status" value="9" checked="checked">
+							    <td width="150px;" align="center" style="background: linear-gradient(to bottom, #996633 0%, #996600 100%); border-radius: 10px; margin:-10px 0 0 10px; height:25px"><input type="radio" id="giude_status9" name="giude_status[]" value="9" checked="checked">
 							      :  Cancel</td>
 							    <td></td>
-							    <td width="150px;" align="left" style="background-color: orange; border: double 1px #00F; border-radius: 10px; margin:-10px 0 0 10px; height:25px" width="75">
-							    &nbsp;<input type="radio" id="charter0" name="charter" value="0" checked="checked"> :  Normal<br>
-							    &nbsp;<input type="radio" id="charter3" name="charter" value="3"> :  No Shop
+							    <td width="150px;" align="left" style="background: linear-gradient(to bottom, #ffcc66 0%, #ffcc99 100%); border: double 1px #00F; border-radius: 10px; margin:-10px 0 0 10px; height:25px" width="75">
+							    &nbsp;<input type="radio" id="charter0" name="charter[]" value="0" checked="checked"> :  Normal<br>
+							    &nbsp;<input type="radio" id="charter3" name="charter[]" value="3"> :  No Shop
 							    </td>
 						  	</tr>
+						  	<tr><td>&nbsp;</td></tr>
 						  	<tr>
 							    <td width="100px" align="right" title="Agent">組團社 :</td>
 							    <td></td>
-							    <td width="225px" align="right" title="組團社 - Agent"><input type="text" name="agent_tour" id="agent_tour" class="textbox form-control" value="北京金阳"></td>
+							    <td width="225px" align="right" title="組團社 - Agent"><input type="text" name="agent_tour" id="agent_tour" class="textbox form-control" value="<?php echo $rs['agent_tour']; ?>"></td>
 							    <td width="100px" align="right"> IN :</td>
-							    <td width="225px" align="right"><input type="text" name="requireddatein" id="datein" value="2017-11-23 00:00:00" class="hasDatepicker form-control"></td>
+							    <td width="225px" align="right"><input type="text" name="datein" id="datein" value="<?php echo $rs['datein']; ?>" class="hasDatepicker form-control"></td>
 							    <td width="100px" align="right">Flight In :</td>
-							    <td width="225px"><input type="text" name="no_flight_in" id="no_flight_in" class="textbox form-control" value="HX"></td>
+							    <td width="225px"><input type="text" name="no_flight_in" id="no_flight_in" class="textbox form-control" value="<?php echo $rs['no_flight_in']; ?>"></td>
 						  	</tr>
+						  	<tr><td>&nbsp;</td></tr>
 						  	<tr>
 							    <td width="100px" align="right" title="Type Group">组团社 :</td>
 							    <td></td>
-							    <td width="225px" align="right" title="组团社 - Type Group"><input type="text" name="group_type" id="group_type" class="textbox form-control" value="全新泰国-升级版"></td>
+							    <td width="225px" align="right" title="组团社 - Type Group"><input type="text" name="group_type" id="group_type" class="textbox form-control" value="<?php echo $rs['group_type']; ?>"></td>
 							    <td width="100px" align="right">OUT :</td>
-							    <td width="225px" align="right"><input type="text" name="requireddateout" id="dateout" value="2017-11-29 00:00:00" class="hasDatepicker form-control"></td>
+							    <td width="225px" align="right"><input type="text" name="dateout" id="dateout" value="<?php echo $rs['dateout']; ?>" class="hasDatepicker form-control"></td>
 							    <td width="100px" align="right">Flight Out :</td>
-							    <td width="225px"><input type="text" name="no_flight_out" id="no_flight_out" class="textbox form-control" value=""></td>
+							    <td width="225px"><input type="text" name="no_flight_out" id="no_flight_out" class="textbox form-control" value="<?php echo $rs['no_flight_out']; ?>"></td>
 						  	</tr>
+						  	<tr><td>&nbsp;</td></tr>
 						  	<tr>
 							    <td align="right">Comment :</td>
-							    <td colspan="7"><textarea class="form-control" name="append" id="append" rows="5" cols="100" style="background: #9CF">正收500元/人 不含导游服务费 。无自费（升级泰式草药按摩2小时 金沙岛海鲜升级豪华餐 摩天轮夜市）全程当五 2+2+1 5N7D 最后一晚国五CHATRIUM หัวหน้าทัวร์ไม่นอนด้วย（+1T/L ห้อง： ）【1.KB+500*】</textarea>
+							    <td colspan="7">
+							    	<textarea class="form-control" name="append" id="append" rows="5" style="background: #9CF"><?php echo $rs['append']; ?></textarea>
 							    </td>
 						  	</tr>
 						</tbody>
@@ -167,35 +171,40 @@
 					<table id="a" border="0" cellspacing="1" cellpadding="0">
 						<tbody>
 							<tr>
-							    <td width="82px" align="right" title="Name Giude">導遊姓名 :</td> 
+							    <td width="100px" align="right" title="Name Giude">導遊姓名 :</td> 
 							    <td></td>
-							    <td width="180px" align="left" title="導遊姓名 - Name Giude (Thai)"><input type="text" name="name_thai" id="name_thai" class="textbox" style="width:120px" value="">
-							      泰文名</td>
-							    <td width="180px" align="left" title="導遊姓名 - Name Giude (Chinese )"><input type="text" name="name_china" id="name_china" class="textbox" style="width:120px" value="">
-							      中文名</td> 
-								<td colspan="2" width="181" align="left" style="background-image: url(../pic/button-red.png); border: double 1px #906; border-radius: 10px; margin:-10px 0 0 10px; height:45px">
+							    <td width="350px" align="left" title="導遊姓名 - Name Giude (Thai)">
+							    	<input type="text" name="name_thai" id="name_thai" class="textbox form-control" value="<?php echo $rs['name_thai']; ?>">
+							    </td>
+							    <td width="50px;" align="center"> 泰文名</td>
+							    <td width="350px" align="left" title="導遊姓名 - Name Giude (Chinese )">
+							    	<input type="text" name="name_china" id="name_china" class="textbox form-control" value="<?php echo $rs['name_china']; ?>">
+							    </td>
+							    <td width="50px;" align="center"> 中文名</td> 
+							    <td width="100px;"></td>
+								<td width="225px;" colspan="2" width="181" align="center" style="background: linear-gradient(to bottom, #996633 0%, #996600 100%); border-radius: 10px; margin:-10px 0 0 10px; height:45px">
 									<table>
 								    	<tbody>
 								    		<tr>
-											    <td width="75"><input type="radio" id="giude_status0" name="giude_status" value="0"> :  Plan</td>
-											    <td width="99"><input type="radio" id="giude_status4" name="giude_status" value="4"> :  Transfer</td>
+											    <td width="75"><input type="radio" id="giude_status0" name="giude_status[]" value="0"> :  Plan</td>
+											    <td width="99"><input type="radio" id="giude_status4" name="giude_status[]" value="4"> :  Transfer</td>
 							    			</tr>
 							    			<tr>
-											    <td><input type="radio" id="giude_status1" name="giude_status" value="1"> :  Call</td>
-											    <td><input type="radio" id="giude_status2" name="giude_status" value="2"> :  Confirm</td>
+											    <td><input type="radio" id="giude_status1" name="giude_status[]" value="1"> :  Call</td>
+											    <td><input type="radio" id="giude_status2" name="giude_status[]" value="2"> :  Confirm</td>
 										    </tr>
 										    <tr>
-										    	<td><input type="radio" id="giude_status3" name="giude_status" value="3"> :  Fit</td>
+										    	<td><input type="radio" id="giude_status3" name="giude_status[]" value="3"> :  Fit</td>
 										    </tr>
 										   	<tr>
 										   		<td> เฉพาะ GROUP</td>
 										   	</tr>
 										   	<tr>
-											    <td><input type="radio" id="hotel_status1" name="hotel_status" value="1"> :  Wait</td>
-											    <td><input type="radio" id="hotel_status2" name="hotel_status" value="2"> :  Final</td>
+											    <td><input type="radio" id="hotel_status1" name="hotel_status[]" value="1"> :  Wait</td>
+											    <td><input type="radio" id="hotel_status2" name="hotel_status[]" value="2"> :  Final</td>
 										   	</tr>
 							    		   	<tr>
-							    				<td><input type="radio" id="hotel_status3" name="hotel_status" value="3" checked="checked"> :  Cancel</td>
+							    				<td><input type="radio" id="hotel_status3" name="hotel_status[]" value="3" checked="checked"> :  Cancel</td>
 							    		    </tr>
 							    		</tbody>
 							    	</table>
@@ -204,7 +213,9 @@
 							<tr>
 								<td align="right">KB ไม่ปกติ :</td>
 						    	<td></td>
-								<td colspan="4"><textarea name="kbcomment" id="kbcomment" rows="2" style="width:500px; background: #CCCCFF"></textarea></td>
+								<td colspan="4">
+									<textarea class="form-control" name="kbcomment" id="kbcomment" rows="5" style="width:500px; background: #CCCCFF"><?php echo $rs['kbcomment']; ?></textarea>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -221,7 +232,6 @@
 								</tr>
 								<tr>
 									<td>&nbsp;</td>
-									<td style="color:#F00">งดใช้ลูกน้ำ (,) ในการกรอกข้อมูล</td>
 								</tr>
 								<tr>
 									<td>&nbsp;</td>
@@ -229,7 +239,7 @@
 								</tr>
 								<tr>
 									<td>&nbsp;</td>
-									<td><input type="text" name="hotel_1" id="hotel_1" style="width:200px" value="GRAND FOURWINGS 23/24"></td>
+									<td width="500px;"><input type="text" class="form-control" name="hotel_1" id="hotel_1" value="<?php echo $rs['hotel_1']; ?>"></td>
 								</tr>
 								<tr>
 									<td>&nbsp;</td>
@@ -237,7 +247,7 @@
 								</tr>
 								<tr>
 									<td>&nbsp;</td>
-									<td><input type="text" name="hotel_2" id="hotel_2" style="width:200px" value="JOMTIEN PALM BEACH 24/25"></td>
+									<td width="500px;"><input type="text" class="form-control" name="hotel_2" id="hotel_2" value="<?php echo $rs['hotel_2']; ?>"></td>
 								</tr>
 								<tr>
 									<td>&nbsp;</td>
@@ -245,7 +255,7 @@
 								</tr>
 								<tr>
 									<td>&nbsp;</td>
-									<td><input type="text" name="hotel_4" id="hotel_4" style="width:200px" value="AVANI ATRIUM 26"></td>
+									<td width="500px;"><input type="text" class="form-control" name="hotel_4" id="hotel_4" value="<?php echo $rs['hotel_4']; ?>"></td>
 								</tr>
 								<tr>
 									<td>&nbsp;</td>
@@ -253,7 +263,7 @@
 								</tr>
 								<tr>
 									<td>&nbsp;</td>
-									<td><input type="text" name="hotel_3" id="hotel_3" style="width:200px" value=""></td>
+									<td width="500px;"><input type="text" class="form-control" name="hotel_3" id="hotel_3" value="<?php echo $rs['hotel_3']; ?>"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -261,58 +271,12 @@
 					<br>
 					</div>
 
-					<div style="display:none;">
-						<table>
-							<tbody>
-								<tr>
-								    <td colspan="1" align="right" title="จำนวนคนเข้า Shop">人 Shopping :</td>
-								    <td width="124">
-						    	<br>
-							    		<table>
-							        		<tbody>
-							        			<tr>
-							        				<td colspan="2"><input type="text" name="people_shop" id="people_shop" class="textbox" style="text-align:right; border:inset 2px #C66" value="0"></td>
-							        			</tr>
-							        			<tr>
-											    	<td style="background-color:#FFF;"><center><input type="radio" id="status_people_shop1" name="status_people_shop" value="0" checked="checked"></center></td>
-													<td style="background-color:#F0F"><center><input type="radio" id="status_people_shop2" name="status_people_shop" value="1"></center></td>
-												</tr>
-							        		</tbody>
-							        	</table>
-						    		</td>
-								    <td width="1"></td>
-								    <td colspan="3" align="left" style="background-image: url(../pic/brown.jpg); border: double 1px #00F; border-radius: 10px; margin:-10px 0 0 10px; height:45px">
-									    <input type="radio" id="charter1" name="charter" value="1"> :  Charter<br>
-										<input type="radio" id="charter2" name="charter" value="2"> :  Return Option
-						    		</td>
-						    		<td width="2"></td>
-						    		<td align="left" style="background-image:url(../pic/button-bg.png); border: double 1px #00F; border-radius: 10px; margin:-10px 0 0 10px; height:45px">
-									    <input type="radio" id="status_group0" name="status_group" value="0" checked="checked"> :  Trip<br>
-									    <input type="radio" id="status_group2" name="status_group" value="2"> :  Wait Option<br>
-									    <input type="radio" id="status_group1" name="status_group" value="1"> :  Complete
-						    		</td>
-						    	</tr>
-								<tr>
-									<td></td>
-							        <td width="124" align="right" title="">站總和 :</td>
-							        <td>&nbsp;</td>
-							        <td width="124" title=""><input type="text" disabled="disabled" name="points_4" id="points_4" class="dis" style="text-align:right"></td>
-							        <td>&nbsp;</td>
-							         <td align="right" title="Mean เฉลี่ย">站總和平均 :</td>
-							         <td>&nbsp;</td>
-							         <td width="125" title=""><input type="text" disabled="disabled" name="points_4_mean" id="points_4_mean" class="dis" style="text-align:right"></td>
-								</tr>
-
-
-								<tr>
-									<td></td>
-								    <td align="right">Comment :</td>
-								    <td></td>
-								    <td colspan="5"><textarea name="comment" id="comment" rows="3" style="width:250px; background:#FEA9AB"></textarea></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+					<div class="form-group">
+			      		<div class="col-sm-12 text-center">
+				        	<input type="submit" name="save" class=" btn btn-lg btn-success" value="แก้ไข">
+				        	<a href="../index.php" class="btn btn-lg btn-danger" data-dismiss="modal">กลับหน้าหลัก</a>
+			        	</div>
+			      	</div>
 
 				</form>
 		    </div>

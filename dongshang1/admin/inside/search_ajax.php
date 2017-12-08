@@ -67,19 +67,8 @@
                 <h3 class="panel-title">รายงานข้อมูล Group</h3>
                 <div class="pull-right">
                     <a href="search_advance.php" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-filter"></span> ค้นหาแบบละเอียด</a>
-                    <button class="btn btn-warning btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> ค้นหา</button>
                 </div>
             </div>
-            <table>
-                <thead class="table-bordered">
-                    <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="ค้นหาจาก ID ของแถว" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="ค้นหาจาก กรุ๊ปโค้ด" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="ค้นหาจาก ชื่อไกด์" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="ค้นหาจาก ชื่อหัวหน้าทัวร์" disabled></th>
-                    </tr>
-                </thead>
-            </table>
             <table class="table table-bordered" id="op_data">
                 <thead class="bgthead">
                     <tr class="text-center" style="font-size: 12px;">

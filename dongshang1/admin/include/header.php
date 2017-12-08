@@ -16,6 +16,8 @@
 <link href="../assets/css/date/bootstrap-material-datetimepicker.css" rel="stylesheet">
 <link href="../assets/css/date/material-font.css" rel="stylesheet">
 
+<link rel="stylesheet" href="../assets/css/datatable/dataTables.bootstrap.min.css">
+
 <!--icons-css-->
 <link href="../assets/css/font-awesome.css" rel="stylesheet"> 
 <!--Google Fonts-->

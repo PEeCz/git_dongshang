@@ -27,7 +27,7 @@
     $rsUser = $qry->fetch_assoc();
 
     // Start Pagination And SELECT .. ORDER BY .. And LIMIT ..... , ..... -------------------
-	$limit = 10;  
+	/*$limit = 10;  
 	if (isset($_GET["page"])) { 
 		$page  = $_GET["page"]; 
 	} else {
@@ -36,7 +36,10 @@
 
 	$start_from = ($page-1) * $limit;
 
-	$sqlPagination = "SELECT * FROM report_group WHERE re_group_id ORDER BY re_group_code ASC LIMIT $start_from, $limit ";  
+ $sqlPagination = "SELECT * FROM report_group WHERE re_group_id ORDER BY re_group_code ASCLIMIT $start_from, $limit"; 
+	*/
+
+	$sqlPagination = "SELECT * FROM report_group WHERE re_group_id ORDER BY re_group_code ASC";  
 	$qryPagination  = $conn->query($sqlPagination);
 
 
@@ -107,7 +110,7 @@
                     </tr>
                 </thead>
             </table>
-            <table class="table table-bordered" id="data_op">
+            <table class="table table-bordered" id="example1">
                 <thead class="bgthead">
                     <tr class="text-center" style="font-size: 12px;">
                     	<th>No.</th>
@@ -227,7 +230,7 @@
             
         </div>
         <?php  
-				$sql = "SELECT COUNT(re_group_id) FROM report_group";
+				/*$sql = "SELECT COUNT(re_group_id) FROM report_group";
 				$rs_result = $conn->query($sql);  
 				$row = mysqli_fetch_row($rs_result);  
 				$total_records = $row[0];  
@@ -236,7 +239,7 @@
 				for ($i=1; $i<=$total_pages; $i++) {  
 				             $pagLink .= "<li><a href='index.php?page=".$i."'>".$i."</a></li>";  
 				};  
-				echo $pagLink . "</ul></nav>";  
+				echo $pagLink . "</ul></nav>";  */
 		?>
 
 				<!--copy rights start here-->

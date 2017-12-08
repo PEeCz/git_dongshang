@@ -66,6 +66,7 @@
 				<div class="row">
 					<input type="text" class="form-control" name="txtSearch" id="txtSearch" placeholder="Search By Group Code" style="width: 300px;">
 					<input type="button" class="btn btn-primary" name="btnSearch" id="btnSearch" value="Search" OnClick="JavaScript:doCallAjax(document.getElementById('txtSearch').value,'1');">
+					<a href="index.php" class="btn btn-md btn-warning">กลับหน้าหลัก</a>
 					<br><br>
 					<span id="mySpan"></span>
 				</div>
