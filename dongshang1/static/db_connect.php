@@ -5,9 +5,9 @@ function connect()
   // เริ่มต้นส่วนกำหนดการเชิ่อมต่อฐานข้อมูล //  
 	 $db_config=array(
 		"host"=>"localhost",  // กำหนด host
-		"user"=>"root", // กำหนดชื่อ user
-		"pass"=>"",   // กำหนดรหัสผ่าน
-		"dbname"=>"dongshang",  // กำหนดชื่อฐานข้อมูล
+		"user"=>"wclcoth_dongshan", // กำหนดชื่อ user
+		"pass"=>"dongshang88",   // กำหนดรหัสผ่าน
+		"dbname"=>"",  // กำหนดชื่อฐานข้อมูล
 		"charset"=>"utf8"  // กำหนด charset
 	);
   // สิ้นสุุดส่วนกำหนดการเชิ่อมต่อฐานข้อมูล // 	
@@ -44,38 +44,7 @@ function select($sql)
 	}
 	return $result;	
 }
-//    ฟังก์ชันสำหรับการ insert ข้อมูล
-function insert($table,$data)
-{
-	global $mysqli;		
-	$fields=""; $values="";
-	$i=1;
-	foreach($data as $key=>$val)
-	{
-		if($i!=1) { $fields.=", "; $values.=", "; }
-		$fields.="$key";
-		$values.="'$val'";
-		$i++;
-	}
-	$sql = "INSERT INTO $table ($fields) VALUES ($values)";
-	if($mysqli->query($sql)) { return true; } 
-	else { die("SQL Error: <br>".$sql."<br>".$mysqli->error); return false; }
-}
-//    ฟังก์ชันสำหรับการ update ข้อมูล
-function update($table,$data,$where)
-{
-	global $mysqli;			
-	$modifs="";
-	$i=1;
-	foreach($data as $key=>$val)
-	{
-		if($i!=1){ $modifs.=", "; }
-		$modifs.=$key.' = "'.$val.'"'; 
-		$i++;
-	}
-	$sql = ("UPDATE $table SET $modifs WHERE $where");
-	if($mysqli->query($sql)) { return true; } 
-	else { die("SQL Error: <br>".$sql."<br>".$mysqli->error); return false; }
+//    ฟังก์ชั�60br>".$mysqli->error); return false; }
 }
 //    ฟังก์ชันสำหรับการ delete ข้อมูล
 function delete($table, $where)

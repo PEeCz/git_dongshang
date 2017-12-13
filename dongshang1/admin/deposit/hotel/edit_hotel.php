@@ -51,7 +51,7 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li><a class="text-center text-success" style="font-weight: bolder;" href="../../index.php">หน้าหลัก</a></li>
+            <li><a class="text-center text-success" style="font-weight: bolder;" href="../../inside/index.php">หน้าหลัก</a></li>
             <li><a class="text-center text-success" style="font-weight: bolder;" href="../deposit-report.php">ดูข้อมูล</a></li>
           </ul>
         </div>
@@ -175,7 +175,7 @@
   <script src="../assets/js/bootstrap.min.js"></script>
   <script src="../assets/js/bootstrapValidator.min.js"></script>
   <script src="../assets/js/holder.min.js"></script>
-  <script src="../assets/js/ie10-viewport-bugworkaround.js"></script>
+  <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
   <script src="../assets/js/ie-emulation-modes-warning.js"></script>
 </body>
 </html>

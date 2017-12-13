@@ -7,7 +7,7 @@
 			    <div class="menu">
 			      	<ul id="menu" >
 				        <li id="menu-home" >
-				        	<a href="index.php">
+				        	<a href="../index.php">
 				        		<i class="fa fa-tachometer"></i><span>หน้าหลัก</span>
 				        	</a>
 				        </li>

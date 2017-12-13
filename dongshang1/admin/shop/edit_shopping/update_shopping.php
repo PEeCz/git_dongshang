@@ -104,7 +104,43 @@
 
     $overall4 = $calc4;
 	
-		$editSql = "UPDATE edit_shopping SET 
+		$editSql = "UPDATE report_shopping SET 
+								re_shopping_personqty='$personqty',
+								re_shopping_personqty_color='$re_shopping_personqty_color',
+								re_shopping_charter='$re_shopping_charter',
+								re_shopping_complete='$re_shopping_complete',
+								re_shopping_jewelry_color='$re_shopping_jewelry_color',
+								re_shopping_jewelry='$jewelry',
+								re_shopping_leather_color='$re_shopping_leather_color',
+								re_shopping_leather='$leather',
+								re_shopping_snake_park_color='$re_shopping_snake_park_color',
+								re_shopping_snake_park='$snakepark',
+								re_shopping_rubber_color='$re_shopping_rubber_color',
+								re_shopping_rubber='$rubber',
+								re_shopping_red88_color='$re_shopping_red88_color',
+								re_shopping_red88='$red88',
+								re_shopping_gm_color='$re_shopping_gm_color',
+								re_shopping_gm='$gm',
+								re_shopping_silk_color='$re_shopping_silk_color',
+								re_shopping_silk='$silk',
+								re_shopping_watprachum_color='$re_shopping_watprachum_color',
+								re_shopping_watprachum='$watprachum',
+								re_shopping_watnongket_color='$re_shopping_watnongket_color',
+								re_shopping_watnongket='$watnongket',
+								re_shopping_option_percent='$option_percent',
+								re_shopping_option_money='$option_money',
+								re_shopping_comment='$comment',
+								re_shopping_overall_1='$overall1',
+								re_shopping_overall_2='$overall2',
+								re_shopping_overall_3='$overall3',
+								re_shopping_overall_4='$overall4',
+								re_group_id='$id'
+								
+
+					WHERE re_group_id='$id'";
+		$editQry = mysqli_query($conn, $editSql);
+		if($editQry){
+			$editSql2 = "UPDATE edit_shopping SET 
 								re_shopping_personqty='$personqty',
 								re_shopping_personqty_color='$re_shopping_personqty_color',
 								re_shopping_charter='$re_shopping_charter',
@@ -136,42 +172,6 @@
 								re_shopping_overall_4='$overall4',
 								re_group_id='$id',
 								edit_by_date='$edit_by'
-
-					WHERE re_group_id='$id'";
-		$editQry = mysqli_query($conn, $editSql);
-		if($editQry){
-			$editSql2 = "UPDATE report_shopping SET 
-								re_shopping_personqty='$personqty',
-								re_shopping_personqty_color='$re_shopping_personqty_color',
-								re_shopping_charter='$re_shopping_charter',
-								re_shopping_complete='$re_shopping_complete',
-								re_shopping_jewelry_color='$re_shopping_jewelry_color',
-								re_shopping_jewelry='$jewelry',
-								re_shopping_leather_color='$re_shopping_leather_color',
-								re_shopping_leather='$leather',
-								re_shopping_snake_park_color='$re_shopping_snake_park_color',
-								re_shopping_snake_park='$snakepark',
-								re_shopping_rubber_color='$re_shopping_rubber_color',
-								re_shopping_rubber='$rubber',
-								re_shopping_red88_color='$re_shopping_red88_color',
-								re_shopping_red88='$red88',
-								re_shopping_gm_color='$re_shopping_gm_color',
-								re_shopping_gm='$gm',
-								re_shopping_silk_color='$re_shopping_silk_color',
-								re_shopping_silk='$silk',
-								re_shopping_watprachum_color='$re_shopping_watprachum_color',
-								re_shopping_watprachum='$watprachum',
-								re_shopping_watnongket_color='$re_shopping_watnongket_color',
-								re_shopping_watnongket='$watnongket',
-								re_shopping_option_percent='$option_percent',
-								re_shopping_option_money='$option_money',
-								re_shopping_comment='$comment',
-								re_shopping_overall_1='$overall1',
-								re_shopping_overall_2='$overall2',
-								re_shopping_overall_3='$overall3',
-								re_shopping_overall_4='$overall4',
-								re_group_id='$id',
-								edit_by='$edit_by'
 
 					WHERE re_group_id='$id'";
 			$editQry2 = mysqli_query($conn, $editSql2);

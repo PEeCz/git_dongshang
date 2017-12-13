@@ -36,7 +36,7 @@
 
 	$start_from = ($page-1) * $limit;
 
- $sqlPagination = "SELECT * FROM report_group WHERE re_group_id ORDER BY re_group_code ASCLIMIT $start_from, $limit"; 
+ $sqlPagination = "SELECT * FROM report_group WHERE re_group_id ORDER BY re_group_code ASC LIMIT $start_from, $limit"; 
 	*/
 
 	$sqlPagination = "SELECT * FROM report_group WHERE re_group_id ORDER BY re_group_code ASC";  
@@ -213,8 +213,8 @@
                       	">
                       		<?php echo $rs['re_group_personqty']; ?>
                       	</td>
-                      	<td class="text-center"><?php echo $rs['re_group_in_date'].' <BR> '.$rs['re_group_in_time']; ?></td>
-                      	<td class="text-center"><?php echo $rs['re_group_out_date'].' <BR> '.$rs['re_group_out_time']; ?></td>
+                      	<td class="text-center"><?php echo $rs['re_group_in_date'].'<BR>'.$rs['re_group_in_time'].'<BR>'.$rs['re_group_flight_in']; ?></td>
+                      	<td class="text-center"><?php echo $rs['re_group_out_date'].'<BR>'.$rs['re_group_out_time'].'<BR>'.$rs['re_group_flight_out']; ?></td>
                       	<td class="text-center"><?php echo $rs['re_group_hotel1']; ?></td>
                       	<td class="text-center"><?php echo $rs['re_group_hotel2']; ?></td>
                       	<td class="text-center"><?php echo $rs['re_group_hotel3']; ?></td>

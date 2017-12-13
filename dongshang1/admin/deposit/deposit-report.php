@@ -39,6 +39,9 @@ session_start();
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
+
+        <link rel="shortcut icon" href="../../main/favicon.png">
+
 	<link rel="stylesheet" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/css/bootstrapValidator.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.css">
@@ -293,7 +296,7 @@ session_start();
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/bootstrapValidator.min.js"></script>
 	<script src="assets/js/holder.min.js"></script>
-	<script src="assets/js/ie10-viewport-bugworkaround.js"></script>
+	<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 	<script src="assets/js/ie-emulation-modes-warning.js"></script>
 	<script src="assets/js/jquery.Pagination.js"></script>
 

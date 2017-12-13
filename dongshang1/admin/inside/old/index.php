@@ -37,7 +37,7 @@
                             ,no_flight_in,no_flight_out,hotel_1,hotel_2,hotel_3,hotel_4
                         FROM report_shopping 
                         WHERE no_group
-                        BETWEEN 'DS 171100 A' AND 'DS 182000 A'
+                        BETWEEN 'DS 170101 A' AND 'DS 171030 A'
                         ORDER BY no_group ASC 
                         LIMIT $start_from, $limit
                      ";  
@@ -142,7 +142,7 @@
         </div>
         <?php  
                 $sql = "SELECT COUNT(no_group) FROM report_shopping WHERE no_group
-                        BETWEEN 'DS 171100 A' AND 'DS 182000 A'";
+                        BETWEEN 'DS 170101 A' AND 'DS 171030 A'";
                 $rs_result = $conn->query($sql);  
                 $row = mysqli_fetch_row($rs_result);  
                 $total_records = $row[0];  

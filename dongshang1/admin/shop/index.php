@@ -83,7 +83,7 @@
                 </thead>
                 <?php
                   // Start Pagination And SELECT .. ORDER BY .. And LIMIT ..... , ..... -------------------
-                  $limit = 10;  
+                  $limit = 100;  
                   if (isset($_GET["page"])) { 
                     $page  = $_GET["page"]; 
                   } else {
@@ -119,7 +119,7 @@
                                     LEFT OUTER JOIN
                                         report_shopping rs
                                 ON rg.re_group_id = rs.re_group_id
-                                WHERE rg.re_group_id ORDER BY rg.re_group_id DESC LIMIT $start_from, $limit";
+                                WHERE rg.re_group_id ORDER BY rg.re_group_code DESC LIMIT $start_from, $limit";
                   $qryReport = $conn->query($selReport);
             	 ?>
                 <tbody>
@@ -589,7 +589,7 @@
                               }
                             ?> 
                         </td>
-                  	</tr <?php } ?>
+                  	</tr> <?php } ?>
                   	<?php $j++; } ?>
               	</tbody>
             </table>

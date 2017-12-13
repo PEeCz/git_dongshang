@@ -12,7 +12,7 @@
 		        	<h4 class="modal-title text-center">ข้อมูลไกด์</h4>
 		      	</div>
 		      	<form method="post" class="form-horizontal" name="frmAddGuide" action="add_report/ins_guidechk.php?id=<?php echo $user_id; ?>">
-			      	<div class="modal-body" style="background: linear-gradient(to bottom, #66ffff 0%, #3399ff 100%);">
+			      	<div class="modal-body" style="background: linear-gradient(to bottom, #84fab0 0%, #8fd3f4 100%);">
 				      	<div class="form-group">
 						    <label for="re_group_code" class="col-sm-2 control-label">กรุ๊ปโค้ด</label>
 						    <div class="col-sm-2">

@@ -25,7 +25,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../../index.php">หน้าหลัก</a></li>
+            <li><a href="../../inside/index.php">หน้าหลัก</a></li>
           </ul>
         </div>
       </div>
@@ -155,7 +155,7 @@
 	<script src="../assets/js/bootstrap.min.js"></script>
 	<script src="../assets/js/bootstrapValidator.min.js"></script>
 	<script src="../assets/js/holder.min.js"></script>
-	<script src="../assets/js/ie10-viewport-bugworkaround.js"></script>
+	<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../assets/js/ie-emulation-modes-warning.js"></script>
 </body>
 </html>

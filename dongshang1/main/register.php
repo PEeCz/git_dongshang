@@ -74,14 +74,14 @@
 
                         <hr>
 
-                        <form action="customer-orders.html" method="post">
+                        <form action="../chk/loginchk_admin.php" method="post">
                             <div class="form-group">
                                 <label for="user">Username</label>
-                                <input type="text" class="form-control" id="user" name="user">
+                                <input type="text" class="form-control" id="admin_user" name="admin_user">
                             </div>
                             <div class="form-group">
                                 <label for="pass">Password</label>
-                                <input type="password" class="form-control" id="pass" name="pass">
+                                <input type="password" class="form-control" id="admin_pass" name="admin_pass">
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
